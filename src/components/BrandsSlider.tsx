@@ -1,4 +1,3 @@
-import { useLanguage } from "../contexts/LanguageContext";
 import lgLogo from "../assets/companies/LG-Logo.jpg";
 import traneLogo from "../assets/companies/TraneLogo.png";
 import carrierLogo from "../assets/companies/carrier.jpg";
@@ -52,8 +51,6 @@ const brands = [
 ];
 
 export default function BrandsSlider() {
-  const { t } = useLanguage();
-
   return (
     <div className="relative overflow-hidden">
       <div className="flex animate-scroll">
