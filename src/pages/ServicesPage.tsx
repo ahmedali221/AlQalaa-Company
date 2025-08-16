@@ -1,5 +1,4 @@
 import { 
-  
   Settings, 
   FileText,
   CheckCircle, 
@@ -21,12 +20,11 @@ import {
   TrendingUp,
   Headphones,
   MapPin,
-  Image,
-
+  Image
 } from "lucide-react";
 import { cn } from "../utils/cn";
 import { useLanguage } from "../contexts/LanguageContext";
-import { motion } from "framer-motion";
+
 
 // Import design images
 import design1 from "../assets/Designs/3.jpg";
@@ -246,24 +244,7 @@ export default function ServicesPage() {
     { label: "Support Available", value: "24/7", icon: <Headphones className="w-5 h-5" /> }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
 
   return (
     <div className="w-full max-w-full px-4 sm:px-6 md:px-8">

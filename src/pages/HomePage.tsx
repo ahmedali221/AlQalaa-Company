@@ -8,31 +8,17 @@ import {
   Award,
   Phone,
   Zap,
-  Target,
   Building,
   MapPin,
   Mail,
   CheckCircle,
   Settings,
-  Lightbulb,
-  Trophy
+  Lightbulb
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { cn } from "../utils/cn";
 import { useLanguage } from "../contexts/LanguageContext";
 import Hero from "../components/Hero";
 import BrandsSlider from "../components/BrandsSlider";
-
-interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: 'default' | 'outline' | 'secondary';
-}
-
-
-
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'default' | 'outline' | 'ghost';
-  size?: 'default' | 'sm' | 'lg' | 'xl';
-}
 
 
 export default function HomePage() {
