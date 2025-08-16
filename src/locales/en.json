@@ -1,0 +1,902 @@
+{
+  "header": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "getQuote": "Get Quote",
+    "phone": "+971 58 192 9889",
+    "email": "alqalaa02@gmail.com",
+    "location": "Fujairah, Madhab"
+  },
+  "hero": {
+    "badge": "Professional AC Services",
+    "title": "Beat the UAE Heat with",
+    "titleHighlight": "Professional AC Solutions",
+    "description": "From Dubai to Abu Dhabi, we provide reliable air conditioning installation, maintenance, and repair services across the UAE. Stay cool year-round with our expert team.",
+    "scheduleButton": "Schedule Service",
+    "emergencyButton": "Emergency Repair",
+    "features": {
+      "fiveStar": "5-Star Service",
+      "licensed": "Licensed & Insured",
+      "emergency": "24/7 Emergency",
+      "experts": "Expert Technicians"
+    },
+    "trustText": "Trusted by thousands of customers across the UAE",
+    "trustItems": {
+      "licensed": "UAE Licensed",
+      "insured": "Fully Insured",
+      "certified": "ISO Certified",
+      "warranty": "5-Year Warranty"
+    }
+  },
+
+  "footer": {
+    "companyName": "AlQalaa Air Conditioning",
+    "companyNameArabic": "شركة القلعة للتبريد والتكييف",
+    "description": "Your trusted partner for central air conditioning solutions in the Eastern Region of UAE. Established in 2020, specializing in American and Asian HVAC systems with advanced engineering solutions.",
+    "services": {
+      "title": "Our Services",
+      "chilledWater": "Chilled Water Systems",
+      "ductSplit": "Duct Split Units",
+      "packageUnits": "Package Units",
+      "smartControl": "Smart Control Systems",
+      "maintenance": "Annual Maintenance",
+      "materials": "Materials Supply"
+    },
+    "areas": {
+      "title": "Service Areas",
+      "fujairah": "Fujairah",
+      "madhab": "Madhab",
+      "khorFakkan": "Khor Fakkan",
+      "kalba": "Kalba",
+      "easternRegion": "Eastern Region UAE"
+    },
+    "contact": {
+      "title": "Contact Info",
+      "mainPhone": "+971 58 192 9889",
+      "mainPhoneLabel": "Main Line",
+      "altPhone": "+971 50 123 4567",
+      "altPhoneLabel": "Alternative Line",
+      "email": "alqalaa02@gmail.com",
+      "emailLabel": "Business Inquiries",
+      "location": "Fujairah, UAE",
+      "locationDetail": "Madhab Area",
+      "instagram": "Follow our projects",
+      "instagramLabel": "Instagram"
+    },
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "warranty": "Warranty Policy"
+    },
+    "copyright": "© 2024 AlQalaa Air Conditioning & Cooling. All rights reserved."
+  },
+  "pages": {
+   
+    "about": {
+      "badge": "About AlQalaa Air Conditioning",
+      "title": "Your Trusted AC Partner",
+      "description": "Since 2020, AlQalaa Air Conditioning has been providing professional AC solutions across Eastern Region UAE. Based in Fujairah-Madhab, we specialize in chilled water systems, smart controls, and comprehensive HVAC services.",
+      "servicesButton": "Our Services",
+      "contactButton": "Contact Us",
+      "foundation": {
+        "badge": "Our Foundation",
+        "title": "Vision & Mission",
+        "subtitle": "Guiding principles that drive our excellence"
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "To be the leading AC solutions provider in Eastern Region UAE, known for innovation, quality, and exceptional customer service. We envision a future where every building has efficient, smart, and sustainable climate control systems."
+      },
+      "mission": {
+        "title": "Our Mission",
+        "description": "To deliver professional AC solutions through innovative technology, expert engineering, and reliable service. We commit to providing energy-efficient systems that enhance comfort while minimizing environmental impact."
+      },
+      "values": {
+        "badge": "Core Values",
+        "title": "What We Stand For",
+        "subtitle": "Values that define our culture and guide our actions",
+        "items": [
+          {
+            "title": "Excellence",
+            "description": "We strive for excellence in every project, ensuring the highest quality standards and customer satisfaction."
+          },
+          {
+            "title": "Reliability",
+            "description": "Our clients trust us to deliver reliable AC solutions with consistent performance and professional service."
+          },
+          {
+            "title": "Innovation",
+            "description": "We embrace innovative technologies and smart solutions to enhance AC system efficiency and user experience."
+          },
+          {
+            "title": "Quality",
+            "description": "Quality is at the core of everything we do, from equipment selection to installation and maintenance."
+          }
+        ]
+      },
+      "milestones": {
+        "badge": "Our Journey",
+        "title": "Company Milestones",
+        "subtitle": "Key moments that shaped our growth and success",
+        "items": [
+          {
+            "title": "Company Establishment",
+            "description": "AlQalaa Air Conditioning & Cooling established in Fujairah-Madhab area"
+          },
+          {
+            "title": "Rheem Partnership",
+            "description": "Became authorized agent for Rheem AC systems"
+          },
+          {
+            "title": "Smart Integration",
+            "description": "Introduced IoT and smart control systems"
+          },
+          {
+            "title": "Regional Expansion",
+            "description": "Extended services across Eastern Region UAE"
+          }
+        ]
+      },
+      "achievements": {
+        "badge": "Our Success",
+        "title": "By the Numbers",
+        "subtitle": "Achievements that reflect our commitment to excellence",
+        "items": [
+          {
+            "label": "Projects Completed"
+          },
+          {
+            "label": "Happy Clients"
+          },
+          {
+            "label": "Warranty Coverage"
+          },
+          {
+            "label": "Support Available"
+            
+          }
+        ]
+      },
+      "certifications": {
+        "badge": "Quality Assurance",
+        "title": "Certifications & Partnerships",
+       
+        "subtitle": "Licensed professionals with industry-leading partnerships",
+        "items": [
+          {
+            "title": "Rheem Authorized Agent",
+           
+            "description": "Official partnership for American AC systems"
+          },
+          {
+            "title": "Licensed Engineers",
+           
+            "description": "UAE licensed mechanical engineering team"
+          },
+          {
+            "title": "Quality Standards",
+           
+            "description": "ISO compliant quality management systems"
+          },
+          {
+            "title": "Municipality Approved",
+           
+            "description": "UAE municipality registered contractor"
+          }
+        ]
+      },
+      "team": {
+        "badge": "Our Team",
+        "title": "Expert Professionals",
+       
+        "subtitle": "Experienced specialists dedicated to your success",
+        "items": [
+          {
+            "name": "Engineering Team",
+           
+            "role": "Licensed Mechanical Engineers",
+            
+            "expertise": "HVAC Design & Analysis",
+           
+            "experience": "10+ years combined"
+           
+          },
+          {
+            "name": "Installation Team",
+           
+            "role": "Certified Technicians",
+            
+            "expertise": "System Installation & Commissioning",
+           
+            "experience": "5+ years average"
+           
+          },
+          {
+            "name": "Maintenance Team",
+           
+            "role": "Service Specialists",
+            
+            "expertise": "Preventive & Corrective Maintenance",
+           
+            "experience": "8+ years average"
+           
+          },
+          {
+            "name": "Customer Support",
+           
+            "role": "Client Relations Team",
+            
+            "expertise": "Technical Support & Consultation",
+           
+            "experience": "24/7 availability"
+           
+          }
+        ]
+      }
+    },
+    "contact": {
+      "badge": "Contact AlQalaa Air Conditioning",
+      "title": "Get in Touch",
+      "subtitle": "We're Here to Help",
+      "description": "Have questions about our services? Need a quote? Contact our team for prompt assistance with all your AC needs.",
+      "callButton": "Call Now",
+      "quoteButton": "Get Quote",
+      "contactDetails": {
+        "badge": "Contact Details",
+        "title": "How to Reach Us",
+        "subtitle": "Multiple ways to connect with our professional team"
+      },
+      "contactInfo": {
+        "phone": {
+          "title": "Phone Number",
+         
+          "subInfo": "Available 24/7 for emergency support"
+        },
+        "location": {
+          "title": "Office Location",
+         
+          "info": "Fujairah-Madhab Area",
+          "subInfo": "Eastern Region, United Arab Emirates"
+        },
+        "email": {
+          "title": "Email Address",
+         
+          "subInfo": "Professional inquiries and quotes"
+        },
+        "hours": {
+          "title": "Working Hours",
+         
+          "info": "Sunday - Thursday: 8:00 AM - 6:00 PM",
+          "subInfo": "Friday: 2:00 PM - 6:00 PM | Saturday: Closed"
+        }
+      },
+      "serviceAreas": {
+        "fujairah": {
+          "city": "Fujairah",
+          "coverage": "Complete coverage across all areas"    
+            },
+        "madhab": {
+          "city": "Madhab",
+          "coverage": "Main office location"
+        },
+        "kalba": {
+          "city": "Kalba",
+          "coverage": "Regular service area"
+        },
+        "khorFakkan": {
+          "city": "Khor Fakkan",
+          "coverage": "Extended service area"
+        },
+        "dibba": {
+          "city": "Dibba",
+          "coverage": "City center and surrounding areas"
+        },
+        "rasAlKhaimah": {
+          "city": "Ras Al Khaimah",
+          "coverage": "Selected areas (by appointment)"
+        }
+      },
+      "responseInfo": {
+        "responseTime": {
+          "title": "Response Time",
+          "value": "Within 4 hours",
+          "description": "For consultation requests"
+        },
+        "emergency": {
+          "title": "Emergency Support",
+         
+          "value": "24/7 Available",
+       
+          "description": "For critical AC issues"
+        },
+        "siteVisit": {
+          "title": "Site Visit",
+         
+          "value": "Same day",
+       
+          "description": "For Eastern Region locations"
+        },
+        "standard": {
+          "title": "Standard Service Calls",
+         
+          "value": "Same or Next Day",
+       
+          "description": "For regular maintenance and non-emergency repairs"
+        },
+        "consultation": {
+          "title": "Consultation Visits",
+         
+          "value": "Within 48 Hours",
+       
+          "description": "For system evaluations and installation planning"
+        },
+        "quote": {
+          "title": "Quote Delivery",
+         
+          "value": "Within 24 Hours",
+       
+          "description": "Fast turnaround on all project quotations"
+        }
+      },
+      "whatToExpect": {
+        "title": "What to Expect",
+        "subtitle": "Our professional response process"
+      },
+      "quickContact": {
+        "title": "Quick Contact Options",
+        "subtitle": "Reach us instantly through these direct channels",
+        "call": {
+          "title": "Call: +971 58 192 9889",
+          "subtitle": "24/7 Emergency Support"
+        },
+        "email": {
+          "title": "Email: info@alqalaa-ac.com",
+          "subtitle": "Professional Inquiries"
+        },
+        "whatsapp": {
+          "title": "WhatsApp: +971 58 192 9889",
+          "subtitle": "Quick Messaging Support"
+        },
+        "responseTime": {
+          "title": "Response Time",
+          "description": "We typically respond within 1-2 hours during business hours"
+        }
+      },
+      "serviceCoverage": {
+        "badge": "Service Coverage",
+        "title": "Our Service Areas",
+        "subtitle": "Professional AC services across Eastern Region UAE",
+        "coverageAreas": {
+          "badge": "Coverage Areas",
+          "title": "Serving the Entire Eastern Region",
+          "description": "We provide comprehensive AC services across major cities and areas in the Eastern Region of UAE, ensuring professional service wherever you are located."
+        }
+      },
+      "form": {
+        "title": "Request a Consultation",
+        "description": "Fill out the form below, and our team will get back to you within 4 hours during business hours.",
+        "firstName": {
+          "label": "First Name *",
+          "placeholder": "Ahmed"
+        },
+        "lastName": {
+          "label": "Last Name *",
+          "placeholder": "Al-Mansoori"
+        },
+        "phone": {
+          "label": "Phone Number *",
+          "placeholder": "+971 50 123 4567"
+        },
+        "email": {
+          "label": "Email Address",
+          "placeholder": "ahmed@example.com"
+        },
+        "location": {
+          "label": "Project Location *",
+          "placeholder": "Select Location",
+          "other": "Other Eastern Region Location"
+        },
+        "service": {
+          "label": "Service Required *",
+          "placeholder": "Select Service",
+          "chilledWater": "Chilled Water Systems",
+          "ductSplit": "Duct Split Units",
+          "packageUnits": "Package Units",
+          "smartControl": "Smart Control Systems",
+          "installation": "Installation & Commissioning",
+          "maintenance": "Annual Maintenance",
+          "repair": "Emergency Repair",
+          "design": "System Design & Consultation",
+          "consultation": "Consultation",
+          "other": "Other"
+        },
+        "details": {
+          "label": "Project Details",
+          "placeholder": "Please describe your project: building type, size, capacity requirements, timeline, budget considerations, and any specific requirements..."
+        },
+        "submit": "Send Consultation Request"
+      },
+      "location": {
+        "badge": "Visit Us",
+        "title": "Office Location",
+        "description": "Located in the heart of Fujairah-Madhab area",
+        "companyName": "AlQalaa Air Conditioning & Cooling",
+        "address": {
+          "area": "Fujairah-Madhab Area",
+          "region": "Eastern Region, United Arab Emirates"
+        },
+        "access": {
+          "title": "Easy Access",
+          "description": "Located near main roads with easy parking"
+        },
+        "hours": {
+          "title": "Business Hours",
+          "weekdays": "Sunday-Thursday: 8:00 AM - 6:00 PM",
+          "friday": "Friday: 2:00 PM - 6:00 PM"
+        },
+        "directions": "Get Directions",
+        "map": {
+          "title": "Interactive Map",
+          "description": "Click to view location"
+        }
+      },
+      "cta": {
+        "title": "Ready to Start Your AC Project?",
+        "description": "Contact AlQalaa Air Conditioning today for professional consultation and quality AC solutions across Eastern Region UAE.",
+        "callButton": "Call",
+        "messageButton": "Send Message"
+      }
+    },
+    "home": {
+      "welcome": "Welcome to AlQalaa Air Conditioning",
+      "featuredServices": "Featured Services",
+      "whyChooseUs": "Why Choose Us",
+      "trusted_since": "Trusted Since 2020",
+      "hero_title": "Professional AC Solutions",
+      "hero_subtitle": "Eastern Region UAE",
+      "hero_description": "Expert air conditioning services with American and Asian HVAC systems. From chilled water systems to smart controls, we deliver excellence across Fujairah, Madhab, and the entire Eastern Region.",
+      "services_button": "Our Services",
+      "contact_button": "Contact Us",
+      "features": {
+        "quality": {
+          "title": "Quality Guarantee",
+          "desc": "Premium materials and expert installation"
+        },
+        "warranty": {
+          "title": "5-Year Warranty",
+          "desc": "Comprehensive coverage on all systems"
+        },
+        "support": {
+          "title": "24/7 Support",
+          "desc": "Emergency service when you need it"
+        },
+        "installation": {
+          "title": "Expert Installation",
+          "desc": "Licensed technicians and proper setup"
+        }
+      },
+      "stats": {
+        "established": "Established",
+        "projects": "Projects Completed",
+        "warranty": "Warranty",
+        "region": "Eastern Region"
+      },
+      "quickServices": {
+        "chilledWater": "Chilled Water Systems",
+        "smartControl": "Smart Control Systems",
+        "maintenance": "Annual Maintenance"
+      },
+      "specialties": {
+        "american": {
+          "title": "American Systems",
+          "desc": "Rheem authorized partner"
+        },
+        "asian": {
+          "title": "Asian Systems",
+          "desc": "Efficient and reliable"
+        },
+        "smart": {
+          "title": "Smart Integration",
+          "desc": "IoT and automation"
+        }
+      },
+      "form": {
+        "title": "Get a Free Quote",
+        "subtitle": "Professional consultation within 4 hours",
+        "firstName": {
+          "label": "First Name",
+          "placeholder": "Ahmed"
+        },
+        "lastName": {
+          "label": "Last Name",
+          "placeholder": "Al-Mansoori"
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "+971 50 123 4567"
+        },
+        "service": {
+          "label": "Service Required",
+          "placeholder": "Select Service",
+          "chilledWater": "Chilled Water Systems",
+          "ductSplit": "Duct Split Units",
+          "packageUnits": "Package Units",
+          "smartControl": "Smart Control Systems",
+          "maintenance": "Annual Maintenance",
+          "materials": "Materials Supply"
+        },
+        "details": {
+          "label": "Project Details",
+          "placeholder": "Describe your project requirements..."
+        },
+        "submit": "Get Free Quote"
+      },
+      "services": {
+        "badge": "Our Services",
+        "title": "Professional AC Solutions",
+        "description": "Comprehensive air conditioning services for residential, commercial, and industrial applications across Eastern Region UAE.",
+        "most_popular": "Most Popular",
+        "learn_more": "Learn More"
+      },
+      "stats_section": {
+        "title": "Trusted Throughout Eastern Region UAE",
+        "subtitle": "Our experience and expertise since 2020"
+      },
+      "about_section": {
+        "badge": "About AlQalaa",
+        "title": "Leading AC Solutions in Eastern Region UAE",
+        "description": "Since 2020, AlQalaa Air Conditioning has been the trusted name for professional HVAC solutions across Fujairah and the Eastern Region. We specialize in chilled water systems, smart controls, and comprehensive maintenance services.",
+        "features": {
+          "licensed": "Licensed and certified technicians",
+          "warranty": "5-year warranty on all installations",
+          "support": "24/7 emergency support"
+        },
+        "button": "Learn More About Us"
+      },
+      "services_section": {
+        "badge": "Our Services",
+        "title": "Comprehensive HVAC Solutions for Every Need",
+        "description": "From chilled water systems to smart control integration, we provide end-to-end HVAC solutions that ensure optimal performance and energy efficiency for commercial and residential properties.",
+        "items": {
+          "chilledWater": "Chilled Water",
+          "smartControls": "Smart Controls",
+          "maintenance": "Maintenance",
+          "installation": "Installation"
+        },
+        "button": "View All Services"
+      },
+      "whyChooseUs_section": {
+        "badge": "Why Choose Us",
+        "title": "Experience the AlQalaa Difference",
+        "description": "Our commitment to quality, reliability, and customer satisfaction sets us apart. With years of experience and a team of certified professionals, we deliver results that exceed expectations.",
+        "features": {
+          "trackRecord": {
+            "title": "Proven Track Record",
+            "description": "Over 100 successful projects completed since 2020"
+          },
+          "timelyDelivery": {
+            "title": "Timely Delivery",
+            "description": "We respect your time and deliver projects on schedule"
+          },
+          "innovation": {
+            "title": "Innovation",
+            "description": "Latest technology and smart solutions for modern needs"
+          }
+        },
+        "button": "Get Free Quote"
+      },
+      "contact_section": {
+        "badge": "Get In Touch",
+        "title": "Ready to Start Your Project?",
+        "description": "Located in Fujairah, Madhab, we serve the entire Eastern Region of UAE. Contact us today for a free consultation and let us help you achieve the perfect climate control solution.",
+        "methods": {
+          "call": "Call Us",
+          "email": "Email",
+          "location": "Location"
+        },
+        "buttons": {
+          "call": "Call Now",
+          "email": "Send Email"
+        }
+      },
+      "cta_section": {
+        "title": "Ready for Professional AC Solutions?",
+        "description": "Experience the difference of working with Eastern Region's trusted AC specialists. Contact AlQalaa Air Conditioning for expert consultation and premium service.",
+        "buttons": {
+          "call": "Call: +971 58 192 9889",
+          "consultation": "Schedule Consultation"
+        }
+      },
+      "brands_section": {
+        "badge": "Trusted Partners",
+        "title": "Premium AC Brands We Work With",
+        "description": "We partner with world-leading air conditioning manufacturers to deliver the highest quality systems and ensure optimal performance for your projects.",
+        "footer": "Certified installer and authorized service provider for premium AC brands"
+      },
+      "portfolio_section": {
+        "badge": "Our Portfolio",
+        "title": "Recent Projects",
+        "description": "Explore our latest AC installations and maintenance projects across Eastern Region UAE. Each project showcases our commitment to quality and innovation.",
+        "cta": "View All Projects",
+        "projects": {
+          "project1": {
+            "category": "Commercial",
+            "title": "Fujairah Mall AC System",
+            "description": "Complete chilled water system installation for a major shopping center in Fujairah, featuring advanced temperature control and energy-efficient cooling technology.",
+            "year": "2024",
+            "button": "View Details",
+            "features": {
+              "chilledWater": "Chilled water system installation",
+              "smartControl": "Smart temperature control",
+              "maintenance": "Comprehensive maintenance plan"
+            }
+          },
+          "project2": {
+            "category": "Smart Control",
+            "title": "Madhab Office Complex",
+            "description": "IoT-enabled smart control system for automated climate management, providing remote monitoring and energy optimization for modern office environments.",
+            "year": "2024",
+            "button": "View Details",
+            "features": {
+              "iot": "IoT-enabled monitoring",
+              "automation": "Automated climate control",
+              "monitoring": "Remote system monitoring"
+            }
+          },
+          "project3": {
+            "category": "Maintenance",
+            "title": "Khor Fakkan Hotel",
+            "description": "Annual maintenance and system optimization for luxury hotel AC systems, ensuring optimal performance and guest comfort throughout the year.",
+            "year": "2024",
+            "button": "View Details",
+            "features": {
+              "annual": "Annual maintenance program",
+              "optimization": "System optimization",
+              "luxury": "Luxury hotel standards"
+            }
+          }
+        }
+      }
+    },
+    "services": {
+      "badge": "Professional AC Services",
+      "title": "Comprehensive HVAC Solutions",
+      "description": "From chilled water systems to smart controls, we deliver professional air conditioning solutions across Eastern Region UAE. Expert installation, maintenance, and repair services.",
+      "quoteButton": "Get Free Quote",
+      "callButton": "Call Now",
+      "mostPopular": "Most Popular",
+      "keyFeatures": "Key Features",
+      "capacityRange": "Capacity Range",
+      "warranty": "Warranty",
+      "getDetails": "Get Details",
+      "core": {
+        "badge": "Core Services",
+        "title": "Our Main Services",
+        "description": "Comprehensive HVAC solutions designed for optimal performance and energy efficiency"
+      },
+      "mainServices": {
+        "chilled": {
+          "title": "Chilled Water Systems",
+          "description": "Advanced chilled water systems for large commercial and industrial applications",
+          "features": [
+            "Energy-efficient cooling technology",
+            "Scalable for large buildings",
+            "Advanced temperature control",
+            "Reduced operating costs"
+          ],
+          "capacity": "50-500 tons",
+          "warranty": "5-year comprehensive warranty"
+        },
+        "duct": {
+          "title": "Duct Split Units",
+          "description": "Flexible duct split systems for commercial and residential applications",
+          "features": [
+            "Flexible installation options",
+            "Zone-based temperature control",
+            "Quiet operation",
+            "Easy maintenance access"
+          ],
+          "capacity": "2-10 tons",
+          "warranty": "3-year parts warranty"
+        },
+        "package": {
+          "title": "Package Units",
+          "description": "Complete packaged solutions for immediate installation and operation",
+          "features": [
+            "Ready-to-install systems",
+            "All-in-one design",
+            "Quick commissioning",
+            "Space-efficient solutions"
+          ],
+          "capacity": "5-25 tons",
+          "warranty": "2-year comprehensive warranty"
+        },
+        "smart": {
+          "title": "Smart Control Systems",
+          "description": "IoT-enabled smart control systems for automated climate management",
+          "features": [
+            "Remote monitoring and control",
+            "Energy optimization algorithms",
+            "Predictive maintenance alerts",
+            "Mobile app integration"
+          ],
+          "capacity": "Compatible with all systems",
+          "warranty": "1-year software warranty"
+        }
+      },
+      "additionalServices": {
+        "badge": "Support Services",
+        "title": "Additional Services",
+        "description": "Comprehensive support services to ensure your HVAC system operates at peak performance",
+        "supportServices": "Support Services",
+        "beyondInstallation": "Beyond Installation",
+        "installation": {
+          "title": "Professional Installation",
+          "description": "Expert installation by certified technicians with proper commissioning"
+        },
+        "maintenance": {
+          "title": "Annual Maintenance",
+          "description": "Preventive maintenance programs to extend system life and efficiency"
+        },
+        "materials": {
+          "title": "Materials Supply",
+          "description": "High-quality HVAC materials and spare parts from trusted manufacturers"
+        },
+        "design": {
+          "title": "System Design",
+          "description": "Custom HVAC system design and engineering consultation"
+        },
+        "emergency": {
+          "title": "Emergency Services",
+          "description": "24/7 emergency repair and troubleshooting services"
+        },
+        "optimization": {
+          "title": "System Optimization",
+          "description": "Performance optimization and energy efficiency improvements"
+        }
+      },
+      "process": {
+        "badge": "Our Process",
+        "title": "How We Work",
+        "description": "Our proven process ensures quality results and customer satisfaction"
+      },
+      "processSteps": {
+        "consultation": {
+          "title": "Initial Consultation",
+          "description": "Free consultation to understand your requirements and project scope",
+          "detail": "Project Assessment",
+          "detailText": "We conduct a thorough assessment of your space, requirements, and budget to create a tailored solution that meets your specific needs."
+        },
+        "design": {
+          "title": "System Design",
+          "description": "Custom system design and engineering based on your specific needs",
+          "detail": "Custom Engineering",
+          "detailText": "Our engineering team creates detailed system designs, load calculations, and technical specifications for optimal performance."
+        },
+        "procurement": {
+          "title": "Equipment Procurement",
+          "description": "Sourcing high-quality equipment from trusted manufacturers",
+          "detail": "Quality Equipment",
+          "detailText": "We source premium HVAC equipment from trusted manufacturers like Rheem, ensuring reliability and performance."
+        },
+        "installation": {
+          "title": "Professional Installation",
+          "description": "Expert installation by certified technicians with quality assurance",
+          "detail": "Expert Installation",
+          "detailText": "Our certified technicians ensure precise installation with attention to detail and adherence to industry standards."
+        },
+        "testing": {
+          "title": "Testing & Commissioning",
+          "description": "Comprehensive testing and system commissioning for optimal performance",
+          "detail": "System Validation",
+          "detailText": "We conduct comprehensive testing, performance validation, and system commissioning to ensure everything works perfectly."
+        },
+        "support": {
+          "title": "Ongoing Support",
+          "description": "Continuous support and maintenance services for long-term reliability",
+          "detail": "Lifetime Support",
+          "detailText": "We provide ongoing maintenance, 24/7 emergency support, and regular system optimization for long-term reliability."
+        }
+      },
+      "certifications": {
+        "badge": "Certifications",
+        "title": "Our Certifications",
+        "description": "Industry-recognized certifications and partnerships that ensure quality",
+        "sectionTitle": "Quality Assurance",
+        "sectionDescription": "Our certifications and partnerships demonstrate our commitment to excellence",
+        "certifications": "Certifications",
+        "industryRecognition": "Industry Recognition",
+        "rheem": {
+          "title": "Rheem Authorized Agent"
+        },
+        "engineers": {
+          "title": "Licensed Engineers"
+        },
+        "municipality": {
+          "title": "Municipality Approved"
+        },
+        "quality": {
+          "title": "Quality Standards"
+        }
+      },
+      "areas": {
+        "badge": "Service Areas",
+        "title": "Coverage Areas",
+        "description": "Comprehensive HVAC services across Eastern Region UAE",
+        "serviceAreas": "Service Areas",
+        "easternRegionCoverage": "Eastern Region Coverage",
+        "coverageAreas": "Coverage Areas",
+        "servingRegion": "Serving Eastern Region",
+        "regionDescription": "We provide comprehensive HVAC services across the entire Eastern Region of UAE",
+        "locations": {
+          "fujairah": {
+            "title": "Fujairah"
+          },
+          "madhab": {
+            "title": "Madhab"
+          },
+          "kalba": {
+            "title": "Kalba"
+          },
+          "khor_fakkan": {
+            "title": "Khor Fakkan"
+          },
+          "dibba": {
+            "title": "Dibba"
+          },
+          "ras_al_khaimah": {
+            "title": "Ras Al Khaimah"
+          }
+        }
+      },
+      "cta": {
+        "badge": "Get Started",
+        "title": "Ready for Professional AC Solutions?",
+        "description": "Experience the difference of working with Eastern Region's trusted HVAC specialists. Contact us today for expert consultation and premium service.",
+        "call_button": "Call Now",
+        "quote_button": "Get Free Quote"
+      },
+      "designs": {
+        "badge": "Design Portfolio",
+        "title": "Our Design Portfolio",
+        "description": "Explore our diverse portfolio of HVAC system designs for various applications",
+        "viewDetails": "View Details",
+        "getQuote": "Get Quote",
+        "cta": {
+          "title": "Ready to see your project come to life?",
+          "portfolio": "View Portfolio",
+          "consultation": "Book Consultation"
+        },
+        "items": {
+          "residential": {
+            "title": "Residential Villa",
+            "description": "Luxury villa with smart climate control",
+            "type": "Residential"
+          },
+          "commercial": {
+            "title": "Commercial Building",
+            "description": "Office complex with central cooling",
+            "type": "Commercial"
+          },
+          "industrial": {
+            "title": "Industrial Facility",
+            "description": "Factory with process cooling systems",
+            "type": "Industrial"
+          },
+          "office": {
+            "title": "Modern Office",
+            "description": "Contemporary office with smart controls",
+            "type": "Office"
+          },
+          "luxury": {
+            "title": "Luxury Hotel",
+            "description": "5-star hotel with premium HVAC",
+            "type": "Luxury"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,785 @@
+
+import { 
+  Star, 
+  Shield, 
+  Clock, 
+  Wrench, 
+  CheckCircle, 
+  ArrowRight,
+  Users,
+  Award,
+  Phone,
+  Building,
+  Target,
+  Eye,
+  MapPin,
+  Lightbulb,
+  HandHeart,
+  Trophy,
+  Zap,
+  Settings
+} from "lucide-react";
+import { motion } from "framer-motion";
+import { cn } from "../utils/cn";
+import { useLanguage } from "../contexts/LanguageContext";
+import BrandsSlider from "../components/BrandsSlider";
+
+
+interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
+  variant?: 'default' | 'outline';
+}
+
+function Badge({ 
+  className, 
+  variant = 'default', 
+  ...props 
+}: BadgeProps) {
+  return (
+    <div
+      className={cn(
+        "inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium",
+        variant === 'default' && "bg-primary text-white",
+        variant === 'outline' && "border border-primary text-primary",
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'default' | 'outline';
+  size?: 'default' | 'sm' | 'lg';
+}
+
+function Button({ 
+  className, 
+  variant = 'default', 
+  size = 'default', 
+  ...props 
+}: ButtonProps) {
+  return (
+    <button
+      className={cn(
+        "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50",
+        variant === 'default' && "bg-primary text-white hover:bg-primary/90",
+        variant === 'outline' && "border border-primary bg-white text-primary hover:bg-primary hover:text-white",
+        size === 'default' && "h-10 px-4 py-2",
+        size === 'sm' && "h-9 px-3 rounded-md",
+        size === 'lg' && "h-11 px-8 rounded-md",
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
+
+
+
+
+
+export default function AboutPage() {
+  const { t } = useLanguage();
+  
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut" as const
+      }
+    },
+    hover: {
+      scale: 1.05,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut" as const
+      }
+    }
+  };
+
+  const slideInVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut" as const
+      }
+    }
+  };
+
+  const slideInRightVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut" as const
+      }
+    }
+  };
+
+  const fadeInUpVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const
+      }
+    }
+  };
+
+  const companyValues = [
+    {
+      icon: <Target className="w-8 h-8 text-primary" />,
+      title: t('pages.about.values.items.0.title'),
+      description: t('pages.about.values.items.0.description')
+    },
+    {
+      icon: <HandHeart className="w-8 h-8 text-primary" />,
+      title: t('pages.about.values.items.1.title'),
+      description: t('pages.about.values.items.1.description')
+    },
+    {
+      icon: <Lightbulb className="w-8 h-8 text-primary" />,
+      title: t('pages.about.values.items.2.title'),
+      description: t('pages.about.values.items.2.description')
+    },
+    {
+      icon: <Trophy className="w-8 h-8 text-primary" />,
+      title: t('pages.about.values.items.3.title'),
+      description: t('pages.about.values.items.3.description')
+    }
+  ];
+
+  const teamMembers = [
+    {
+      name: t('pages.about.team.items.0.name'),
+      role: t('pages.about.team.items.0.role'),
+      expertise: t('pages.about.team.items.0.expertise'),
+      experience: t('pages.about.team.items.0.experience'),
+      icon: <Users className="w-6 h-6 text-white" />
+    },
+    {
+      name: t('pages.about.team.items.1.name'),
+      role: t('pages.about.team.items.1.role'),
+      expertise: t('pages.about.team.items.1.expertise'),
+      experience: t('pages.about.team.items.1.experience'),
+      icon: <Wrench className="w-6 h-6 text-white" />
+    },
+    {
+      name: t('pages.about.team.items.2.name'),
+      role: t('pages.about.team.items.2.role'),
+      expertise: t('pages.about.team.items.2.expertise'),
+      experience: t('pages.about.team.items.2.experience'),
+      icon: <Settings className="w-6 h-6 text-white" />
+    },
+    {
+      name: t('pages.about.team.items.3.name'),
+      role: t('pages.about.team.items.3.role'),
+      expertise: t('pages.about.team.items.3.expertise'),
+      experience: t('pages.about.team.items.3.experience'),
+      icon: <Phone className="w-6 h-6 text-white" />
+    }
+  ];
+
+  const milestones = [
+    {
+      year: "2020",
+      title: t('pages.about.milestones.items.0.title'),
+      description: t('pages.about.milestones.items.0.description'),
+      icon: <Building className="w-6 h-6 text-white" />
+    },
+    {
+      year: "2021",
+      title: t('pages.about.milestones.items.1.title'),
+      description: t('pages.about.milestones.items.1.description'),
+      icon: <Star className="w-6 h-6 text-white" />
+    },
+    {
+      year: "2022",
+      title: t('pages.about.milestones.items.2.title'),
+      description: t('pages.about.milestones.items.2.description'),
+      icon: <Zap className="w-6 h-6 text-white" />
+    },
+    {
+      year: "2024",
+      title: t('pages.about.milestones.items.3.title'),
+      description: t('pages.about.milestones.items.3.description'),
+      icon: <MapPin className="w-6 h-6 text-white" />
+    }
+  ];
+
+  const achievements = [
+    { number: "100+", label: t('pages.about.achievements.items.0.label'), icon: <Trophy className="w-8 h-8 text-white" /> },
+    { number: "50+", label: t('pages.about.achievements.items.1.label'), icon: <Users className="w-8 h-8 text-white" /> },
+    { number: "5Y", label: t('pages.about.achievements.items.2.label'), icon: <Shield className="w-8 h-8 text-white" /> },
+    { number: "24/7", label: t('pages.about.achievements.items.3.label'), icon: <Clock className="w-8 h-8 text-white" /> }
+  ];
+
+  const certifications = [
+    {
+      title: t('pages.about.certifications.items.0.title'),
+      description: t('pages.about.certifications.items.0.description'),
+      icon: <Star className="w-6 h-6 text-primary" />
+    },
+    {
+      title: t('pages.about.certifications.items.1.title'),
+      description: t('pages.about.certifications.items.1.description'),
+      icon: <Award className="w-6 h-6 text-primary" />
+    },
+    {
+      title: t('pages.about.certifications.items.2.title'),
+      description: t('pages.about.certifications.items.2.description'),
+      icon: <CheckCircle className="w-6 h-6 text-primary" />
+    },
+    {
+      title: t('pages.about.certifications.items.3.title'),
+      description: t('pages.about.certifications.items.3.description'),
+      icon: <Shield className="w-6 h-6 text-primary" />
+    }
+  ];
+
+  return (
+    <div className="overflow-x-hidden">
+      {/* Hero Section */}
+      <motion.section 
+        className="bg-gradient-to-br from-snow via-white to-accent py-12 relative"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        <div className="absolute inset-0 opacity-40">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(247, 199, 144, 0.1) 1px, transparent 0)`,
+            backgroundSize: '25px 25px'
+          }}></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div variants={itemVariants}>
+              <Badge variant="outline" className="mb-6 text-primary border-primary">
+                <Building className="w-4 h-4 mr-2" />
+                {t('pages.about.badge')}
+              </Badge>
+            </motion.div>
+            
+            <motion.h1 
+              className="text-4xl md:text-6xl font-bold mb-6"
+              variants={itemVariants}
+            >
+              {t('pages.about.title')}
+            </motion.h1>
+            
+            <motion.p 
+              className="text-xl text-primary mb-8 leading-relaxed"
+              variants={itemVariants}
+            >
+              {t('pages.about.description')}
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-wrap justify-center gap-4"
+              variants={itemVariants}
+            >
+              <Button size="lg" className="bg-primary hover:bg-primary/90 group hover:scale-105 transition-all duration-300 border-0">
+                {t('pages.about.servicesButton')}
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </Button>
+              <Button variant="outline" size="lg" className="group hover:scale-105 transition-all duration-300 border-primary text-primary hover:bg-primary hover:text-white">
+                <Phone className="w-4 h-4 mr-2 animate-pulse" />
+                {t('pages.about.contactButton')}
+              </Button>
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Section 1: Vision & Mission - Image Left, Text Right */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-8">
+          <motion.div 
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUpVariants}
+          >
+            <Badge variant="outline" className="mb-6 text-primary border-primary">{t('pages.about.foundation.badge')}</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.about.foundation.title')}</h2>
+            <p className="text-primary text-lg">{t('pages.about.foundation.subtitle')}</p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Image Side */}
+            <motion.div 
+              className="relative"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={slideInVariants}
+            >
+              <div className="relative">
+                <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&q=80" alt="Modern UAE building representing company foundation" className="w-full h-96 object-cover rounded-3xl" />
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-accent to-secondary rounded-2xl opacity-80"></div>
+              </div>
+            </motion.div>
+
+            {/* Text Side */}
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={slideInRightVariants}
+            >
+              <div className="space-y-6">
+                <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                  {t('pages.about.foundation.badge')}
+                </div>
+                <h2 className="text-4xl font-bold text-primary leading-tight">
+                  {t('pages.about.foundation.title')}
+                </h2>
+                <p className="text-primary text-lg leading-relaxed">
+                  {t('pages.about.foundation.subtitle')}
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Eye className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-primary mb-1">{t('pages.about.vision.title')}</h4>
+                      <p className="text-primary text-sm">{t('pages.about.vision.description')}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Target className="w-6 h-6 text-secondary" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-primary mb-1">{t('pages.about.mission.title')}</h4>
+                      <p className="text-primary text-sm">{t('pages.about.mission.description')}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 2: Company Values - Text Left, Image Right */}
+      <section className="py-8 ">
+        <div className="container mx-auto px-12">
+          <motion.div 
+            className="text-center mb-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUpVariants}
+          >
+            <Badge variant="outline" className="mb-6 text-primary border-primary">{t('pages.about.values.badge')}</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.about.values.title')}</h2>
+            <p className="text-primary text-lg">{t('pages.about.values.subtitle')}</p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            {/* Text Side */}
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={slideInVariants}
+            >
+              <div className="space-y-4">
+                <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
+                  {t('pages.about.values.badge')}
+                </div>
+                <h2 className="text-4xl font-bold text-primary leading-tight">
+                  {t('pages.about.values.title')}
+                </h2>
+                <p className="text-primary text-lg leading-relaxed">
+                  {t('pages.about.values.subtitle')}
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  {companyValues.map((value, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="w-10 h-10 text-black rounded-lg flex items-center justify-center">
+                        {value.icon}
+                      </div>
+                      <span className="text-black font-medium text-sm">{value.title}</span>
+                      <p className="text-black text-sm">{value.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Image Side */}
+            <motion.div 
+              className="relative"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={slideInRightVariants}
+            >
+              <div className="relative">
+                <img src="https://media.istockphoto.com/id/1413633369/photo/mobile-jigsaw-puzzle-pieces-business-cooperation-concept-teamwork-and-cooperation-businessmen.jpg?s=2048x2048&w=is&k=20&c=QJCTW4pZP12kxf9RzvRjU1LPjqFCiPaJIMf5YucpCsQ=" alt="Contemporary Dubai office building for company values" className="w-full h-96 object-cover rounded-3xl" />
+                <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-2xl opacity-80"></div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: Company Timeline - Image Left, Text Right */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUpVariants}
+          >
+            <Badge variant="outline" className="mb-6 text-primary border-primary">{t('pages.about.milestones.badge')}</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.about.milestones.title')}</h2>
+            <p className="text-primary text-lg">{t('pages.about.milestones.subtitle')}</p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Image Side */}
+            <motion.div 
+              className="relative"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={slideInVariants}
+            >
+              <div className="relative">
+                <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&q=80" alt="Iconic UAE architecture symbolizing company milestones" className="w-full h-96 object-cover rounded-3xl" />
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-secondary to-primary rounded-2xl opacity-80"></div>
+              </div>
+            </motion.div>
+
+            {/* Text Side */}
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={slideInRightVariants}
+            >
+              <div className="space-y-6">
+                <div className="inline-flex items-center px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                  {t('pages.about.milestones.badge')}
+                </div>
+                <h2 className="text-4xl font-bold text-primary leading-tight">
+                  {t('pages.about.milestones.title')}
+                </h2>
+                <p className="text-primary text-lg leading-relaxed">
+                  {t('pages.about.milestones.subtitle')}
+                </p>
+                <div className="space-y-4">
+                  {milestones.slice(0, 3).map((milestone, index) => (
+                    <div key={index} className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        {milestone.icon}
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-primary mb-1">{milestone.year} - {milestone.title}</h4>
+                        <p className="text-primary text-sm">{milestone.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: Team Section - Text Left, Image Right */}
+      <section className="py-12 bg-gradient-to-b from-snow to-white">
+        <div className="container mx-auto px-12">
+          <motion.div 
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUpVariants}
+          >
+            <Badge variant="outline" className="mb-6 text-primary border-primary">{t('pages.about.team.badge')}</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.about.team.title')}</h2>
+            <p className="text-primary text-lg">{t('pages.about.team.subtitle')}</p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Text Side */}
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={slideInVariants}
+            >
+              <div className="space-y-6">
+                <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                  {t('pages.about.team.badge')}
+                </div>
+                <h2 className="text-4xl font-bold text-primary leading-tight">
+                  {t('pages.about.team.title')}
+                </h2>
+                <p className="text-primary text-lg leading-relaxed">
+                  {t('pages.about.team.subtitle')}
+                </p>
+                <div className="space-y-4">
+                  {teamMembers.slice(0, 3).map((member, index) => (
+                    <div key={index} className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        {member.icon}
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-primary mb-1">{member.name}</h4>
+                        <p className="text-primary text-sm">{member.role}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Image Side */}
+            <motion.div 
+              className="relative"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={slideInRightVariants}
+            >
+              <div className="relative">
+                <img src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?auto=format&fit=crop&q=80" alt="Modern office building in UAE for team section" className="w-full h-96 object-cover rounded-3xl" />
+                <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-accent to-secondary rounded-2xl opacity-80"></div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5: Achievements - Image Left, Text Right */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUpVariants}
+          >
+            <Badge variant="outline" className="mb-6 text-primary border-primary">{t('pages.about.achievements.badge')}</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.about.achievements.title')}</h2>
+            <p className="text-primary text-lg">{t('pages.about.achievements.subtitle')}</p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid md:grid-cols-4 gap-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={containerVariants}
+          >
+            {achievements.map((achievement, index) => (
+              <motion.div 
+                key={index} 
+                className="text-center group"
+                variants={itemVariants}
+                whileHover="hover"
+              >
+                <motion.div 
+                  className="relative"
+                  variants={cardVariants}
+                >
+                  <div className="relative w-24 h-24 bg-primary rounded-3xl flex items-center justify-center mx-auto mb-6 transition-all duration-500 group-hover:scale-110 group-hover:-rotate-6 border border-accent">
+                    {achievement.icon}
+                  </div>
+                </motion.div>
+                <motion.div 
+                  className="text-4xl font-bold text-primary mb-2"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                >
+                  {achievement.number}
+                </motion.div>
+                <div className="text-primary font-medium mb-1">{achievement.label}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 6: Certifications - Text Left, Image Right */}
+      <section className="py-12 bg-gradient-to-b from-snow to-white">
+        <div className="container mx-auto px-12">
+          <motion.div 
+            className="text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUpVariants}
+          >
+            <Badge variant="outline" className="mb-6 text-primary border-primary">{t('pages.about.certifications.badge')}</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.about.certifications.title')}</h2>
+            <p className="text-primary text-lg">{t('pages.about.certifications.subtitle')}</p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            {/* Text Side */}
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={slideInVariants}
+            >
+              <div className="space-y-6">
+                <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
+                  {t('pages.about.certifications.badge')}
+                </div>
+                <h2 className="text-4xl font-bold text-primary leading-tight">
+                  {t('pages.about.certifications.title')}
+                </h2>
+                <p className="text-primary text-lg leading-relaxed">
+                  {t('pages.about.certifications.subtitle')}
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  {certifications.slice(0, 4).map((cert, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                        {cert.icon}
+                      </div>
+                      <span className="text-primary font-medium text-sm">{cert.title}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Image Side */}
+            <motion.div 
+              className="relative"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={slideInRightVariants}
+            >
+              <div className="relative">
+                <img src="https://images.unsplash.com/photo-1497366216548-375260702eec?auto=format&fit=crop&q=80" alt="Professional building in Dubai representing certifications" className="w-full h-96 object-cover rounded-3xl" />
+                <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-2xl opacity-80"></div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section: Trusted Brands - Auto Slider */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-12">
+          <motion.div 
+            className="text-center mb-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUpVariants}
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium mb-6">
+              {t('pages.home.brands_section.badge')}
+            </div>
+            <h2 className="text-3xl font-bold text-primary mb-4">{t('pages.home.brands_section.title')}</h2>
+            <p className="text-primary text-lg max-w-2xl mx-auto">
+              {t('pages.home.brands_section.description')}
+            </p>
+          </motion.div>
+
+          <BrandsSlider />
+
+          <motion.div 
+            className="text-center mt-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeInUpVariants}
+          >
+            <p className="text-primary text-sm">
+              {t('pages.home.brands_section.footer')}
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <motion.section 
+        className="py-20 gradient-primary text-white relative overflow-hidden"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.2) 1px, transparent 0)`,
+            backgroundSize: '30px 30px'
+          }}></div>
+        </div>
+        <div className="container mx-auto px-4 text-center relative">
+          <motion.div variants={itemVariants}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              {t('pages.contact.cta.title')}
+            </h2>
+            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+              {t('pages.contact.cta.description')}
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 group hover:scale-105 transition-all duration-300">
+                <Phone className="w-5 h-5 mr-2 animate-pulse" />
+                {t('pages.contact.callButton')}: {t('header.phone')}
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </motion.section>
+    </div>
+  );
+}
