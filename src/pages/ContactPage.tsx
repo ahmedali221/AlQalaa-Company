@@ -17,6 +17,7 @@ import {
 import { motion } from "framer-motion";
 import { cn } from "../utils/cn";
 import { useLanguage } from "../contexts/LanguageContext";
+import { useEffect } from "react";
 
 interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: 'default' | 'outline';
@@ -68,7 +69,12 @@ function Button({
 }
 
 export default function ContactPage() {
-  const { t } = useLanguage();
+  const { t, dir } = useLanguage();
+  
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
   // Animation variants
   const containerVariants = {
@@ -224,7 +230,7 @@ export default function ContactPage() {
     <div className="overflow-x-hidden">
       {/* Hero Section */}
       <motion.section 
-        className="bg-gradient-to-br from-snow via-white to-accent py-16 relative"
+        className="bg-gradient-to-br from-snow via-white to-accent py-8 sm:py-12 relative"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -260,25 +266,19 @@ export default function ContactPage() {
               {t('pages.contact.description')}
             </motion.p>
             
-            <motion.div 
-              className="flex flex-wrap justify-center gap-4"
-              variants={itemVariants}
-            >
-              <Button size="lg" className="bg-primary hover:bg-primary/90 group hover:scale-105 transition-all duration-300 border-0">
-                <Phone className="w-5 h-5 mr-2 animate-pulse" />
-                {t('pages.contact.callButton')}: +971 58 192 9889
-              </Button>
-              <Button variant="outline" size="lg" className="group hover:scale-105 transition-all duration-300 border-primary text-primary hover:bg-primary hover:text-white">
-                {t('pages.contact.quoteButton')}
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
-            </motion.div>
+          
           </div>
         </div>
       </motion.section>
 
       {/* Contact Information */}
-      <section className="py-16 bg-white">
+      <motion.section 
+        className="py-8 sm:py-12 bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
         <div className="container mx-auto px-8">
           <motion.div 
             className="text-center mb-16"
@@ -321,10 +321,16 @@ export default function ContactPage() {
             ))}
           </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Section 1: Contact Form & Response Info - Text Left, Image Right */}
-      <section className="py-16 bg-gradient-to-b from-snow to-white">
+      <motion.section 
+        className="py-8 sm:py-12 bg-gradient-to-b from-snow to-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
         <div className="container mx-auto px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Contact Form */}
@@ -434,7 +440,7 @@ export default function ContactPage() {
                   </div>
                   
                   <Button className="w-full bg-primary hover:bg-primary/90 py-4 group hover:scale-105 transition-all duration-300 border-0">
-                    <Send className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <Send className={`w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 ${dir === 'rtl' ? 'ml-2' : 'mr-2'}`} />
                     {t('pages.contact.form.submit')}
                   </Button>
                 </form>
@@ -486,56 +492,62 @@ export default function ContactPage() {
 
               {/* Quick Contact Options */}
               <motion.div 
-                className="bg-white/90 backdrop-blur-sm border border-accent rounded-3xl p-8"
+                className="bg-white/90 backdrop-blur-sm border border-accent rounded-3xl p-10"
                 variants={cardVariants}
                 whileHover="hover"
               >
-                <h3 className="text-xl font-bold mb-4 text-center text-primary">{t('pages.contact.quickContact.title')}</h3>
-                <p className="text-primary text-center mb-6">{t('pages.contact.quickContact.subtitle')}</p>
-                <div className="space-y-4">
+                <h3 className="text-2xl font-bold mb-6 text-center text-primary">{t('pages.contact.quickContact.title')}</h3>
+                <p className="text-primary text-center mb-8 text-lg">{t('pages.contact.quickContact.subtitle')}</p>
+                <div className="space-y-6"> 
                   <a href="tel:+97158192989" className="block">
-                    <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white group hover:scale-105 transition-all duration-300">
-                      <Phone className="w-5 h-5 mr-3 animate-pulse text-primary group-hover:text-white" />
+                    <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white group hover:scale-105 transition-all duration-300 p-6 h-auto">
+                      <Phone className="w-6 h-6 mr-4 animate-pulse text-primary group-hover:text-white" />
                       <div className="text-left">
-                        <div className="font-bold">{t('pages.contact.quickContact.call.title')}</div>
-                        <div className="text-sm opacity-70">{t('pages.contact.quickContact.call.subtitle')}</div>
+                        <div className="font-bold text-lg">{t('pages.contact.quickContact.call.title')}</div>
+                        <div className="text-base opacity-70">{t('pages.contact.quickContact.call.subtitle')}</div>
                       </div>
-                      <ArrowRight className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+                      <ArrowRight className="w-5 h-5 ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                     </Button>
                   </a>
                   <a href="mailto:info@alqalaa-ac.com" className="block">
-                    <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white group hover:scale-105 transition-all duration-300">
-                      <Mail className="w-5 h-5 mr-3 text-primary group-hover:text-white" />
+                    <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white group hover:scale-105 transition-all duration-300 p-6 h-auto">
+                      <Mail className="w-6 h-6 mr-4 text-primary group-hover:text-white" />
                       <div className="text-left">
-                        <div className="font-bold">{t('pages.contact.quickContact.email.title')}</div>
-                        <div className="text-sm opacity-70">{t('pages.contact.quickContact.email.subtitle')}</div>
+                        <div className="font-bold text-lg">{t('pages.contact.quickContact.email.title')}</div>
+                        <div className="text-base opacity-70">{t('pages.contact.quickContact.email.subtitle')}</div>
                       </div>
-                      <ArrowRight className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+                      <ArrowRight className="w-5 h-5 ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                     </Button>
                   </a>
                   <a href="https://wa.me/97158192989" target="_blank" rel="noopener noreferrer" className="block">
-                    <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white group hover:scale-105 transition-all duration-300">
-                      <MessageCircle className="w-5 h-5 mr-3 text-primary group-hover:text-white" />
+                    <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white group hover:scale-105 transition-all duration-300 p-6 h-auto">
+                      <MessageCircle className="w-6 h-6 mr-4 text-primary group-hover:text-white" />
                       <div className="text-left">
-                        <div className="font-bold">{t('pages.contact.quickContact.whatsapp.title')}</div>
-                        <div className="text-sm opacity-70">{t('pages.contact.quickContact.whatsapp.subtitle')}</div>
+                        <div className="font-bold text-lg">{t('pages.contact.quickContact.whatsapp.title')}</div>
+                        <div className="text-base opacity-70">{t('pages.contact.quickContact.whatsapp.subtitle')}</div>
                       </div>
-                      <ArrowRight className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+                      <ArrowRight className="w-5 h-5 ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                     </Button>
                   </a>
                 </div>
-                <div className="mt-6 pt-6 border-t border-accent">
-                  <h4 className="font-bold text-center mb-2 text-primary">{t('pages.contact.quickContact.responseTime.title')}</h4>
-                  <p className="text-sm text-primary text-center">{t('pages.contact.quickContact.responseTime.description')}</p>
+                <div className="mt-8 pt-8 border-t border-accent">
+                  <h4 className="font-bold text-center mb-3 text-primary text-lg">{t('pages.contact.quickContact.responseTime.title')}</h4>
+                  <p className="text-base text-primary text-center">{t('pages.contact.quickContact.responseTime.description')}</p>
                 </div>
               </motion.div>
             </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Section 2: Service Areas - Text Only */}
-      <section className="py-16 bg-white">
+      <motion.section 
+        className="py-8 sm:py-12 bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
         <div className="container mx-auto px-8">
           <motion.div 
             className="text-center mb-16"
@@ -590,10 +602,16 @@ export default function ContactPage() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Section 3: Location & Directions - Full Width Layout */}
-      <section className="py-16 bg-gradient-to-b from-snow to-white">
+      <motion.section 
+        className="py-8 sm:py-12 bg-gradient-to-b from-snow to-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
         <div className="container mx-auto px-8">
           <motion.div 
             className="text-center mb-16"
@@ -649,9 +667,9 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 group hover:scale-105 transition-all duration-300 border-0 shadow-lg hover:shadow-xl"
                 >
-                  <Navigation className="w-4 h-4 mr-2" />
+                  <Navigation className={`w-4 h-4 ${dir === 'rtl' ? 'ml-2' : 'mr-2'}`} />
                   {t('pages.contact.location.directions')}
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className={`w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 ${dir === 'rtl' ? 'mr-2 rotate-180' : 'ml-2'}`} />
                 </a>
               </div>
             </div>
@@ -695,41 +713,8 @@ export default function ContactPage() {
             </div>
           </motion.div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <motion.section 
-        className="py-20 gradient-primary text-white relative overflow-hidden"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={containerVariants}
-      >
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.2) 1px, transparent 0)`,
-            backgroundSize: '30px 30px'
-          }}></div>
-        </div>
-        <div className="container mx-auto px-4 text-center relative">
-          <motion.div variants={itemVariants}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {t('pages.contact.cta.title')}
-            </h2>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              {t('pages.contact.cta.description')}
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 group hover:scale-105 transition-all duration-300">
-                <Phone className="w-5 h-5 mr-2 animate-pulse" />
-                {t('pages.contact.cta.callButton')}: +971 58 192 9889
-              </Button>
-             
-            </div>
-          </motion.div>
-        </div>
       </motion.section>
+    
     </div>
   );
 }

@@ -82,14 +82,16 @@
 
 @import "tailwindcss";
 
-/* Custom Theme Colors */
+/* Custom Theme Colors - Based on Logo (Lighter Version) */
 :root {
-  --color-primary: #0f1f35;      /* Dark blue from winter landscape */
-  --color-accent: #C7E0F0;       /* Light blue */
-  --color-white: #FFFFFF;
-  --color-snow: #F8FAFC;         /* Very light blue-grey for snow */
-  --color-text-dark: #1F2937;    /* Dark text */
-  --color-text-light: #6B7280;   /* Light text */
+  --color-primary: #A0522D;      /* Lighter golden-brown from logo border */
+  --color-secondary: #140b03;    /* Lighter golden color from castle */
+  --color-accent: #FDF5E6;       /* Very light golden accent */
+  --color-white: #FFFFFF;        /* White background from logo */
+  --color-gold: #FFE135;         /* Lighter bright gold for highlights */
+  --color-dark-gold: #CD853F;    /* Lighter darker gold for text */
+  --color-text-dark: #4A3728;    /* Lighter dark brown for text */
+  --color-text-light: #A89078;   /* Lighter brown for secondary text */
 }
 
 /* Global Theme Styles */
@@ -157,7 +159,7 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #3d4a5e;
+  background-color: var(--color-dark-gold);
   transform: translateY(-1px);
 }
 
@@ -172,7 +174,7 @@ body {
 }
 
 .btn-secondary:hover {
-  background-color: #f0b97a;
+  background-color: var(--color-gold);
   transform: translateY(-1px);
 }
 
@@ -187,7 +189,7 @@ body {
 }
 
 .btn-accent:hover {
-  background-color: #b3d4e6;
+  background-color: var(--color-secondary);
   transform: translateY(-1px);
 }
 
@@ -263,15 +265,44 @@ body {
 
 /* Utility classes */
 .gradient-primary {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
 }
 
 .gradient-secondary {
-  background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-gold));
+}
+
+.gradient-golden {
+  background: linear-gradient(135deg, var(--color-gold), var(--color-accent));
 }
 
 .text-shadow {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Golden theme utilities */
+.text-gold {
+  color: var(--color-gold);
+}
+
+.text-dark-gold {
+  color: var(--color-dark-gold);
+}
+
+.bg-gold {
+  background-color: var(--color-gold);
+}
+
+.bg-dark-gold {
+  background-color: var(--color-dark-gold);
+}
+
+.border-gold {
+  border-color: var(--color-gold);
+}
+
+.border-dark-gold {
+  border-color: var(--color-dark-gold);
 }
 
 /* Responsive design */

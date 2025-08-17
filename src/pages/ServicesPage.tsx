@@ -12,10 +12,9 @@ import {
   Building,
   Monitor,
   Package,
-  Droplets,
   Wind,
   Target,
-  Gauge,
+  
   Award,
   TrendingUp,
   Headphones,
@@ -24,6 +23,8 @@ import {
 } from "lucide-react";
 import { cn } from "../utils/cn";
 import { useLanguage } from "../contexts/LanguageContext";
+import { motion } from "framer-motion";
+import CTA from "../components/CTA";
 
 
 // Import design images
@@ -90,6 +91,95 @@ function Button({
 
 export default function ServicesPage() {
   const { t } = useLanguage();
+  
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
+  };
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8 }
+    }
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.6 }
+    }
+  };
+
+  const slideInLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8 }
+    }
+  };
+
+  const slideInRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.8 }
+    }
+  };
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const cardHover = {
+    hover: {
+      scale: 1.02,
+      y: -5,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const imageHover = {
+    hover: {
+      scale: 1.05,
+      transition: {
+        duration: 0.4,
+        ease: "easeOut"
+      }
+    }
+  };
   
   const mainServices = [
     {
@@ -200,7 +290,12 @@ export default function ServicesPage() {
   return (
     <div className="w-full max-w-full px-4 sm:px-6 md:px-8">
      {/* Hero Section - Fixed for horizontal scroll */}
-<section className="bg-gradient-to-br from-snow via-white to-accent py-8 sm:py-12 md:py-16 lg:py-20 relative overflow-hidden">
+<motion.section 
+  className="bg-gradient-to-br from-snow via-white to-accent py-8 sm:py-12 md:py-16 lg:py-20 relative overflow-hidden"
+  initial="hidden"
+  animate="visible"
+  variants={containerVariants}
+>
   {/* Enhanced background patterns */}
   <div className="absolute inset-0 opacity-30">
     <div className="absolute inset-0" style={{
@@ -210,86 +305,182 @@ export default function ServicesPage() {
   </div>
   
   {/* Fixed decorative elements - contained within viewport */}
-  <div className="absolute top-10 right-4 sm:right-10 w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl animate-pulse max-w-full"></div>
-  <div className="absolute bottom-10 left-4 sm:left-10 w-32 h-32 sm:w-48 sm:h-48 md:w-72 md:h-72 bg-gradient-to-tr from-primary/10 to-accent/10 rounded-full blur-3xl max-w-full"></div>
-  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-gradient-to-r from-secondary/30 to-accent/30 rounded-full blur-2xl animate-ping max-w-full"></div>
+  <motion.div 
+    className="absolute top-10 right-4 sm:right-10 w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl max-w-full"
+    animate={{ 
+      scale: [1, 1.1, 1],
+      opacity: [0.3, 0.6, 0.3]
+    }}
+    transition={{ 
+      duration: 3,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }}
+  ></motion.div>
+  <motion.div 
+    className="absolute bottom-10 left-4 sm:left-10 w-32 h-32 sm:w-48 sm:h-48 md:w-72 md:h-72 bg-gradient-to-tr from-primary/10 to-accent/10 rounded-full blur-3xl max-w-full"
+    animate={{ 
+      scale: [1, 1.2, 1],
+      opacity: [0.2, 0.4, 0.2]
+    }}
+    transition={{ 
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }}
+  ></motion.div>
+  <motion.div 
+    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-gradient-to-r from-secondary/30 to-accent/30 rounded-full blur-2xl max-w-full"
+    animate={{ 
+      scale: [1, 1.3, 1],
+      opacity: [0.4, 0.8, 0.4]
+    }}
+    transition={{ 
+      duration: 2.5,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }}
+  ></motion.div>
   
   <div className="container mx-auto px-4 sm:px-6 relative z-10">
     <div className="max-w-4xl mx-auto text-center">
-      <Badge variant="outline" className="mb-4 sm:mb-6 text-primary border-primary animate-in slide-in-from-bottom-4 duration-700 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold shadow-sm">
-        <Thermometer className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2" />
-        {t('pages.services.badge')}
-      </Badge>
+      <motion.div variants={fadeInUp}>
+        <Badge variant="outline" className="mb-4 sm:mb-6 text-primary border-primary px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold shadow-sm">
+          <Thermometer className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2" />
+          {t('pages.services.badge')}
+        </Badge>
+      </motion.div>
       
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 animate-in slide-in-from-bottom-4 duration-700 delay-200 leading-tight bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-primary">
+      <motion.h1 
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-primary"
+        variants={fadeInUp}
+      >
         {t('pages.services.title')}
-      </h1>
+      </motion.h1>
       
-      <p className="text-base sm:text-lg md:text-xl text-primary mb-6 sm:mb-10 leading-relaxed animate-in slide-in-from-bottom-4 duration-700 delay-400 max-w-3xl mx-auto">
+      <motion.p 
+        className="text-base sm:text-lg md:text-xl text-primary mb-6 sm:mb-10 leading-relaxed max-w-3xl mx-auto"
+        variants={fadeInUp}
+      >
         {t('pages.services.description')}
-      </p>
+      </motion.p>
       
-      <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-5 animate-in slide-in-from-bottom-4 duration-700 delay-600">
-        <Button size="lg" className="bg-primary hover:bg-primary/90 group hover:scale-105 transition-all duration-300 border-0 shadow-lg shadow-primary/20 text-sm sm:text-base font-medium py-2.5 sm:py-3 px-6 sm:px-8">
-          {t('pages.services.quoteButton')}
-          <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-        </Button>
-        <Button variant="outline" size="lg" className="group hover:scale-105 transition-all duration-300 border-primary text-primary hover:bg-primary hover:text-white shadow-lg text-sm sm:text-base font-medium py-2.5 sm:py-3 px-6 sm:px-8">
-          <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2 animate-pulse" />
-          {t('pages.services.callButton')}
-        </Button>
-      </div>
+      <motion.div 
+        className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-5"
+        variants={fadeInUp}
+      >
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <Button size="lg" className="bg-primary hover:bg-primary/90 group border-0 shadow-lg shadow-primary/20 text-sm sm:text-base font-medium py-2.5 sm:py-3 px-6 sm:px-8">
+            {t('pages.services.quoteButton')}
+            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+          </Button>
+        </motion.div>
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <Button variant="outline" size="lg" className="group border-primary text-primary hover:bg-primary hover:text-white shadow-lg text-sm sm:text-base font-medium py-2.5 sm:py-3 px-6 sm:px-8">
+            <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2" />
+            {t('pages.services.callButton')}
+          </Button>
+        </motion.div>
+      </motion.div>
     </div>
   </div>
-</section>
+</motion.section>
 
       {/* Stats Section */}
-      <section className="py-6 sm:py-8 bg-white relative">
+      <motion.section 
+        className="py-6 sm:py-8 bg-white relative"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={staggerContainer}
+      >
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, index) => (
-              <div 
+              <motion.div 
                 key={index}
-                className="text-center group animate-in slide-in-from-bottom-4 duration-700"
-                style={{ animationDelay: `${index * 150}ms` }}
+                className="text-center group"
+                variants={itemVariants}
+                whileHover={{ scale: 1.05, y: -5 }}
+                transition={{ duration: 0.3 }}
               >
-                <div className="bg-gradient-to-br from-snow to-white rounded-2xl p-6 border border-accent hover:shadow-lg hover:border-primary/20 transition-all duration-300 group-hover:scale-105">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                <div className="bg-gradient-to-br from-snow to-white rounded-2xl p-6 border border-accent hover:shadow-lg hover:border-primary/20 transition-all duration-300">
+                  <motion.div 
+                    className="w-12 h-12 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-300"
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                  >
                     {stat.icon}
-                  </div>
+                  </motion.div>
                   <div className="text-2xl md:text-3xl font-bold text-primary mb-2">{stat.value}</div>
                   <div className="text-sm text-primary">{t(`pages.about.achievements.items.${index}.label`)}</div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Main Services */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden">
+      <motion.section 
+        className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={containerVariants}
+      >
         {/* Enhanced decorative elements */}
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-secondary/50 to-transparent"></div>
-        <div className="absolute top-0 left-0 w-32 h-32 sm:w-40 sm:h-40 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-2xl max-w-full"></div>
-        <div className="absolute top-1/4 right-4 sm:right-8 w-40 h-40 sm:w-60 sm:h-60 bg-gradient-to-bl from-primary/10 to-accent/10 rounded-full blur-3xl max-w-full"></div>
+        <motion.div 
+          className="absolute top-0 left-0 w-32 h-32 sm:w-40 sm:h-40 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-2xl max-w-full"
+          animate={{ 
+            scale: [1, 1.1, 1],
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          transition={{ 
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        ></motion.div>
+        <motion.div 
+          className="absolute top-1/4 right-4 sm:right-8 w-40 h-40 sm:w-60 sm:h-60 bg-gradient-to-bl from-primary/10 to-accent/10 rounded-full blur-3xl max-w-full"
+          animate={{ 
+            scale: [1, 1.2, 1],
+            opacity: [0.2, 0.5, 0.2]
+          }}
+          transition={{ 
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        ></motion.div>
         
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
-          <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16 animate-in slide-in-from-bottom-4 duration-700">
+          <motion.div 
+            className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16"
+            variants={fadeInUp}
+          >
             <Badge variant="outline" className="mb-4 sm:mb-6 text-primary border-primary px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold shadow-sm">
               {t('pages.services.core.badge')}
             </Badge>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-primary">{t('pages.services.core.title')}</h2>
             <p className="text-primary text-base sm:text-lg max-w-3xl mx-auto">{t('pages.services.core.description')}</p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 max-w-6xl mx-auto px-4">
+          <motion.div 
+            className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 max-w-6xl mx-auto px-4"
+            variants={staggerContainer}
+          >
             {mainServices.map((service, index) => (
-              <div 
+              <motion.div 
                 key={index} 
-                className={`relative group cursor-pointer animate-in slide-in-from-bottom-4 duration-700 ${
+                className={`relative group cursor-pointer ${
                   service.popular ? 'lg:col-span-2' : ''
                 }`}
-                style={{ animationDelay: `${index * 200}ms` }}
+                variants={itemVariants}
+                whileHover={{ scale: 1.02, y: -5 }}
+                transition={{ duration: 0.3 }}
               >
                 <div className={`relative bg-white border border-accent rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/30 hover:scale-[1.02] sm:hover:scale-[1.03] transition-all duration-500 h-full flex flex-col ${
                   service.popular ? 'border-primary/30 bg-gradient-to-br from-secondary/10 via-white to-accent/10 shadow-xl shadow-primary/15' : ''
@@ -431,11 +622,11 @@ export default function ServicesPage() {
                     </>
                   )}
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
 
  
       {/* Section 2: Work Process - Alternating Layout */}
@@ -862,6 +1053,21 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <div className="-mx-4 sm:-mx-6 md:-mx-8">
+        <CTA 
+          title={t('pages.services.cta.title')}
+          description={t('pages.services.cta.description')}
+          primaryButtonText={t('pages.services.cta.contactButton')}
+          secondaryButtonText={t('pages.services.cta.quoteButton')}
+          variant="primary"
+          features={{
+            freeConsultation: t('pages.services.cta.features.freeConsultation'),
+            quickResponse: t('pages.services.cta.features.quickResponse'),
+            expertTeam: t('pages.services.cta.features.expertTeam')
+          }}
+        />
+      </div>
 
      
   

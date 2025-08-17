@@ -23,6 +23,7 @@ import { motion } from "framer-motion";
 import { cn } from "../utils/cn";
 import { useLanguage } from "../contexts/LanguageContext";
 import BrandsSlider from "../components/BrandsSlider";
+import CTA from "../components/CTA";
 
 
 interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -80,7 +81,7 @@ function Button({
 
 
 export default function AboutPage() {
-  const { t } = useLanguage();
+  const { t, dir } = useLanguage();
   
   // Animation variants
   const containerVariants = {
@@ -247,7 +248,7 @@ export default function AboutPage() {
     <div className="overflow-x-hidden">
       {/* Hero Section */}
       <motion.section 
-        className="bg-gradient-to-br from-snow via-white to-accent py-12 relative"
+        className="bg-gradient-to-br from-snow via-white to-accent py-8 sm:py-12 relative"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -263,7 +264,7 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto text-center">
             <motion.div variants={itemVariants}>
               <Badge variant="outline" className="mb-6 text-primary border-primary">
-                <Building className="w-4 h-4 mr-2" />
+                <Building className={`w-4 h-4 ${dir === 'rtl' ? 'ml-2' : 'mr-2'}`} />
                 {t('pages.about.badge')}
               </Badge>
             </motion.div>
@@ -288,10 +289,10 @@ export default function AboutPage() {
             >
               <Button size="lg" className="bg-primary hover:bg-primary/90 group hover:scale-105 transition-all duration-300 border-0">
                 {t('pages.about.servicesButton')}
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className={`w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 ${dir === 'rtl' ? 'mr-2 rotate-180' : 'ml-2'}`} />
               </Button>
               <Button variant="outline" size="lg" className="group hover:scale-105 transition-all duration-300 border-primary text-primary hover:bg-primary hover:text-white">
-                <Phone className="w-4 h-4 mr-2 animate-pulse" />
+                <Phone className={`w-4 h-4 animate-pulse ${dir === 'rtl' ? 'ml-2' : 'mr-2'}`} />
                 {t('pages.about.contactButton')}
               </Button>
             </motion.div>
@@ -300,7 +301,13 @@ export default function AboutPage() {
       </motion.section>
 
       {/* Section 1: Vision & Mission - Image Left, Text Right */}
-      <section className="py-12 bg-white">
+      <motion.section 
+        className="py-8 sm:py-12 bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
         <div className="container mx-auto px-8">
           <motion.div 
             className="text-center mb-16"
@@ -370,10 +377,16 @@ export default function AboutPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Section 2: Company Values - Text Left, Image Right */}
-      <section className="py-8 ">
+      <motion.section 
+        className="py-6 sm:py-8"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
         <div className="container mx-auto px-12">
           <motion.div 
             className="text-center mb-6"
@@ -434,10 +447,16 @@ export default function AboutPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Section 3: Company Timeline - Image Left, Text Right */}
-      <section className="py-12 bg-white">
+      <motion.section 
+        className="py-8 sm:py-12 bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -500,10 +519,16 @@ export default function AboutPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Section 4: Team Section - Text Left, Image Right */}
-      <section className="py-12 bg-gradient-to-b from-snow to-white">
+      <motion.section 
+        className="py-8 sm:py-12 bg-gradient-to-b from-snow to-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
         <div className="container mx-auto px-12">
           <motion.div 
             className="text-center mb-16"
@@ -581,10 +606,16 @@ export default function AboutPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Section 5: Achievements - Image Left, Text Right */}
-      <section className="py-12 bg-white">
+      <motion.section 
+        className="py-8 sm:py-12 bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -634,10 +665,16 @@ export default function AboutPage() {
             ))}
           </motion.div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Section 6: Certifications - Text Left, Image Right */}
-      <section className="py-12 bg-gradient-to-b from-snow to-white">
+      <motion.section 
+        className="py-8 sm:py-12 bg-gradient-to-b from-snow to-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
         <div className="container mx-auto px-12">
           <motion.div 
             className="text-center"
@@ -737,7 +774,7 @@ export default function AboutPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Section: Trusted Brands - Auto Slider */}
       <section className="py-16 bg-white">
@@ -775,37 +812,18 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <motion.section 
-        className="py-20 gradient-primary text-white relative overflow-hidden"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={containerVariants}
-      >
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.2) 1px, transparent 0)`,
-            backgroundSize: '30px 30px'
-          }}></div>
-        </div>
-        <div className="container mx-auto px-4 text-center relative">
-          <motion.div variants={itemVariants}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {t('pages.contact.cta.title')}
-            </h2>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              {t('pages.contact.cta.description')}
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 group hover:scale-105 transition-all duration-300">
-                <Phone className="w-5 h-5 mr-2 animate-pulse" />
-                {t('pages.contact.callButton')}: {t('header.phone')}
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </motion.section>
+      <CTA 
+        title={t('pages.contact.cta.title')}
+        description={t('pages.contact.cta.description')}
+        primaryButtonText={`${t('pages.contact.callButton')}: ${t('header.phone')}`}
+        variant="primary"
+
+        features={{
+          freeConsultation: t('pages.services.cta.features.freeConsultation'),
+          quickResponse: t('pages.services.cta.features.quickResponse'),
+          expertTeam: t('pages.services.cta.features.expertTeam')
+        }}
+      />
     </div>
   );
 }

@@ -888,8 +888,13 @@
         "badge": "Get Started",
         "title": "Ready for Professional AC Solutions?",
         "description": "Experience the difference of working with Eastern Region's trusted HVAC specialists. Contact us today for expert consultation and premium service.",
-        "call_button": "Call Now",
-        "quote_button": "Get Free Quote"
+        "contactButton": "Call Now",
+        "quoteButton": "Get Free Quote",
+        "features": {
+          "freeConsultation": "Free Consultation",
+          "quickResponse": "Quick Response",
+          "expertTeam": "Expert Team"
+        }
       },
       "designs": {
         "badge": "Design Portfolio",

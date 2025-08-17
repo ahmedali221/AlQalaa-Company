@@ -7,18 +7,19 @@ import {
   Users,
   Award,
   Phone,
-  Zap,
   Building,
   MapPin,
   Mail,
   CheckCircle,
   Settings,
-  Lightbulb
+  Lightbulb,
+  Wind
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../contexts/LanguageContext";
 import Hero from "../components/Hero";
 import BrandsSlider from "../components/BrandsSlider";
+import CTA from "../components/CTA";
 
 import companyImage from "../assets/Company/Company Stuff.JPG";
 import companyImage2 from "../assets/Company/company.JPG";
@@ -225,27 +226,22 @@ export default function HomePage() {
                   {t('pages.home.services_section.description')}
                 </p>
                 <div className="grid grid-cols-2 gap-4">
+             
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Wind className="w-5 h-5 text-primary" />
-                    </div>
-                    <span className="text-secondary font-medium">{t('pages.home.services_section.items.ductSplit')}</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
-                      <Settings className="w-5 h-5 text-secondary" />
+                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                  <Settings className="w-5 h-5 text-primary" />
                     </div>
                     <span className="text-secondary font-medium">{t('pages.home.services_section.items.smartControls')}</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                      <Wrench className="w-5 h-5 text-accent" />
+                      <Wrench className="w-5 h-5 text-primary" />
                     </div>
                     <span className="text-secondary font-medium">{t('pages.home.services_section.items.maintenance')}</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Shield className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                  <Shield className="w-5 h-5 text-primary" />
                     </div>
                     <span className="text-secondary font-medium">{t('pages.home.services_section.items.installation')}</span>
                   </div>
@@ -694,43 +690,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Enhanced CTA Section */}
-      <motion.section 
-        className="py-24 gradient-primary text-white relative overflow-hidden"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={containerVariants}
-      >
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.2) 1px, transparent 0)`,
-            backgroundSize: '30px 30px'
-          }}></div>
-        </div>
-        
-        <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        
-        <div className="container mx-auto px-4 text-center relative">
-          <motion.div variants={itemVariants}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {t('pages.home.cta_section.title')}
-            </h2>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              {t('pages.home.cta_section.description')}
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="inline-flex items-center px-8 py-4 bg-white text-primary rounded-lg font-medium hover:bg-white/90 transition-colors duration-300 shadow-2xl shadow-black/20">
-                <Phone className="w-5 h-5 mr-2 animate-pulse" />
-                {t('pages.home.cta_section.buttons.call')}
-              </button>
-             
-            </div>
-          </motion.div>
-        </div>
-      </motion.section>
+      {/* CTA Section */}
+      <CTA 
+        title={t('pages.home.cta_section.title')}
+        description={t('pages.home.cta_section.description')}
+        primaryButtonText={t('pages.home.cta_section.buttons.call')}
+        variant="primary"
+        features={{
+          freeConsultation: t('pages.services.cta.features.freeConsultation'),
+          quickResponse: t('pages.services.cta.features.quickResponse'),
+          expertTeam: t('pages.services.cta.features.expertTeam')
+        }}
+      />
     </div>
   );
 }
