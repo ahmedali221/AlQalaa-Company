@@ -184,36 +184,7 @@ export default function AboutPage() {
     }
   ];
 
-  const teamMembers = [
-    {
-      name: t('pages.about.team.items.0.name'),
-      role: t('pages.about.team.items.0.role'),
-      expertise: t('pages.about.team.items.0.expertise'),
-      experience: t('pages.about.team.items.0.experience'),
-      icon: <Users className="w-6 h-6 text-white" />
-    },
-    {
-      name: t('pages.about.team.items.1.name'),
-      role: t('pages.about.team.items.1.role'),
-      expertise: t('pages.about.team.items.1.expertise'),
-      experience: t('pages.about.team.items.1.experience'),
-      icon: <Wrench className="w-6 h-6 text-white" />
-    },
-    {
-      name: t('pages.about.team.items.2.name'),
-      role: t('pages.about.team.items.2.role'),
-      expertise: t('pages.about.team.items.2.expertise'),
-      experience: t('pages.about.team.items.2.experience'),
-      icon: <Settings className="w-6 h-6 text-white" />
-    },
-    {
-      name: t('pages.about.team.items.3.name'),
-      role: t('pages.about.team.items.3.role'),
-      expertise: t('pages.about.team.items.3.expertise'),
-      experience: t('pages.about.team.items.3.experience'),
-      icon: <Phone className="w-6 h-6 text-white" />
-    }
-  ];
+
 
   const milestones = [
     {
@@ -564,23 +535,34 @@ export default function AboutPage() {
                 <p className="text-primary text-lg leading-relaxed">
                   {t('pages.about.team.subtitle')}
                 </p>
-                <div className="space-y-4">
-                  {teamMembers.slice(0, 3).map((member, index) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                        {member.icon}
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-primary mb-1">{member.name}</h4>
-                        <p className="text-primary text-sm">{member.role}</p>
-                      </div>
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Users className="w-6 h-6 text-primary" />
                     </div>
-                  ))}
+                    <div>
+                      <h4 className="font-semibold text-primary mb-2">{t('pages.about.team.professionalTeam.title')}</h4>
+                      <p className="text-primary text-sm leading-relaxed">
+                        {t('pages.about.team.professionalTeam.description')}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Award className="w-6 h-6 text-secondary" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-primary mb-2">{t('pages.about.team.certifiedExcellence.title')}</h4>
+                      <p className="text-primary text-sm leading-relaxed">
+                        {t('pages.about.team.certifiedExcellence.description')}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Image Side */}
+            {/* Team Image Side */}
             <motion.div 
               className="relative"
               initial="hidden"
@@ -589,7 +571,11 @@ export default function AboutPage() {
               variants={slideInRightVariants}
             >
               <div className="relative">
-                <img src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?auto=format&fit=crop&q=80" alt="Modern office building in UAE for team section" className="w-full h-96 object-cover rounded-3xl" />
+                <img 
+                  src="/src/assets/Company/team.JPG" 
+                  alt="Al Qalaa professional team" 
+                  className="w-full h-96 object-cover rounded-3xl shadow-lg"
+                />
                 <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-accent to-secondary rounded-2xl opacity-80"></div>
               </div>
             </motion.div>
@@ -696,7 +682,7 @@ export default function AboutPage() {
               </div>
             </motion.div>
 
-            {/* Image Side */}
+            {/* Certificate Images Side */}
             <motion.div 
               className="relative"
               initial="hidden"
@@ -704,10 +690,50 @@ export default function AboutPage() {
               viewport={{ once: true, amount: 0.3 }}
               variants={slideInRightVariants}
             >
-              <div className="relative">
-                <img src="https://images.unsplash.com/photo-1497366216548-375260702eec?auto=format&fit=crop&q=80" alt="Professional building in Dubai representing certifications" className="w-full h-96 object-cover rounded-3xl" />
-                <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-2xl opacity-80"></div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* First Certificate */}
+                <motion.div 
+                  className="relative group cursor-pointer"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                    <img 
+                      src="/src/assets/Certificates/certificate.jpg" 
+                      alt="Rheem Pro Partner Certificate 2022" 
+                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h4 className="font-semibold text-sm">Rheem Pro Partner</h4>
+                      <p className="text-xs opacity-90">Authorized Partner 2022</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Second Certificate */}
+                <motion.div 
+                  className="relative group cursor-pointer"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="relative overflow-hidden rounded-2xl shadow-lg">
+                    <img 
+                      src="/src/assets/Certificates/Scan.jpg" 
+                      alt="Rheem Academy Certificate" 
+                      className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h4 className="font-semibold text-sm">Rheem Academy</h4>
+                      <p className="text-xs opacity-90">MEA-BASICS of HVAC</p>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
+              
+              {/* Decorative Element */}
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-2xl opacity-80 -z-10"></div>
             </motion.div>
           </div>
         </div>

@@ -534,7 +534,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Section 2: Service Areas - Image Left, Text Right */}
+      {/* Section 2: Service Areas - Text Only */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-8">
           <motion.div 
@@ -549,74 +549,46 @@ export default function ContactPage() {
             <p className="text-primary text-lg">{t('pages.contact.serviceCoverage.subtitle')}</p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* UAE Map Side */}
-            <motion.div 
-              className="relative"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={slideInVariants}
-            >
-              <div className="relative">
-                <div className="w-full h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3570.139305!2d56.331444!3d25.139305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sae!4v1234567890"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="UAE Service Areas"
-                    className="w-full h-full"
-                  ></iframe>
-                </div>
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-accent to-secondary rounded-2xl opacity-80 shadow-lg"></div>
-                <div className="absolute -top-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-accent">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-                      <Globe className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-primary text-sm">Service Areas</p>
-                      <p className="text-secondary text-xs">Fujairah & Surroundings</p>
-                    </div>
-                  </div>
-                </div>
+          <motion.div 
+            className="max-w-4xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={slideInVariants}
+          >
+            <div className="space-y-6">
+              <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
+                {t('pages.contact.serviceCoverage.coverageAreas.badge')}
               </div>
-            </motion.div>
-
-            {/* Text Side */}
-            <motion.div 
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={slideInRightVariants}
-            >
-              <div className="space-y-6">
-                <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
-                  {t('pages.contact.serviceCoverage.coverageAreas.badge')}
-                </div>
-                <h2 className="text-4xl font-bold text-primary leading-tight">
-                  {t('pages.contact.serviceCoverage.coverageAreas.title')}
-                </h2>
-                <p className="text-primary text-lg leading-relaxed">
-                  {t('pages.contact.serviceCoverage.coverageAreas.description')}
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  {serviceAreas.map((area, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+              <h2 className="text-4xl font-bold text-primary leading-tight text-center">
+                {t('pages.contact.serviceCoverage.coverageAreas.title')}
+              </h2>
+              <p className="text-primary text-lg leading-relaxed text-center">
+                {t('pages.contact.serviceCoverage.coverageAreas.description')}
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+                {serviceAreas.map((area, index) => (
+                  <motion.div 
+                    key={index}
+                    className="group cursor-pointer"
+                    variants={itemVariants}
+                    whileHover="hover"
+                  >
+                    <motion.div 
+                      className="bg-white border border-accent rounded-2xl p-6 text-center h-full flex flex-col items-center justify-center"
+                      variants={cardVariants}
+                    >
+                      <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300">
                         {area.icon}
                       </div>
-                      <span className="text-primary font-medium text-sm">{area.city}</span>
-                    </div>
-                  ))}
-                </div>
+                      <h3 className="text-primary font-bold text-sm mb-2">{area.city}</h3>
+                      <p className="text-primary text-xs">{area.coverage}</p>
+                    </motion.div>
+                  </motion.div>
+                ))}
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

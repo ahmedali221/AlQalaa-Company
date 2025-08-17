@@ -20,6 +20,9 @@ import { useLanguage } from "../contexts/LanguageContext";
 import Hero from "../components/Hero";
 import BrandsSlider from "../components/BrandsSlider";
 
+import companyImage from "../assets/Company/Company Stuff.JPG";
+import companyImage2 from "../assets/Company/company.JPG";
+
 
 export default function HomePage() {
   const { t, language } = useLanguage();
@@ -154,7 +157,7 @@ export default function HomePage() {
               variants={slideInLeftVariants}
             >
               <div className="relative">
-                <img src="https://images.unsplash.com/photo-1722010811002-a772b2066890?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Modern AC Installation" className="w-full h-96 object-cover rounded-3xl" loading="lazy" />
+                <img src={companyImage} alt="Modern AC Installation" className="w-full h-100 object-contain rounded-3xl" loading="lazy" />
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-accent to-secondary rounded-2xl opacity-80"></div>
               </div>
             </motion.div>
@@ -224,9 +227,9 @@ export default function HomePage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Zap className="w-5 h-5 text-primary" />
+                      <Wind className="w-5 h-5 text-primary" />
                     </div>
-                    <span className="text-secondary font-medium">{t('pages.home.services_section.items.chilledWater')}</span>
+                    <span className="text-secondary font-medium">{t('pages.home.services_section.items.ductSplit')}</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
@@ -284,7 +287,7 @@ export default function HomePage() {
               variants={slideInLeftVariants}
             >
               <div className="relative">
-                <img src="https://images.unsplash.com/photo-1708015694046-ba486c73fe4e?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Professional HVAC Service" className="w-full h-96 object-cover rounded-3xl" loading="lazy" />
+                <img src={companyImage2} alt="Professional HVAC Service" className="w-full h-96 object-cover rounded-3xl" loading="lazy" />
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-secondary to-primary rounded-2xl opacity-80"></div>
               </div>
             </motion.div>

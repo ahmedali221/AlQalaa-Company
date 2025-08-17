@@ -34,6 +34,8 @@ import design4 from "../assets/Designs/20.jpg";
 import design5 from "../assets/Designs/24.jpg";
 import design6 from "../assets/Designs/11.jpg";
 
+
+
 interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: 'default' | 'outline' | 'secondary';
 }
@@ -91,21 +93,6 @@ export default function ServicesPage() {
   
   const mainServices = [
     {
-      icon: <Droplets className="w-8 h-8 text-primary" />,
-      title: t('pages.services.mainServices.chilled.title'),
-      description: t('pages.services.mainServices.chilled.description'),
-      features: [
-        t('pages.services.mainServices.chilled.features.0'),
-        t('pages.services.mainServices.chilled.features.1'),
-        t('pages.services.mainServices.chilled.features.2'),
-        t('pages.services.mainServices.chilled.features.3')
-      ],
-      capacity: t('pages.services.mainServices.chilled.capacity'),
-      warranty: t('pages.services.mainServices.chilled.warranty'),
-      popular: true,
-      color: "from-primary to-accent"
-    },
-    {
       icon: <Wind className="w-8 h-8 text-primary" />,
       title: t('pages.services.mainServices.duct.title'),
       description: t('pages.services.mainServices.duct.description'),
@@ -117,8 +104,8 @@ export default function ServicesPage() {
       ],
       capacity: t('pages.services.mainServices.duct.capacity'),
       warranty: t('pages.services.mainServices.duct.warranty'),
-      popular: false,
-      color: "from-secondary to-accent"
+      popular: true,
+      color: "from-primary to-accent"
     },
     {
       icon: <Package className="w-8 h-8 text-primary" />,
@@ -152,44 +139,7 @@ export default function ServicesPage() {
     }
   ];
 
-  const additionalServices = [
-    {
-      icon: <Wrench className="w-6 h-6 text-primary" />,
-      title: t('pages.services.additionalServices.installation.title'),
-      description: t('pages.services.additionalServices.installation.description'),
-      color: "from-primary to-accent"
-    },
-    {
-      icon: <Settings className="w-6 h-6 text-primary" />,
-      title: t('pages.services.additionalServices.maintenance.title'),
-      description: t('pages.services.additionalServices.maintenance.description'),
-      color: "from-secondary to-accent"
-    },
-    {
-      icon: <Package className="w-6 h-6 text-primary" />,
-      title: t('pages.services.additionalServices.materials.title'),
-      description: t('pages.services.additionalServices.materials.description'),
-      color: "from-primary to-secondary"
-    },
-    {
-      icon: <FileText className="w-6 h-6 text-primary" />,
-      title: t('pages.services.additionalServices.design.title'),
-      description: t('pages.services.additionalServices.design.description'),
-      color: "from-secondary to-primary"
-    },
-    {
-      icon: <Shield className="w-6 h-6 text-primary" />,
-      title: t('pages.services.additionalServices.emergency.title'),
-      description: t('pages.services.additionalServices.emergency.description'),
-      color: "from-primary to-accent"
-    },
-    {
-      icon: <Gauge className="w-6 h-6 text-primary" />,
-      title: t('pages.services.additionalServices.optimization.title'),
-      description: t('pages.services.additionalServices.optimization.description'),
-      color: "from-secondary to-accent"
-    }
-  ];
+
 
   const processSteps = [
     {
@@ -199,35 +149,36 @@ export default function ServicesPage() {
       color: "from-primary to-accent"
     },
     {
+      icon: <MapPin className="w-6 h-6 text-primary" />,
+      title: t('pages.about.siteInspection.title'),
+      description: t('pages.about.siteInspection.description'),
+      color: "from-secondary to-accent"
+    },
+    {
       icon: <FileText className="w-6 h-6 text-primary" />,
       title: t('pages.services.processSteps.design.title'),
       description: t('pages.services.processSteps.design.description'),
-      color: "from-secondary to-accent"
+      color: "from-primary to-secondary"
     },
     {
       icon: <Package className="w-6 h-6 text-primary" />,
       title: t('pages.services.processSteps.procurement.title'),
       description: t('pages.services.processSteps.procurement.description'),
-      color: "from-primary to-secondary"
+      color: "from-secondary to-primary"
     },
     {
       icon: <Wrench className="w-6 h-6 text-primary" />,
       title: t('pages.services.processSteps.installation.title'),
       description: t('pages.services.processSteps.installation.description'),
-      color: "from-secondary to-primary"
+      color: "from-primary to-accent"
     },
     {
       icon: <Settings className="w-6 h-6 text-primary" />,
       title: t('pages.services.processSteps.testing.title'),
       description: t('pages.services.processSteps.testing.description'),
-      color: "from-primary to-accent"
-    },
-    {
-      icon: <Shield className="w-6 h-6 text-primary" />,
-      title: t('pages.services.processSteps.support.title'),
-      description: t('pages.services.processSteps.support.description'),
       color: "from-secondary to-accent"
-    }
+    },
+ 
   ];
 
   const certifications = [
@@ -486,58 +437,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Section 1: Additional Services - Text Left, Image Right */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-snow to-white relative overflow-hidden">
-                 {/* Enhanced decorative elements */}
-         <div className="absolute top-1/3 left-4 sm:left-8 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
-         <div className="absolute bottom-0 right-4 sm:right-8 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-tl from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-in slide-in-from-bottom-4 duration-700">
-            <Badge variant="outline" className="mb-6 text-primary border-primary px-4 py-2 text-sm font-semibold shadow-sm">
-              {t('pages.services.additionalServices.badge')}
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">{t('pages.services.additionalServices.title')}</h2>
-            <p className="text-primary text-lg max-w-3xl mx-auto">{t('pages.services.additionalServices.description')}</p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center max-w-full">
-            {/* Text Side */}
-            <div className="space-y-4 sm:space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
-                {t('pages.services.additionalServices.badge')}
-              </div>
-              <h2 className="text-4xl font-bold text-primary leading-tight">
-                {t('pages.services.additionalServices.title')}
-              </h2>
-              <p className="text-primary text-lg leading-relaxed">
-                {t('pages.services.additionalServices.description')}
-              </p>
-              <div className="grid grid-cols-2 gap-4 max-w-full">
-                {additionalServices.slice(0, 4).map((service, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                      {service.icon}
-                    </div>
-                    <span className="text-primary font-medium text-sm">{service.title}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Image Side */}
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop&crop=center" 
-                alt="AC maintenance tools and equipment" 
-                className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-3xl shadow-lg"
-              />
-              <div className="absolute top-4 left-4 w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-2xl opacity-80 max-w-full"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+ 
       {/* Section 2: Work Process - Alternating Layout */}
       <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden">
         {/* Enhanced decorative elements */}
@@ -610,30 +510,17 @@ export default function ServicesPage() {
                   <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-2xl sm:rounded-3xl overflow-hidden">
                     <img 
                       src={[
-                        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop&crop=center", // consultation
-                        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop&crop=center", // design
-                        "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop&crop=center", // procurement
-                        "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop&crop=center", // installation
-                        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop&crop=center", // testing
-                        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop&crop=center"  // support
+                        "/src/assets/Steps/contacting.JPG", // consultation
+                        "/src/assets/Steps/planning.JPG", // site inspection
+                        "/src/assets/Steps/design.JPG", // design
+                        "/src/assets/Steps/providingMaterials.jpeg", // procurement
+                        "/src/assets/Steps/starting.JPG", // installation
+                        "/src/assets/Steps/takingMeasures.JPG", // testing
+                       
                       ][index]} 
                       alt={step.title} 
                       className="w-full h-full object-cover"
                     />
-                    
-                    {/* Overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-80`}></div>
-                    
-                    {/* Content overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center text-center p-6">
-                      <div>
-                        <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
-                          {step.icon}
-                        </div>
-                        <h4 className="text-white font-bold text-lg sm:text-xl mb-2">{step.title}</h4>
-                        <p className="text-white/90 text-sm sm:text-base max-w-xs mx-auto">{step.description}</p>
-                      </div>
-                    </div>
                   </div>
                   
                   {/* Decorative element */}
@@ -644,7 +531,182 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-                 {/* Design Showcase Section */}
+
+      {/* Section: System Design Process */}
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden">
+        {/* Enhanced decorative elements */}
+        <div className="absolute top-1/4 right-4 sm:right-8 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-bl from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
+        <div className="absolute bottom-0 left-4 sm:left-8 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-tr from-secondary/30 to-primary/20 rounded-full blur-3xl max-w-full"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-in slide-in-from-bottom-4 duration-700">
+            <Badge variant="outline" className="mb-6 text-primary border-primary px-4 py-2 text-sm font-semibold shadow-sm">
+              <FileText className="w-4 h-4 mr-2" />
+              {t('pages.about.systemDesign.badge')}
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">{t('pages.about.systemDesign.title')}</h2>
+            <p className="text-primary text-lg max-w-3xl mx-auto">{t('pages.about.systemDesign.subtitle')}</p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center max-w-full">
+            {/* Text Side */}
+            <div className="space-y-6">
+              <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                {t('pages.about.systemDesign.badge')}
+              </div>
+              <h2 className="text-4xl font-bold text-primary leading-tight">
+                {t('pages.about.systemDesign.title')}
+              </h2>
+              <p className="text-primary text-lg leading-relaxed">
+                {t('pages.about.systemDesign.description')}
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Target className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.systemDesign.features.analysis.title')}</h4>
+                    <p className="text-primary text-xs">{t('pages.about.systemDesign.features.analysis.description')}</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
+                    <Image className="w-5 h-5 text-secondary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.systemDesign.features.modeling.title')}</h4>
+                    <p className="text-primary text-xs">{t('pages.about.systemDesign.features.modeling.description')}</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <Settings className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.systemDesign.features.engineering.title')}</h4>
+                    <p className="text-primary text-xs">{t('pages.about.systemDesign.features.engineering.description')}</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.systemDesign.features.optimization.title')}</h4>
+                    <p className="text-primary text-xs">{t('pages.about.systemDesign.features.optimization.description')}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Image Side - Two 3D modeling images */}
+            <div className="relative">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative">
+                  <img 
+                    src="/src/assets/3Ds/modeling.jpeg" 
+                    alt="3D modeling and system design" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-2xl shadow-lg"
+                  />
+                  <div className="absolute -top-3 -left-3 w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-xl opacity-80"></div>
+                </div>
+                <div className="relative">
+                  <img 
+                    src="/src/assets/3Ds/modelingTest.jpeg" 
+                    alt="Advanced 3D visualization" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-2xl shadow-lg"
+                  />
+                  <div className="absolute -bottom-3 -right-3 w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-xl opacity-80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section: Support & Maintenance */}
+      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-snow to-white relative overflow-hidden">
+        {/* Enhanced decorative elements */}
+        <div className="absolute top-1/3 left-4 sm:left-8 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
+        <div className="absolute bottom-0 right-4 sm:right-8 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-tl from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-in slide-in-from-bottom-4 duration-700">
+            <Badge variant="outline" className="mb-6 text-primary border-primary px-4 py-2 text-sm font-semibold shadow-sm">
+              <Headphones className="w-4 h-4 mr-2" />
+              {t('pages.about.support.badge')}
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">{t('pages.about.support.title')}</h2>
+            <p className="text-primary text-lg max-w-3xl mx-auto">{t('pages.about.support.subtitle')}</p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center max-w-full">
+            {/* Text Side */}
+            <div className="space-y-6">
+              <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                {t('pages.about.support.badge')}
+              </div>
+              <h2 className="text-4xl font-bold text-primary leading-tight">
+                {t('pages.about.support.title')}
+              </h2>
+              <p className="text-primary text-lg leading-relaxed">
+                {t('pages.about.support.description')}
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-start space-x-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Shield className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.support.features.emergencySupport.title')}</h4>
+                    <p className="text-primary text-xs">{t('pages.about.support.features.emergencySupport.description')}</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
+                    <Settings className="w-5 h-5 text-secondary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.support.features.preventiveMaintenance.title')}</h4>
+                    <p className="text-primary text-xs">{t('pages.about.support.features.preventiveMaintenance.description')}</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                    <Wrench className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.support.features.technicalSupport.title')}</h4>
+                    <p className="text-primary text-xs">{t('pages.about.support.features.technicalSupport.description')}</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <Award className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.support.features.warrantyService.title')}</h4>
+                    <p className="text-primary text-xs">{t('pages.about.support.features.warrantyService.description')}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Image Side */}
+            <div className="relative">
+              <img 
+                src="/src/assets/Steps/consultation.JPG" 
+                alt="24/7 support and maintenance services" 
+                className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-3xl shadow-lg"
+              />
+              <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-2xl opacity-80"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Design Showcase Section */}
                  <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-snow to-white relative overflow-hidden">
          {/* Enhanced decorative elements */}
          <div className="absolute top-1/3 left-4 sm:left-8 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
@@ -763,77 +825,43 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            {/* Image Side */}
+            {/* Image Side - Certificate Images */}
             <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop&crop=center" 
-                alt="Professional AC technician with certifications" 
-                className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-3xl shadow-lg"
-              />
-              <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-accent to-secondary rounded-2xl opacity-80"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4: Service Areas - Image Left, Text Right */}
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden">
-        {/* Enhanced decorative elements */}
-        <div className="absolute top-1/3 right-4 sm:right-8 w-40 h-40 sm:w-64 sm:h-64 bg-gradient-to-bl from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
-        <div className="absolute bottom-0 left-4 sm:left-8 w-56 h-56 sm:w-80 sm:h-80 bg-gradient-to-tr from-secondary/30 to-primary/20 rounded-full blur-3xl max-w-full"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-in slide-in-from-bottom-4 duration-700">
-            <Badge variant="outline" className="mb-6 text-primary border-primary px-4 py-2 text-sm font-semibold shadow-sm">
-              {t('pages.services.areas.badge')}
-            </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">{t('pages.services.areas.title')}</h2>
-            <p className="text-primary text-lg max-w-3xl mx-auto">{t('pages.services.areas.description')}</p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center max-w-full">
-            {/* Image Side */}
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop&crop=center" 
-                alt="UAE Eastern Region map and service areas" 
-                className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-3xl shadow-lg"
-              />
-              <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-secondary to-primary rounded-2xl opacity-80"></div>
-            </div>
-
-            {/* Text Side */}
-            <div className="space-y-4 sm:space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
-                {t('pages.services.areas.coverageAreas')}
-              </div>
-              <h2 className="text-4xl font-bold text-primary leading-tight">
-                {t('pages.services.areas.servingRegion')}
-              </h2>
-              <p className="text-primary text-lg leading-relaxed">
-                {t('pages.services.areas.regionDescription')}
-              </p>
-              <div className="grid grid-cols-2 gap-4 max-w-full">
-                {[
-                  { city: "Fujairah", arabic: "الفجيرة", key: "fujairah" },
-                  { city: "Madhab", arabic: "مدهب", key: "madhab" },
-                  { city: "Kalba", arabic: "كلباء", key: "kalba" },
-                  { city: "Khor Fakkan", arabic: "خور فكان", key: "khor_fakkan" },
-                  { city: "Dibba", arabic: "دبا", key: "dibba" },
-                  { city: "Ras Al Khaimah", arabic: "رأس الخيمة", key: "ras_al_khaimah" },
-                ].slice(0, 4).map((location, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <MapPin className="w-5 h-5 text-primary" />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative group">
+                  <img 
+                    src="/src/assets/Certificates/certificate.jpg" 
+                    alt="Professional certification" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end">
+                    <div className="p-4 text-white">
+                      <h4 className="font-semibold text-sm">Professional Certification</h4>
+                      <p className="text-xs opacity-90">Licensed HVAC Professional</p>
                     </div>
-                    <span className="text-primary font-medium text-sm">{t(`pages.services.areas.locations.${location.key}.title`)}</span>
                   </div>
-                ))}
+                  <div className="absolute -top-3 -left-3 w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-xl opacity-80"></div>
+                </div>
+                <div className="relative group">
+                  <img 
+                    src="/src/assets/Certificates/Scan.jpg" 
+                    alt="Quality assurance certification" 
+                    className="w-full h-48 sm:h-56 object-cover rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end">
+                    <div className="p-4 text-white">
+                      <h4 className="font-semibold text-sm">Quality Assurance</h4>
+                      <p className="text-xs opacity-90">ISO Standards Compliance</p>
+                    </div>
+                  </div>
+                  <div className="absolute -bottom-3 -right-3 w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-xl opacity-80"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
      
   

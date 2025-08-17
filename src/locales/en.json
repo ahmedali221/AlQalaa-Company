@@ -190,50 +190,83 @@
       "team": {
         "badge": "Our Team",
         "title": "Expert Professionals",
-       
         "subtitle": "Experienced specialists dedicated to your success",
-        "items": [
-          {
-            "name": "Engineering Team",
-           
-            "role": "Licensed Mechanical Engineers",
-            
-            "expertise": "HVAC Design & Analysis",
-           
-            "experience": "10+ years combined"
-           
+        "professionalTeam": {
+          "title": "Professional Team",
+          "description": "Our dedicated team of HVAC professionals brings together years of experience and expertise. From certified technicians to experienced engineers, we work collaboratively to deliver exceptional service and innovative solutions for all your air conditioning and cooling needs."
+        },
+        "certifiedExcellence": {
+          "title": "Certified Excellence",
+          "description": "Each team member is certified and trained in the latest HVAC technologies and safety standards. We maintain the highest levels of professionalism and continuously update our skills to provide you with the most advanced and reliable solutions."
+        }
+      },
+      "siteInspection": {
+        "badge": "Site Inspection",
+        "title": "Site Inspection & Planning",
+        "subtitle": "Professional site inspection and detailed planning for optimal HVAC system design and installation",
+        "description": "Our comprehensive site inspection process ensures that every HVAC system is perfectly designed for your specific location and requirements. We conduct thorough assessments to determine the optimal placement, capacity, and configuration for maximum efficiency and performance.",
+        "features": {
+          "siteAssessment": {
+            "title": "Site Assessment",
+            "description": "Comprehensive evaluation of building structure, space availability, and environmental factors"
           },
-          {
-            "name": "Installation Team",
-           
-            "role": "Certified Technicians",
-            
-            "expertise": "System Installation & Commissioning",
-           
-            "experience": "5+ years average"
-           
+          "technicalPlanning": {
+            "title": "Technical Planning",
+            "description": "Detailed technical specifications and system configuration planning"
           },
-          {
-            "name": "Maintenance Team",
-           
-            "role": "Service Specialists",
-            
-            "expertise": "Preventive & Corrective Maintenance",
-           
-            "experience": "8+ years average"
-           
-          },
-          {
-            "name": "Customer Support",
-           
-            "role": "Client Relations Team",
-            
-            "expertise": "Technical Support & Consultation",
-           
-            "experience": "24/7 availability"
-           
+          "documentation": {
+            "title": "Documentation",
+            "description": "Complete documentation and detailed reports for project planning"
           }
-        ]
+        }
+      },
+      "support": {
+        "badge": "Ongoing Support",
+        "title": "24/7 Support & Maintenance",
+        "subtitle": "Comprehensive support services to ensure your HVAC system operates at peak performance",
+        "description": "Our commitment doesn't end with installation. We provide ongoing support, maintenance, and emergency services to ensure your HVAC system continues to operate efficiently and reliably. Our team is available 24/7 for any urgent issues or maintenance needs.",
+        "features": {
+          "emergencySupport": {
+            "title": "Emergency Support",
+            "description": "24/7 emergency response for critical HVAC issues and breakdowns"
+          },
+          "preventiveMaintenance": {
+            "title": "Preventive Maintenance",
+            "description": "Regular maintenance programs to extend system life and prevent issues"
+          },
+          "technicalSupport": {
+            "title": "Technical Support",
+            "description": "Expert technical assistance and troubleshooting for all HVAC systems"
+          },
+          "warrantyService": {
+            "title": "Warranty Service",
+            "description": "Comprehensive warranty coverage and service for all installed systems"
+          }
+        }
+      },
+      "systemDesign": {
+        "badge": "System Design",
+        "title": "How We Design Your HVAC System",
+        "subtitle": "Advanced 3D modeling and engineering approach for optimal system design",
+        "description": "Our design process begins with comprehensive analysis and advanced 3D modeling to create the perfect HVAC solution for your space. We use cutting-edge technology to visualize and optimize every aspect of your system before installation begins.",
+        "features": {
+          "analysis": {
+            "title": "Space Analysis",
+            "description": "Comprehensive evaluation of building structure, space requirements, and environmental factors"
+          },
+          "modeling": {
+            "title": "3D Modeling",
+            "description": "Advanced 3D visualization and modeling for precise system layout and optimization"
+          },
+          "engineering": {
+            "title": "Engineering Design",
+            "description": "Detailed engineering calculations and specifications for optimal performance"
+          },
+          "optimization": {
+            "title": "System Optimization",
+            "description": "Performance optimization and energy efficiency calculations for cost-effective solutions"
+          }
+        }
       }
     },
     "contact": {

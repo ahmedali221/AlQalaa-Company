@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
+import logo from '../assets/logo.jpg';
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -10,7 +11,16 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>
-            <h3 className="font-bold text-xl mb-4 text-white">{t('footer.companyName')}</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 overflow-hidden rounded-full">
+                <img 
+                  src={logo} 
+                  alt="AlQalaa Logo" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h3 className="font-bold text-xl text-white">{t('footer.companyName')}</h3>
+            </div>
             <p className="text-accent mb-4">
               {t('footer.description')}
             </p>

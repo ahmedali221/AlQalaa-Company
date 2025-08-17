@@ -1,7 +1,7 @@
 import { Phone, Mail, MapPin, Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from '../assets/logo.svg';
+import logo from '../assets/logo.jpg';
 import { cn } from "../utils/cn";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -82,14 +82,12 @@ export default function Header() {
             to="/"
             className="flex items-center gap-4 hover:opacity-80 transition-all duration-300 hover:scale-105 group"
           >
-            <div className="w-15 h-15 overflow-hidden transition-all duration-300 p-1">
-              <div className="w-full h-full bg-white flex items-center justify-center">
-                <img 
-                  src={logo} 
-                  alt="AlQalaa Logo" 
-                  className="object-fill"
-                />
-              </div>
+            <div className="w-15 h-15 overflow-hidden transition-all duration-300 rounded-full">
+              <img 
+                src={logo} 
+                alt="AlQalaa Logo" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="animate-in slide-in-from-left-4 duration-700 delay-100">
               <h1 className="text-xl font-bold text-primary">
