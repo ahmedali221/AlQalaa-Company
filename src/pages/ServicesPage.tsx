@@ -35,6 +35,19 @@ import design4 from "../assets/Designs/20.jpg";
 import design5 from "../assets/Designs/24.jpg";
 import design6 from "../assets/Designs/11.jpg";
 
+// Import step images and other assets to ensure proper bundling in production
+import stepContacting from "../assets/Steps/contacting.JPG";
+import stepPlanning from "../assets/Steps/planning.JPG";
+import stepDesign from "../assets/Steps/design.JPG";
+import stepProvidingMaterials from "../assets/Steps/providingMaterials.jpeg";
+import stepStarting from "../assets/Steps/starting.JPG";
+import stepTakingMeasures from "../assets/Steps/takingMeasures.JPG";
+import stepConsultation from "../assets/Steps/consultation.JPG";
+import modelingImg from "../assets/3Ds/modeling.jpeg";
+import modelingTestImg from "../assets/3Ds/modelingTest.jpeg";
+import certificateImg from "../assets/Certificates/certificate.jpg";
+import certificateScanImg from "../assets/Certificates/Scan.jpg";
+
 
 
 interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -653,13 +666,12 @@ export default function ServicesPage() {
                   <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-2xl sm:rounded-3xl overflow-hidden">
                     <img 
                       src={[
-                        "/src/assets/Steps/contacting.JPG", // consultation
-                        "/src/assets/Steps/planning.JPG", // site inspection
-                        "/src/assets/Steps/design.JPG", // design
-                        "/src/assets/Steps/providingMaterials.jpeg", // procurement
-                        "/src/assets/Steps/starting.JPG", // installation
-                        "/src/assets/Steps/takingMeasures.JPG", // testing
-                       
+                        stepContacting, // consultation
+                        stepPlanning, // site inspection
+                        stepDesign, // design
+                        stepProvidingMaterials, // procurement
+                        stepStarting, // installation
+                        stepTakingMeasures, // testing
                       ][index]} 
                       alt={step.title} 
                       className="w-full h-full object-cover"
@@ -749,7 +761,7 @@ export default function ServicesPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative">
                   <img 
-                    src="/src/assets/3Ds/modeling.jpeg" 
+                    src={modelingImg} 
                     alt="3D modeling and system design" 
                     className="w-full h-48 sm:h-56 object-cover rounded-2xl shadow-lg"
                     loading="lazy"
@@ -758,7 +770,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="relative">
                   <img 
-                    src="/src/assets/3Ds/modelingTest.jpeg" 
+                    src={modelingTestImg} 
                     alt="Advanced 3D visualization" 
                     className="w-full h-48 sm:h-56 object-cover rounded-2xl shadow-lg"
                     loading="lazy"
@@ -842,7 +854,7 @@ export default function ServicesPage() {
             {/* Image Side */}
             <div className="relative">
               <img 
-                src="/src/assets/Steps/consultation.JPG" 
+                src={stepConsultation} 
                 alt="24/7 support and maintenance services" 
                 className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-3xl shadow-lg"
                 loading="lazy"
@@ -978,7 +990,7 @@ export default function ServicesPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative group">
                   <img 
-                    src="/src/assets/Certificates/certificate.jpg" 
+                    src={certificateImg} 
                     alt="Professional certification" 
                     className="w-full h-48 sm:h-56 object-cover rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
@@ -993,7 +1005,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="relative group">
                   <img 
-                    src="/src/assets/Certificates/Scan.jpg" 
+                    src={certificateScanImg} 
                     alt="Quality assurance certification" 
                     className="w-full h-48 sm:h-56 object-cover rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
