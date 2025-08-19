@@ -663,6 +663,7 @@ export default function ServicesPage() {
                       ][index]} 
                       alt={step.title} 
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </div>
                   
@@ -751,6 +752,7 @@ export default function ServicesPage() {
                     src="/src/assets/3Ds/modeling.jpeg" 
                     alt="3D modeling and system design" 
                     className="w-full h-48 sm:h-56 object-cover rounded-2xl shadow-lg"
+                    loading="lazy"
                   />
                   <div className="absolute -top-3 -left-3 w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-xl opacity-80"></div>
                 </div>
@@ -759,6 +761,7 @@ export default function ServicesPage() {
                     src="/src/assets/3Ds/modelingTest.jpeg" 
                     alt="Advanced 3D visualization" 
                     className="w-full h-48 sm:h-56 object-cover rounded-2xl shadow-lg"
+                    loading="lazy"
                   />
                   <div className="absolute -bottom-3 -right-3 w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-xl opacity-80"></div>
                 </div>
@@ -842,6 +845,7 @@ export default function ServicesPage() {
                 src="/src/assets/Steps/consultation.JPG" 
                 alt="24/7 support and maintenance services" 
                 className="w-full h-64 sm:h-80 md:h-96 object-cover rounded-3xl shadow-lg"
+                loading="lazy"
               />
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-2xl opacity-80"></div>
             </div>
@@ -884,6 +888,7 @@ export default function ServicesPage() {
                      src={design.src} 
                      alt={design.title} 
                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                     loading="lazy"
                    />
                  </div>
                  
@@ -976,6 +981,7 @@ export default function ServicesPage() {
                     src="/src/assets/Certificates/certificate.jpg" 
                     alt="Professional certification" 
                     className="w-full h-48 sm:h-56 object-cover rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end">
                     <div className="p-4 text-white">
@@ -990,6 +996,7 @@ export default function ServicesPage() {
                     src="/src/assets/Certificates/Scan.jpg" 
                     alt="Quality assurance certification" 
                     className="w-full h-48 sm:h-56 object-cover rounded-2xl shadow-lg group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end">
                     <div className="p-4 text-white">

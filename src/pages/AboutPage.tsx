@@ -329,7 +329,7 @@ export default function AboutPage() {
               variants={slideInVariants}
             >
               <div className="relative">
-                <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&q=80" alt="Modern UAE building representing company foundation" className="w-full h-96 object-cover rounded-3xl" />
+                <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&q=80" alt="Modern UAE building representing company foundation" className="w-full h-96 object-cover rounded-3xl" loading="lazy" />
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-accent to-secondary rounded-2xl opacity-80"></div>
               </div>
             </motion.div>
@@ -439,7 +439,7 @@ export default function AboutPage() {
               variants={slideInRightVariants}
             >
               <div className="relative">
-                <img src="https://media.istockphoto.com/id/1413633369/photo/mobile-jigsaw-puzzle-pieces-business-cooperation-concept-teamwork-and-cooperation-businessmen.jpg?s=2048x2048&w=is&k=20&c=QJCTW4pZP12kxf9RzvRjU1LPjqFCiPaJIMf5YucpCsQ=" alt="Contemporary Dubai office building for company values" className="w-full h-96 object-cover rounded-3xl" />
+                <img src="https://media.istockphoto.com/id/1413633369/photo/mobile-jigsaw-puzzle-pieces-business-cooperation-concept-teamwork-and-cooperation-businessmen.jpg?s=2048x2048&w=is&k=20&c=QJCTW4pZP12kxf9RzvRjU1LPjqFCiPaJIMf5YucpCsQ=" alt="Contemporary Dubai office building for company values" className="w-full h-96 object-cover rounded-3xl" loading="lazy" />
                 <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-2xl opacity-80"></div>
               </div>
             </motion.div>
@@ -478,7 +478,7 @@ export default function AboutPage() {
               variants={slideInVariants}
             >
               <div className="relative">
-                <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&q=80" alt="Iconic UAE architecture symbolizing company milestones" className="w-full h-96 object-cover rounded-3xl" />
+                <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&q=80" alt="Iconic UAE architecture symbolizing company milestones" className="w-full h-96 object-cover rounded-3xl" loading="lazy" />
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-secondary to-primary rounded-2xl opacity-80"></div>
               </div>
             </motion.div>
@@ -598,6 +598,7 @@ export default function AboutPage() {
                   src="/src/assets/Company/team.JPG" 
                   alt="Al Qalaa professional team" 
                   className="w-full h-96 object-cover rounded-3xl shadow-lg"
+                  loading="lazy"
                 />
                 <div className="absolute -top-6 -left-6 w-32 h-32 bg-gradient-to-br from-accent to-secondary rounded-2xl opacity-80"></div>
               </div>
@@ -737,6 +738,7 @@ export default function AboutPage() {
                       src="/src/assets/Certificates/certificate.jpg" 
                       alt="Rheem Pro Partner Certificate 2022" 
                       className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -757,6 +759,7 @@ export default function AboutPage() {
                       src="/src/assets/Certificates/Scan.jpg" 
                       alt="Rheem Academy Certificate" 
                       className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
