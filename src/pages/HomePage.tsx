@@ -12,8 +12,7 @@ import {
   Mail,
   CheckCircle,
   Settings,
-  Lightbulb,
-  Wind
+  Lightbulb
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../contexts/LanguageContext";
@@ -21,7 +20,7 @@ import Hero from "../components/Hero";
 import BrandsSlider from "../components/BrandsSlider";
 import CTA from "../components/CTA";
 
-import companyImage from "../assets/Company/Company Stuff.JPG";
+import companyImage from "../assets/Company/CompanyImage.JPG";
 import companyImage2 from "../assets/Company/company.JPG";
 
 

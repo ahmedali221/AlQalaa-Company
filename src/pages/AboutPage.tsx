@@ -3,7 +3,6 @@ import {
   Star, 
   Shield, 
   Clock, 
-  Wrench, 
   CheckCircle, 
   ArrowRight,
   Users,
@@ -16,8 +15,7 @@ import {
   Lightbulb,
   HandHeart,
   Trophy,
-  Zap,
-  Settings
+  Zap
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { cn } from "../utils/cn";
