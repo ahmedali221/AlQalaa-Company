@@ -116,7 +116,7 @@ export default function HomePage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUpVariants}
           >
-            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.home.stats_section.title')}</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gold">{t('pages.home.stats_section.title')}</h2>
             <p className="text-secondary text-lg">{t('pages.home.stats_section.subtitle')}</p>
           </motion.div>
           
@@ -170,27 +170,27 @@ export default function HomePage() {
               variants={slideInRightVariants}
             >
               <div className="space-y-6">
-                <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-gold rounded-full text-sm font-medium">
                   {t('pages.home.about_section.badge')}
                 </div>
-                <h2 className="text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-4xl font-bold text-gold leading-tight">
                   {t('pages.home.about_section.title')}
                 </h2>
-                <p className="text-secondary text-lg leading-relaxed">
+                <p className="text-gold text-lg leading-relaxed">
                   {t('pages.home.about_section.description')}
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                    <span className="text-secondary">{t('pages.home.about_section.features.licensed')}</span>
+                    <CheckCircle className="w-6 h-6 text-gold flex-shrink-0" />
+                    <span className="text-gold">{t('pages.home.about_section.features.licensed')}</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                    <span className="text-secondary">{t('pages.home.about_section.features.warranty')}</span>
+                    <CheckCircle className="w-6 h-6 text-gold flex-shrink-0" />
+                    <span className="text-gold">{t('pages.home.about_section.features.warranty')}</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                    <span className="text-secondary">{t('pages.home.about_section.features.support')}</span>
+                    <CheckCircle className="w-6 h-6 text-gold flex-shrink-0" />
+                    <span className="text-gold">{t('pages.home.about_section.features.support')}</span>
                   </div>
                 </div>
                 <button className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors duration-300">
@@ -215,34 +215,34 @@ export default function HomePage() {
               variants={slideInLeftVariants}
             >
               <div className="space-y-6">
-                <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
+                <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-gold rounded-full text-sm font-medium">
                   {t('pages.home.services_section.badge')}
                 </div>
-                <h2 className="text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-4xl font-bold text-gold leading-tight">
                   {t('pages.home.services_section.title')}
                 </h2>
-                <p className="text-secondary text-lg leading-relaxed">
+                <p className="text-gold text-lg leading-relaxed">
                   {t('pages.home.services_section.description')}
                 </p>
                 <div className="grid grid-cols-2 gap-4">
              
                   <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                  <Settings className="w-5 h-5 text-primary" />
+                  <Settings className="w-5 h-5 text-gold" />
                     </div>
-                    <span className="text-secondary font-medium">{t('pages.home.services_section.items.smartControls')}</span>
+                    <span className="text-gold font-medium">{t('pages.home.services_section.items.smartControls')}</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                      <Wrench className="w-5 h-5 text-primary" />
+                      <Wrench className="w-5 h-5 text-gold" />
                     </div>
-                    <span className="text-secondary font-medium">{t('pages.home.services_section.items.maintenance')}</span>
+                    <span className="text-gold font-medium">{t('pages.home.services_section.items.maintenance')}</span>
                   </div>
                   <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-primary" />
+                  <Shield className="w-5 h-5 text-gold" />
                     </div>
-                    <span className="text-secondary font-medium">{t('pages.home.services_section.items.installation')}</span>
+                    <span className="text-gold font-medium">{t('pages.home.services_section.items.installation')}</span>
                   </div>
                 </div>
                 <button className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors duration-300">
@@ -298,29 +298,29 @@ export default function HomePage() {
                 <div className="inline-flex items-center px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
                   {t('pages.home.whyChooseUs_section.badge')}
                 </div>
-                <h2 className="text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-4xl font-bold text-logo-brown leading-tight">
                   {t('pages.home.whyChooseUs_section.title')}
                 </h2>
-                <p className="text-secondary text-lg leading-relaxed">
+                <p className="text-logo-brown text-lg leading-relaxed">
                   {t('pages.home.whyChooseUs_section.description')}
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Star className="w-6 h-6 text-primary" />
+                      <Star className="w-6 h-6 text-logo-brown" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-1">{t('pages.home.whyChooseUs_section.features.trackRecord.title')}</h4>
-                      <p className="text-secondary text-sm">{t('pages.home.whyChooseUs_section.features.trackRecord.description')}</p>
+                      <h4 className="font-semibold text-logo-brown mb-1">{t('pages.home.whyChooseUs_section.features.trackRecord.title')}</h4>
+                      <p className="text-logo-brown text-sm">{t('pages.home.whyChooseUs_section.features.trackRecord.description')}</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-secondary" />
+                      <Clock className="w-6 h-6 text-logo-brown" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-1">{t('pages.home.whyChooseUs_section.features.timelyDelivery.title')}</h4>
-                      <p className="text-secondary text-sm">{t('pages.home.whyChooseUs_section.features.timelyDelivery.description')}</p>
+                      <h4 className="font-semibold text-logo-brown mb-1">{t('pages.home.whyChooseUs_section.features.timelyDelivery.title')}</h4>
+                      <p className="text-logo-brown text-sm">{t('pages.home.whyChooseUs_section.features.timelyDelivery.description')}</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -328,8 +328,8 @@ export default function HomePage() {
                       <Lightbulb className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-1">{t('pages.home.whyChooseUs_section.features.innovation.title')}</h4>
-                      <p className="text-secondary text-sm">{t('pages.home.whyChooseUs_section.features.innovation.description')}</p>
+                      <h4 className="font-semibold text-logo-brown mb-1">{t('pages.home.whyChooseUs_section.features.innovation.title')}</h4>
+                      <p className="text-logo-brown text-sm">{t('pages.home.whyChooseUs_section.features.innovation.description')}</p>
                     </div>
                   </div>
                 </div>
@@ -353,11 +353,11 @@ export default function HomePage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUpVariants}
           >
-            <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-logo-brown rounded-full text-sm font-medium mb-6">
               {t('pages.home.portfolio_section.badge')}
             </div>
-            <h2 className="text-4xl font-bold text-primary mb-4">{t('pages.home.portfolio_section.title')}</h2>
-            <p className="text-secondary text-lg max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-logo-brown mb-4">{t('pages.home.portfolio_section.title')}</h2>
+            <p className="text-logo-brown text-lg max-w-2xl mx-auto">
               {t('pages.home.portfolio_section.description')}
             </p>
           </motion.div>
@@ -387,29 +387,29 @@ export default function HomePage() {
               className="space-y-6"
               variants={slideInRightVariants}
             >
-              <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-logo-brown rounded-full text-sm font-medium">
                 {t('pages.home.portfolio_section.projects.project1.category')}
               </div>
-              <h3 className="text-3xl font-bold text-primary">{t('pages.home.portfolio_section.projects.project1.title')}</h3>
-              <p className="text-secondary text-lg leading-relaxed">
+              <h3 className="text-3xl font-bold text-logo-brown">{t('pages.home.portfolio_section.projects.project1.title')}</h3>
+              <p className="text-logo-brown text-lg leading-relaxed">
                 {t('pages.home.portfolio_section.projects.project1.description')}
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                  <span className="text-secondary">{t('pages.home.portfolio_section.projects.project1.features.chilledWater')}</span>
+                  <CheckCircle className="w-6 h-6 text-logo-brown flex-shrink-0" />
+                  <span className="text-logo-brown">{t('pages.home.portfolio_section.projects.project1.features.chilledWater')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                  <span className="text-secondary">{t('pages.home.portfolio_section.projects.project1.features.smartControl')}</span>
+                  <CheckCircle className="w-6 h-6 text-logo-brown flex-shrink-0" />
+                  <span className="text-logo-brown">{t('pages.home.portfolio_section.projects.project1.features.smartControl')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-primary flex-shrink-0" />
-                  <span className="text-secondary">{t('pages.home.portfolio_section.projects.project1.features.maintenance')}</span>
+                  <CheckCircle className="w-6 h-6 text-logo-brown flex-shrink-0" />
+                  <span className="text-logo-brown">{t('pages.home.portfolio_section.projects.project1.features.maintenance')}</span>
                 </div>
               </div>
               <div className="flex items-center justify-between pt-4">
-                <span className="text-sm text-secondary">{t('pages.home.portfolio_section.projects.project1.year')}</span>
+                <span className="text-sm text-logo-brown">{t('pages.home.portfolio_section.projects.project1.year')}</span>
                 <button className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors duration-300">
                   {t('pages.home.portfolio_section.projects.project1.button')}
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -430,29 +430,29 @@ export default function HomePage() {
               className="space-y-6 lg:order-1"
               variants={slideInLeftVariants}
             >
-              <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-logo-brown rounded-full text-sm font-medium">
                 {t('pages.home.portfolio_section.projects.project2.category')}
               </div>
-              <h3 className="text-3xl font-bold text-primary">{t('pages.home.portfolio_section.projects.project2.title')}</h3>
-              <p className="text-secondary text-lg leading-relaxed">
+              <h3 className="text-3xl font-bold text-logo-brown">{t('pages.home.portfolio_section.projects.project2.title')}</h3>
+              <p className="text-logo-brown text-lg leading-relaxed">
                 {t('pages.home.portfolio_section.projects.project2.description')}
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0" />
-                  <span className="text-secondary">{t('pages.home.portfolio_section.projects.project2.features.iot')}</span>
+                  <CheckCircle className="w-6 h-6 text-logo-brown flex-shrink-0" />
+                  <span className="text-logo-brown">{t('pages.home.portfolio_section.projects.project2.features.iot')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0" />
-                  <span className="text-secondary">{t('pages.home.portfolio_section.projects.project2.features.automation')}</span>
+                  <CheckCircle className="w-6 h-6 text-logo-brown flex-shrink-0" />
+                  <span className="text-logo-brown">{t('pages.home.portfolio_section.projects.project2.features.automation')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0" />
-                  <span className="text-secondary">{t('pages.home.portfolio_section.projects.project2.features.monitoring')}</span>
+                  <CheckCircle className="w-6 h-6 text-logo-brown flex-shrink-0" />
+                  <span className="text-logo-brown">{t('pages.home.portfolio_section.projects.project2.features.monitoring')}</span>
                 </div>
               </div>
               <div className="flex items-center justify-between pt-4">
-                <span className="text-sm text-secondary">{t('pages.home.portfolio_section.projects.project2.year')}</span>
+                <span className="text-sm text-logo-brown">{t('pages.home.portfolio_section.projects.project2.year')}</span>
                 <button className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors duration-300">
                   {t('pages.home.portfolio_section.projects.project2.button')}
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -502,26 +502,26 @@ export default function HomePage() {
               <div className="inline-flex items-center px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
                 {t('pages.home.portfolio_section.projects.project3.category')}
               </div>
-              <h3 className="text-3xl font-bold text-primary">{t('pages.home.portfolio_section.projects.project3.title')}</h3>
-              <p className="text-secondary text-lg leading-relaxed">
+              <h3 className="text-3xl font-bold text-logo-brown">{t('pages.home.portfolio_section.projects.project3.title')}</h3>
+              <p className="text-logo-brown text-lg leading-relaxed">
                 {t('pages.home.portfolio_section.projects.project3.description')}
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
-                  <span className="text-secondary">{t('pages.home.portfolio_section.projects.project3.features.annual')}</span>
+                  <span className="text-logo-brown">{t('pages.home.portfolio_section.projects.project3.features.annual')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
-                  <span className="text-secondary">{t('pages.home.portfolio_section.projects.project3.features.optimization')}</span>
+                  <span className="text-logo-brown">{t('pages.home.portfolio_section.projects.project3.features.optimization')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
-                  <span className="text-secondary">{t('pages.home.portfolio_section.projects.project3.features.luxury')}</span>
+                  <span className="text-logo-brown">{t('pages.home.portfolio_section.projects.project3.features.luxury')}</span>
                 </div>
               </div>
               <div className="flex items-center justify-between pt-4">
-                <span className="text-sm text-secondary">{t('pages.home.portfolio_section.projects.project3.year')}</span>
+                <span className="text-sm text-logo-brown">{t('pages.home.portfolio_section.projects.project3.year')}</span>
                 <button className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors duration-300">
                   {t('pages.home.portfolio_section.projects.project3.button')}
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -557,13 +557,13 @@ export default function HomePage() {
             variants={slideInLeftVariants}
           >
             <div className="text-center space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-logo-brown rounded-full text-sm font-medium">
                 {t('pages.home.contact_section.badge')}
               </div>
-              <h2 className="text-4xl font-bold text-primary leading-tight">
+              <h2 className="text-4xl font-bold text-logo-brown leading-tight">
                 {t('pages.home.contact_section.title')}
               </h2>
-              <p className="text-primary text-lg leading-relaxed">
+              <p className="text-logo-brown text-lg leading-relaxed">
                 {t('pages.home.contact_section.description')}
               </p>
             </div>
@@ -583,8 +583,8 @@ export default function HomePage() {
                     {method.icon}
                   </div>
                   <div className={`${isRTL ? 'text-right' : 'text-left'} w-full`}>
-                    <h4 className="font-semibold text-primary group-hover:text-primary/80 transition-colors mb-2">{method.label}</h4>
-                    <p className="text-primary group-hover:text-primary/80 transition-colors">{method.value}</p>
+                    <h4 className="font-semibold text-logo-brown group-hover:text-logo-brown/80 transition-colors mb-2">{method.label}</h4>
+                    <p className="text-logo-brown group-hover:text-logo-brown/80 transition-colors">{method.value}</p>
                   </div>
                 </motion.div>
               ))}
@@ -595,7 +595,7 @@ export default function HomePage() {
               variants={itemVariants}
             >
               <motion.a 
-                href="tel:+97158192989" 
+                href="tel:+971566201878" 
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -605,7 +605,7 @@ export default function HomePage() {
               </motion.a>
               <motion.a 
                 href="mailto:info@alqalaa-ac.com" 
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary rounded-xl font-semibold hover:bg-primary hover:text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-logo-brown rounded-xl font-semibold hover:bg-primary hover:text-white hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -624,7 +624,7 @@ export default function HomePage() {
             variants={slideInRightVariants}
           >
             <div className="relative">
-              <div className="w-full h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+              <div className="w-full h-64 sm:h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.139305!2d56.331444!3d25.139305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA4JzIxLjUiTiA1NsKwMTknNTMuMiJF!5e0!3m2!1sen!2sae!4v1234567890"
                   width="100%"
@@ -644,8 +644,8 @@ export default function HomePage() {
                     <MapPin className="w-5 h-5 text-white" />
                   </div>
                   <div className={`${isRTL ? 'text-right' : 'text-left'}`}>
-                    <p className="font-bold text-primary text-sm">AlQalaa AC</p>
-                    <p className="text-primary text-xs">Fujairah, UAE</p>
+                    <p className="font-bold text-logo-brown text-sm">AlQalaa AC</p>
+                    <p className="text-logo-brown text-xs">Fujairah, UAE</p>
                   </div>
                 </div>
               </div>
@@ -667,7 +667,7 @@ export default function HomePage() {
             <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium mb-6">
               {t('pages.home.brands_section.badge')}
             </div>
-            <h2 className="text-3xl font-bold text-primary mb-4">{t('pages.home.brands_section.title')}</h2>
+            <h2 className="text-3xl font-bold text-logo-brown mb-4">{t('pages.home.brands_section.title')}</h2>
             <p className="text-secondary text-lg max-w-2xl mx-auto">
               {t('pages.home.brands_section.description')}
             </p>

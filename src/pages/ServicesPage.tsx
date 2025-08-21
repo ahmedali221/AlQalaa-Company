@@ -103,7 +103,7 @@ function Button({
 }
 
 export default function ServicesPage() {
-  const { t } = useLanguage();
+  const { t, dir } = useLanguage();
   
   // Animation variants
   const containerVariants = {
@@ -148,7 +148,7 @@ export default function ServicesPage() {
   
   const mainServices = [
     {
-      icon: <Wind className="w-8 h-8 text-primary" />,
+      icon: <Wind className="w-6 h-6 text-gold" />,
       title: t('pages.services.mainServices.duct.title'),
       description: t('pages.services.mainServices.duct.description'),
       features: [
@@ -163,7 +163,7 @@ export default function ServicesPage() {
       color: "from-primary to-accent"
     },
     {
-      icon: <Package className="w-8 h-8 text-primary" />,
+      icon: <Package className="w-6 h-6 text-gold" />,
       title: t('pages.services.mainServices.package.title'),
       description: t('pages.services.mainServices.package.description'),
       features: [
@@ -178,7 +178,7 @@ export default function ServicesPage() {
       color: "from-primary to-secondary"
     },
     {
-      icon: <Monitor className="w-8 h-8 text-primary" />,
+      icon: <Monitor className="w-6 h-6 text-gold" />,
       title: t('pages.services.mainServices.smart.title'),
       description: t('pages.services.mainServices.smart.description'),
       features: [
@@ -198,37 +198,37 @@ export default function ServicesPage() {
 
   const processSteps = [
     {
-      icon: <Phone className="w-6 h-6 text-primary" />,
+      icon: <Phone className="w-6 h-6 text-gold" />,
       title: t('pages.services.processSteps.consultation.title'),
       description: t('pages.services.processSteps.consultation.description'),
       color: "from-primary to-accent"
     },
     {
-      icon: <MapPin className="w-6 h-6 text-primary" />,
+      icon: <MapPin className="w-6 h-6 text-gold" />,
       title: t('pages.about.siteInspection.title'),
       description: t('pages.about.siteInspection.description'),
       color: "from-secondary to-accent"
     },
     {
-      icon: <FileText className="w-6 h-6 text-primary" />,
+      icon: <FileText className="w-6 h-6 text-gold" />,
       title: t('pages.services.processSteps.design.title'),
       description: t('pages.services.processSteps.design.description'),
       color: "from-primary to-secondary"
     },
     {
-      icon: <Package className="w-6 h-6 text-primary" />,
+      icon: <Package className="w-6 h-6 text-gold" />,
       title: t('pages.services.processSteps.procurement.title'),
       description: t('pages.services.processSteps.procurement.description'),
       color: "from-secondary to-primary"
     },
     {
-      icon: <Wrench className="w-6 h-6 text-primary" />,
+      icon: <Wrench className="w-6 h-6 text-gold" />,
       title: t('pages.services.processSteps.installation.title'),
       description: t('pages.services.processSteps.installation.description'),
       color: "from-primary to-accent"
     },
     {
-      icon: <Settings className="w-6 h-6 text-primary" />,
+      icon: <Settings className="w-6 h-6 text-gold" />,
       title: t('pages.services.processSteps.testing.title'),
       description: t('pages.services.processSteps.testing.description'),
       color: "from-secondary to-accent"
@@ -237,10 +237,10 @@ export default function ServicesPage() {
   ];
 
   const certifications = [
-    { name: t('pages.services.certifications.rheem.title'), icon: <Award className="w-6 h-6 text-primary" />, color: "from-secondary to-primary" },
-    { name: t('pages.services.certifications.engineers.title'), icon: <Users className="w-6 h-6 text-primary" />, color: "from-primary to-accent" },
-    { name: t('pages.services.certifications.municipality.title'), icon: <Shield className="w-6 h-6 text-primary" />, color: "from-secondary to-accent" },
-    { name: t('pages.services.certifications.quality.title'), icon: <CheckCircle className="w-6 h-6 text-primary" />, color: "from-primary to-secondary" }
+    { name: t('pages.services.certifications.rheem.title'), icon: <Award className="w-5 h-5 text-gold" />, color: "from-secondary to-primary" },
+    { name: t('pages.services.certifications.engineers.title'), icon: <Users className="w-5 h-5 text-gold" />, color: "from-primary to-accent" },
+    { name: t('pages.services.certifications.municipality.title'), icon: <Shield className="w-5 h-5 text-gold" />, color: "from-secondary to-accent" },
+    { name: t('pages.services.certifications.quality.title'), icon: <CheckCircle className="w-5 h-5 text-gold" />, color: "from-primary to-secondary" }
   ];
 
   const stats = [
@@ -271,7 +271,7 @@ export default function ServicesPage() {
   
   {/* Fixed decorative elements - contained within viewport */}
   <motion.div 
-    className="absolute top-10 right-4 sm:right-10 w-24 h-24 sm:w-32 sm:h-32 md:w-48 md:h-48 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl max-w-full"
+     className="absolute top-10 right-4 sm:right-10 w-32 h-32 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl max-w-full"
     animate={{ 
       scale: [1, 1.1, 1],
       opacity: [0.3, 0.6, 0.3]
@@ -283,7 +283,7 @@ export default function ServicesPage() {
     }}
   ></motion.div>
   <motion.div 
-    className="absolute bottom-10 left-4 sm:left-10 w-32 h-32 sm:w-48 sm:h-48 md:w-72 md:h-72 bg-gradient-to-tr from-primary/10 to-accent/10 rounded-full blur-3xl max-w-full"
+     className="absolute bottom-10 left-4 sm:left-10 w-48 h-48 bg-gradient-to-tr from-primary/10 to-accent/10 rounded-full blur-3xl max-w-full"
     animate={{ 
       scale: [1, 1.2, 1],
       opacity: [0.2, 0.4, 0.2]
@@ -295,7 +295,7 @@ export default function ServicesPage() {
     }}
   ></motion.div>
   <motion.div 
-    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-gradient-to-r from-secondary/30 to-accent/30 rounded-full blur-2xl max-w-full"
+     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-secondary/30 to-accent/30 rounded-full blur-2xl max-w-full"
     animate={{ 
       scale: [1, 1.3, 1],
       opacity: [0.4, 0.8, 0.4]
@@ -310,21 +310,21 @@ export default function ServicesPage() {
   <div className="container mx-auto px-4 sm:px-6 relative z-10">
     <div className="max-w-4xl mx-auto text-center">
       <motion.div variants={fadeInUp}>
-        <Badge variant="outline" className="mb-4 sm:mb-6 text-primary border-primary px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold shadow-sm">
-          <Thermometer className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2" />
+        <Badge variant="outline" className="mb-4 sm:mb-6 text-logo-brown border-logo-brown px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold shadow-sm">
+          <Thermometer className="w-4 h-4 mr-2" />
           {t('pages.services.badge')}
         </Badge>
       </motion.div>
       
       <motion.h1 
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-primary"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight bg-gradient-to-r from-gold via-gold to-gold bg-clip-text text-gold"
         variants={fadeInUp}
       >
         {t('pages.services.title')}
       </motion.h1>
       
       <motion.p 
-        className="text-base sm:text-lg md:text-xl text-primary mb-6 sm:mb-10 leading-relaxed max-w-3xl mx-auto"
+        className="text-base sm:text-lg md:text-xl text-gold mb-6 sm:mb-10 leading-relaxed max-w-3xl mx-auto"
         variants={fadeInUp}
       >
         {t('pages.services.description')}
@@ -337,12 +337,12 @@ export default function ServicesPage() {
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button size="lg" className="bg-primary hover:bg-primary/90 group border-0 shadow-lg shadow-primary/20 text-sm sm:text-base font-medium py-2.5 sm:py-3 px-6 sm:px-8">
             {t('pages.services.quoteButton')}
-            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
           </Button>
         </motion.div>
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Button variant="outline" size="lg" className="group border-primary text-primary hover:bg-primary hover:text-white shadow-lg text-sm sm:text-base font-medium py-2.5 sm:py-3 px-6 sm:px-8">
-            <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2" />
+          <Button variant="outline" size="lg" className="group border-gold text-gold hover:bg-gold hover:text-white shadow-lg text-sm sm:text-base font-medium py-2.5 sm:py-3 px-6 sm:px-8">
+            <Phone className="w-4 h-4 mr-2" />
             {t('pages.services.callButton')}
           </Button>
         </motion.div>
@@ -377,8 +377,8 @@ export default function ServicesPage() {
                   >
                     {stat.icon}
                   </motion.div>
-                  <div className="text-2xl md:text-3xl font-bold text-primary mb-2">{stat.value}</div>
-                  <div className="text-sm text-primary">{t(`pages.about.achievements.items.${index}.label`)}</div>
+                  <div className="text-heading-md font-bold text-gold mb-2">{stat.value}</div>
+                  <div className="text-body-sm text-gold">{t(`pages.about.achievements.items.${index}.label`)}</div>
                 </div>
               </motion.div>
             ))}
@@ -397,7 +397,7 @@ export default function ServicesPage() {
         {/* Enhanced decorative elements */}
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-secondary/50 to-transparent"></div>
         <motion.div 
-          className="absolute top-0 left-0 w-32 h-32 sm:w-40 sm:h-40 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-2xl max-w-full"
+           className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-2xl max-w-full"
           animate={{ 
             scale: [1, 1.1, 1],
             opacity: [0.3, 0.6, 0.3]
@@ -409,7 +409,7 @@ export default function ServicesPage() {
           }}
         ></motion.div>
         <motion.div 
-          className="absolute top-1/4 right-4 sm:right-8 w-40 h-40 sm:w-60 sm:h-60 bg-gradient-to-bl from-primary/10 to-accent/10 rounded-full blur-3xl max-w-full"
+           className="absolute top-1/4 right-4 sm:right-8 w-40 h-40 bg-gradient-to-bl from-primary/10 to-accent/10 rounded-full blur-3xl max-w-full"
           animate={{ 
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.5, 0.2]
@@ -426,11 +426,11 @@ export default function ServicesPage() {
             className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16"
             variants={fadeInUp}
           >
-            <Badge variant="outline" className="mb-4 sm:mb-6 text-primary border-primary px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold shadow-sm">
+            <Badge variant="outline" className="mb-4 sm:mb-6 text-gold border-gold px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold shadow-sm">
               {t('pages.services.core.badge')}
             </Badge>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-primary">{t('pages.services.core.title')}</h2>
-            <p className="text-primary text-base sm:text-lg max-w-3xl mx-auto">{t('pages.services.core.description')}</p>
+            <h2 className="text-heading-lg font-bold mb-3 sm:mb-4 text-gold">{t('pages.services.core.title')}</h2>
+            <p className="text-gold text-body-lg max-w-3xl mx-auto">{t('pages.services.core.description')}</p>
           </motion.div>
 
           <motion.div 
@@ -452,7 +452,7 @@ export default function ServicesPage() {
                 }`}>
                   {service.popular && (
                     <div className="absolute -top-2 sm:-top-3 left-4 sm:left-8">
-                      <Badge className="bg-gradient-to-r from-primary to-secondary border-0 animate-pulse px-3 sm:px-4 py-1 sm:py-1.5 text-sm shadow-lg shadow-primary/30 text-white">
+                      <Badge className="bg-gradient-to-r from-primary to-secondary border-0 animate-pulse px-3 sm:px-4 py-1 sm:py-1.5 text-body-sm shadow-lg shadow-primary/30 text-white">
                         <Star className="w-3 sm:w-4 sm:h-4 mr-2" />
                         {t('pages.services.mostPopular')}
                       </Badge>
@@ -465,12 +465,12 @@ export default function ServicesPage() {
                       {/* Left column - Icon and title */}
                       <div className="lg:col-span-1">
                         <div className="flex flex-col sm:flex-row lg:flex-col items-start gap-4 sm:gap-6 mb-4 sm:mb-6">
-                          <div className={`w-16 h-16 sm:w-20 sm:h-20 rounded-2xl sm:rounded-3xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 bg-gradient-to-br ${service.color} text-white shadow-lg shadow-primary/20`}>
+                          <div className={`w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 bg-gradient-to-br ${service.color} text-white shadow-lg shadow-primary/20`}>
                             {service.icon}
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 group-hover:text-primary transition-colors duration-300 text-primary">{service.title}</h3>
-                            <p className="text-primary text-sm sm:text-base leading-relaxed">{service.description}</p>
+                            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 group-hover:text-gold transition-colors duration-300 text-gold">{service.title}</h3>
+                <p className="text-gold text-body-sm leading-relaxed">{service.description}</p>
                           </div>
                         </div>
                       </div>
@@ -479,15 +479,15 @@ export default function ServicesPage() {
                       <div className="lg:col-span-1">
                         <div className="space-y-4 sm:space-y-5">
                           <div>
-                            <h4 className="font-bold mb-3 text-primary text-sm sm:text-base flex items-center">
-                              <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary mr-2" />
+                            <h4 className="font-bold mb-3 text-gold text-sm sm:text-base flex items-center">
+                    <CheckCircle className="w-4 h-4 text-gold mr-2" />
                               {t('pages.services.keyFeatures')}
                             </h4>
                             <ul className="space-y-2 sm:space-y-3">
                               {service.features.map((feature, idx) => (
-                                <li key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-primary group-hover:transform group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${idx * 50}ms` }}>
-                                  <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                                    <CheckCircle className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-primary" />
+                                <li key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-gold group-hover:transform group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${idx * 50}ms` }}>
+                        <div className="w-4 h-4 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                          <CheckCircle className="w-3 h-3 text-gold" />
                                   </div>
                                   {feature}
                                 </li>
@@ -501,28 +501,28 @@ export default function ServicesPage() {
                       <div className="lg:col-span-1">
                         <div className="space-y-4 sm:space-y-5 mb-4 sm:mb-6">
                           <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-gradient-to-br from-snow to-white group-hover:from-primary/5 group-hover:to-primary/10 transition-all duration-300 border border-accent">
-                            <h4 className="font-bold text-sm sm:text-base text-primary mb-2 flex items-center">
-                              <Target className="w-4 h-4 sm:w-5 sm:h-5 text-primary mr-2" />
+                            <h4 className="font-bold text-body-sm text-gold mb-2 flex items-center">
+                              <Target className="w-4 h-4 text-gold mr-2" />
                               {t('pages.services.capacityRange')}
                             </h4>
-                            <p className="text-primary font-bold text-sm sm:text-base">{service.capacity}</p>
+                            <p className="text-gold font-bold text-sm sm:text-base">{service.capacity}</p>
                           </div>
                           <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-gradient-to-br from-snow to-white group-hover:from-primary/5 group-hover:to-primary/10 transition-all duration-300 border border-accent">
-                            <h4 className="font-bold text-sm sm:text-base text-primary mb-2 flex items-center">
-                              <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-primary mr-2" />
+                            <h4 className="font-bold text-body-sm text-gold mb-2 flex items-center">
+                              <Shield className="w-4 h-4 text-gold mr-2" />
                               {t('pages.services.warranty')}
                             </h4>
-                            <p className="text-primary text-sm sm:text-base">{service.warranty}</p>
+                            <p className="text-gold text-sm sm:text-base">{service.warranty}</p>
                           </div>
                         </div>
                         
                         <div className="mt-auto pt-3 sm:pt-4">
                           <Button 
                             variant="default" 
-                            className="w-full group-hover:scale-105 transition-transform duration-300 text-sm sm:text-base py-3 sm:py-4 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 border-0 shadow-lg shadow-primary/20"
+                            className="w-full group-hover:scale-105 transition-transform duration-300 text-body-sm py-3 sm:py-4 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 border-0 shadow-lg shadow-primary/20"
                           >
                             {t('pages.services.getDetails')}
-                            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                           </Button>
                         </div>
                       </div>
@@ -531,26 +531,26 @@ export default function ServicesPage() {
                     // Regular service layout - original design
                     <>
                       <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-4 sm:mb-6">
-                        <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 bg-accent group-hover:bg-gradient-to-br group-hover:from-primary/10 group-hover:to-primary/5`}>
+                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 bg-accent group-hover:bg-gradient-to-br group-hover:from-primary/10 group-hover:to-primary/5`}>
                           {service.icon}
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2 group-hover:text-primary transition-colors duration-300 text-primary">{service.title}</h3>
-                          <p className="text-primary text-sm sm:text-base leading-relaxed">{service.description}</p>
+                          <h3 className="text-heading-sm font-bold mb-1 sm:mb-2 group-hover:text-gold transition-colors duration-300 text-gold">{service.title}</h3>
+                  <p className="text-gold text-sm sm:text-base leading-relaxed">{service.description}</p>
                         </div>
                       </div>
 
                       <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6 max-w-full">
                         <div>
-                          <h4 className="font-bold mb-2 sm:mb-3 text-primary text-sm sm:text-base flex items-center">
-                            <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary mr-1.5 sm:mr-2" />
+                          <h4 className="font-bold mb-2 sm:mb-3 text-gold text-body-sm flex items-center">
+                      <CheckCircle className="w-4 h-4 text-gold mr-2" />
                             {t('pages.services.keyFeatures')}
                           </h4>
                           <ul className="space-y-2 sm:space-y-3">
                             {service.features.map((feature, idx) => (
-                              <li key={idx} className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-primary group-hover:transform group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${idx * 50}ms` }}>
-                                <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                                  <CheckCircle className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-primary" />
+                              <li key={idx} className="flex items-center gap-1.5 sm:gap-2 text-body-sm text-gold group-hover:transform group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${idx * 50}ms` }}>
+                          <div className="w-4 h-4 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                            <CheckCircle className="w-3 h-3 text-gold" />
                                 </div>
                                 {feature}
                               </li>
@@ -559,18 +559,18 @@ export default function ServicesPage() {
                         </div>
                         <div className="space-y-3 sm:space-y-5">
                           <div className="p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-br from-snow to-white group-hover:from-primary/5 group-hover:to-primary/10 transition-all duration-300 border border-accent">
-                            <h4 className="font-bold text-xs sm:text-sm text-primary mb-1 sm:mb-2 flex items-center">
-                              <Target className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary mr-1.5 sm:mr-2" />
+                            <h4 className="font-bold text-xs sm:text-sm text-gold mb-1 sm:mb-2 flex items-center">
+                              <Target className="w-4 h-4 text-gold mr-2" />
                               {t('pages.services.capacityRange')}
                             </h4>
-                            <p className="text-primary font-bold text-sm sm:text-base">{service.capacity}</p>
+                            <p className="text-gold font-bold text-sm sm:text-base">{service.capacity}</p>
                           </div>
                           <div className="p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-br from-snow to-white group-hover:from-primary/5 group-hover:to-primary/10 transition-all duration-300 border border-accent">
-                            <h4 className="font-bold text-xs sm:text-sm text-primary mb-1 sm:mb-2 flex items-center">
-                              <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary mr-1.5 sm:mr-2" />
+                            <h4 className="font-bold text-xs sm:text-sm text-gold mb-1 sm:mb-2 flex items-center">
+                              <Shield className="w-4 h-4 text-gold mr-2" />
                               {t('pages.services.warranty')}
                             </h4>
-                            <p className="text-primary text-sm sm:text-base">{service.warranty}</p>
+                            <p className="text-gold text-sm sm:text-base">{service.warranty}</p>
                           </div>
                         </div>
                       </div>
@@ -578,10 +578,10 @@ export default function ServicesPage() {
                       <div className="mt-auto pt-3 sm:pt-4">
                         <Button 
                           variant="outline" 
-                          className="w-full group-hover:scale-105 transition-transform duration-300 text-sm sm:text-base py-2 sm:py-2.5 border-primary text-primary hover:bg-primary hover:text-white"
+                          className="w-full group-hover:scale-105 transition-transform duration-300 text-sm sm:text-base py-2 sm:py-2.5 border-gold text-gold hover:bg-gold hover:text-white"
                         >
                           {t('pages.services.getDetails')}
-                          <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 ml-1.5 sm:ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                         </Button>
                       </div>
                     </>
@@ -597,16 +597,16 @@ export default function ServicesPage() {
       {/* Section 2: Work Process - Alternating Layout */}
       <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden">
         {/* Enhanced decorative elements */}
-        <div className="absolute top-0 left-4 sm:left-8 w-40 h-40 sm:w-64 sm:h-64 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
-        <div className="absolute bottom-1/4 right-4 sm:right-8 w-56 h-56 sm:w-80 sm:h-80 bg-gradient-to-tl from-secondary/30 to-primary/20 rounded-full blur-3xl max-w-full"></div>
+        <div className="absolute top-0 left-4 sm:left-8 w-40 h-40 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
+        <div className="absolute bottom-1/4 right-4 sm:right-8 w-56 h-56 bg-gradient-to-tl from-secondary/30 to-primary/20 rounded-full blur-3xl max-w-full"></div>
         
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16 animate-in slide-in-from-bottom-4 duration-700">
-            <Badge variant="outline" className="mb-4 sm:mb-6 text-primary border-primary px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold shadow-sm">
+            <Badge variant="outline" className="mb-4 sm:mb-6 text-gold border-gold px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold shadow-sm">
               {t('pages.services.process.badge')}
             </Badge>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-primary">{t('pages.services.process.title')}</h2>
-            <p className="text-primary text-base sm:text-lg max-w-3xl mx-auto">{t('pages.services.process.description')}</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-gold">{t('pages.services.process.title')}</h2>
+            <p className="text-gold text-base sm:text-lg max-w-3xl mx-auto">{t('pages.services.process.description')}</p>
           </div>
 
           <div className="space-y-16 sm:space-y-20 md:space-y-24 max-w-6xl mx-auto">
@@ -620,28 +620,28 @@ export default function ServicesPage() {
               >
                 {/* Step Number Badge */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg shadow-primary/20 border-4 border-white">
-                    <span className="text-white font-bold text-lg sm:text-xl">{index + 1}</span>
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg shadow-primary/20 border-4 border-white">
+                    <span className="text-white font-bold text-heading-sm">{index + 1}</span>
                   </div>
                 </div>
 
                 {/* Content - Alternating layout */}
                 <div className={`space-y-4 sm:space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <div className="flex items-center gap-3 sm:gap-4">
-                    <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${step.color} rounded-xl sm:rounded-2xl flex items-center justify-center text-white shadow-lg shadow-primary/20`}>
+                    <div className={`w-12 h-12 bg-gradient-to-br ${step.color} rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/20`}>
                       {step.icon}
                     </div>
                     <div>
-                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary">{step.title}</h3>
-                      <p className="text-primary text-sm sm:text-base leading-relaxed">{step.description}</p>
+                      <h3 className="text-heading-sm font-bold text-gold">{step.title}</h3>
+                  <p className="text-gold text-body-sm leading-relaxed">{step.description}</p>
                     </div>
                   </div>
                   
                   {/* Additional details or features could go here */}
                   <div className="bg-gradient-to-br from-snow to-white rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-accent">
                     <div className="flex items-center gap-2 mb-3">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      <span className="text-primary font-semibold text-sm sm:text-base">
+                      <div className="w-2 h-2 bg-gold rounded-full"></div>
+                    <span className="text-gold font-semibold text-body-sm">
                         {index === 0 && t('pages.services.processSteps.consultation.detail')}
                         {index === 1 && t('pages.services.processSteps.design.detail')}
                         {index === 2 && t('pages.services.processSteps.procurement.detail')}
@@ -650,7 +650,7 @@ export default function ServicesPage() {
                         {index === 5 && t('pages.services.processSteps.support.detail')}
                       </span>
                     </div>
-                    <p className="text-primary text-sm leading-relaxed">
+                    <p className="text-gold text-body-sm leading-relaxed">
                       {index === 0 && t('pages.services.processSteps.consultation.detailText')}
                       {index === 1 && t('pages.services.processSteps.design.detailText')}
                       {index === 2 && t('pages.services.processSteps.procurement.detailText')}
@@ -680,7 +680,7 @@ export default function ServicesPage() {
                   </div>
                   
                   {/* Decorative element */}
-                  <div className={`absolute -bottom-4 ${index % 2 === 1 ? '-left-4' : '-right-4'} w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-accent to-secondary rounded-xl opacity-80`}></div>
+                  <div className={`absolute -bottom-4 ${index % 2 === 1 ? '-left-4' : '-right-4'} w-16 h-16 bg-gradient-to-br from-accent to-secondary rounded-xl opacity-80`}></div>
                 </div>
               </div>
             ))}
@@ -691,66 +691,66 @@ export default function ServicesPage() {
       {/* Section: System Design Process */}
       <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden">
         {/* Enhanced decorative elements */}
-        <div className="absolute top-1/4 right-4 sm:right-8 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-bl from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
-        <div className="absolute bottom-0 left-4 sm:left-8 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-tr from-secondary/30 to-primary/20 rounded-full blur-3xl max-w-full"></div>
+        <div className="absolute top-1/4 right-4 sm:right-8 w-48 h-48 bg-gradient-to-bl from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
+        <div className="absolute bottom-0 left-4 sm:left-8 w-64 h-64 bg-gradient-to-tr from-secondary/30 to-primary/20 rounded-full blur-3xl max-w-full"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-in slide-in-from-bottom-4 duration-700">
-            <Badge variant="outline" className="mb-6 text-primary border-primary px-4 py-2 text-sm font-semibold shadow-sm">
+            <Badge variant="outline" className="mb-6 text-gold border-gold px-4 py-2 text-body-sm font-semibold shadow-sm">
               <FileText className="w-4 h-4 mr-2" />
               {t('pages.about.systemDesign.badge')}
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">{t('pages.about.systemDesign.title')}</h2>
-            <p className="text-primary text-lg max-w-3xl mx-auto">{t('pages.about.systemDesign.subtitle')}</p>
+            <h2 className="text-heading-lg font-bold mb-4 text-gold">{t('pages.about.systemDesign.title')}</h2>
+            <p className="text-gold text-body-lg max-w-3xl mx-auto">{t('pages.about.systemDesign.subtitle')}</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center max-w-full">
             {/* Text Side */}
             <div className="space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-gold/10 text-gold rounded-full text-body-sm font-medium">
                 {t('pages.about.systemDesign.badge')}
               </div>
-              <h2 className="text-4xl font-bold text-primary leading-tight">
+              <h2 className="text-heading-lg font-bold text-gold leading-tight">
                 {t('pages.about.systemDesign.title')}
               </h2>
-              <p className="text-primary text-lg leading-relaxed">
+              <p className="text-gold text-body-lg leading-relaxed">
                 {t('pages.about.systemDesign.description')}
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Target className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center">
+                    <Target className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.systemDesign.features.analysis.title')}</h4>
-                    <p className="text-primary text-xs">{t('pages.about.systemDesign.features.analysis.description')}</p>
+                    <h4 className="font-semibold text-gold mb-1 text-body-sm">{t('pages.about.systemDesign.features.analysis.title')}</h4>
+                    <p className="text-gold text-caption">{t('pages.about.systemDesign.features.analysis.description')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
-                    <Image className="w-5 h-5 text-secondary" />
+                    <Image className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.systemDesign.features.modeling.title')}</h4>
-                    <p className="text-primary text-xs">{t('pages.about.systemDesign.features.modeling.description')}</p>
+                    <h4 className="font-semibold text-gold mb-1 text-body-sm">{t('pages.about.systemDesign.features.modeling.title')}</h4>
+                    <p className="text-gold text-caption">{t('pages.about.systemDesign.features.modeling.description')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                    <Settings className="w-5 h-5 text-accent" />
+                    <Settings className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.systemDesign.features.engineering.title')}</h4>
-                    <p className="text-primary text-xs">{t('pages.about.systemDesign.features.engineering.description')}</p>
+                    <h4 className="font-semibold text-gold mb-1 text-body-sm">{t('pages.about.systemDesign.features.engineering.title')}</h4>
+                    <p className="text-gold text-caption">{t('pages.about.systemDesign.features.engineering.description')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center">
                     <TrendingUp className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.systemDesign.features.optimization.title')}</h4>
-                    <p className="text-primary text-xs">{t('pages.about.systemDesign.features.optimization.description')}</p>
+                    <h4 className="font-semibold text-gold mb-1 text-body-sm">{t('pages.about.systemDesign.features.optimization.title')}</h4>
+                    <p className="text-primary text-caption">{t('pages.about.systemDesign.features.optimization.description')}</p>
                   </div>
                 </div>
               </div>
@@ -786,66 +786,66 @@ export default function ServicesPage() {
       {/* Section: Support & Maintenance */}
       <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-snow to-white relative overflow-hidden">
         {/* Enhanced decorative elements */}
-        <div className="absolute top-1/3 left-4 sm:left-8 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
-        <div className="absolute bottom-0 right-4 sm:right-8 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-tl from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
+        <div className="absolute top-1/3 left-4 sm:left-8 w-48 h-48 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
+        <div className="absolute bottom-0 right-4 sm:right-8 w-64 h-64 bg-gradient-to-tl from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-in slide-in-from-bottom-4 duration-700">
-            <Badge variant="outline" className="mb-6 text-primary border-primary px-4 py-2 text-sm font-semibold shadow-sm">
+            <Badge variant="outline" className="mb-6 text-gold border-gold px-4 py-2 text-body-sm font-semibold shadow-sm">
               <Headphones className="w-4 h-4 mr-2" />
               {t('pages.about.support.badge')}
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">{t('pages.about.support.title')}</h2>
-            <p className="text-primary text-lg max-w-3xl mx-auto">{t('pages.about.support.subtitle')}</p>
+            <h2 className="text-heading-lg font-bold mb-4 text-gold">{t('pages.about.support.title')}</h2>
+            <p className="text-primary text-body-lg max-w-3xl mx-auto">{t('pages.about.support.subtitle')}</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center max-w-full">
             {/* Text Side */}
             <div className="space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-gold/10 text-gold rounded-full text-body-sm font-medium">
                 {t('pages.about.support.badge')}
               </div>
-              <h2 className="text-4xl font-bold text-primary leading-tight">
+              <h2 className="text-heading-lg font-bold text-gold leading-tight">
                 {t('pages.about.support.title')}
               </h2>
-              <p className="text-primary text-lg leading-relaxed">
+              <p className="text-gold text-body-lg leading-relaxed">
                 {t('pages.about.support.description')}
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Shield className="w-5 h-5 text-primary" />
+                  <div className="w-10 h-10 bg-logo-brown/10 rounded-lg flex items-center justify-center">
+                    <Shield className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.support.features.emergencySupport.title')}</h4>
-                    <p className="text-primary text-xs">{t('pages.about.support.features.emergencySupport.description')}</p>
+                    <h4 className="font-semibold text-gold mb-1 text-body-sm">{t('pages.about.support.features.emergencySupport.title')}</h4>
+                    <p className="text-gold text-caption">{t('pages.about.support.features.emergencySupport.description')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
-                    <Settings className="w-5 h-5 text-secondary" />
+                    <Settings className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.support.features.preventiveMaintenance.title')}</h4>
-                    <p className="text-primary text-xs">{t('pages.about.support.features.preventiveMaintenance.description')}</p>
+                    <h4 className="font-semibold text-gold mb-1 text-body-sm">{t('pages.about.support.features.preventiveMaintenance.title')}</h4>
+                    <p className="text-gold text-caption">{t('pages.about.support.features.preventiveMaintenance.description')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                    <Wrench className="w-5 h-5 text-accent" />
+                    <Wrench className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.support.features.technicalSupport.title')}</h4>
-                    <p className="text-primary text-xs">{t('pages.about.support.features.technicalSupport.description')}</p>
+                    <h4 className="font-semibold text-gold mb-1 text-body-sm">{t('pages.about.support.features.technicalSupport.title')}</h4>
+                    <p className="text-gold text-caption">{t('pages.about.support.features.technicalSupport.description')}</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Award className="w-5 h-5 text-primary" />
+                    <Award className="w-5 h-5 text-gold" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary mb-1 text-sm">{t('pages.about.support.features.warrantyService.title')}</h4>
-                    <p className="text-primary text-xs">{t('pages.about.support.features.warrantyService.description')}</p>
+                    <h4 className="font-semibold text-gold mb-1 text-body-sm">{t('pages.about.support.features.warrantyService.title')}</h4>
+                    <p className="text-gold text-caption">{t('pages.about.support.features.warrantyService.description')}</p>
                   </div>
                 </div>
               </div>
@@ -868,17 +868,17 @@ export default function ServicesPage() {
       {/* Design Showcase Section */}
                  <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-snow to-white relative overflow-hidden">
          {/* Enhanced decorative elements */}
-         <div className="absolute top-1/3 left-4 sm:left-8 w-48 h-48 sm:w-72 sm:h-72 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
-         <div className="absolute bottom-0 right-4 sm:right-8 w-64 h-64 sm:w-96 sm:h-96 bg-gradient-to-tl from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
+         <div className="absolute top-1/3 left-4 sm:left-8 w-48 h-48 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
+        <div className="absolute bottom-0 right-4 sm:right-8 w-64 h-64 bg-gradient-to-tl from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
          
          <div className="container mx-auto px-4 relative z-10">
                        <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-in slide-in-from-bottom-4 duration-700">
-              <Badge variant="outline" className="mb-6 text-primary border-primary px-4 py-2 text-sm font-semibold shadow-sm">
+              <Badge variant="outline" className="mb-6 text-gold border-gold px-4 py-2 text-body-sm font-semibold shadow-sm">
                 <Image className="w-4 h-4 mr-2" />
                 {t('pages.services.designs.badge')}
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">{t('pages.services.designs.title')}</h2>
-              <p className="text-primary text-lg max-w-3xl mx-auto">{t('pages.services.designs.description')}</p>
+              <h2 className="text-heading-lg font-bold mb-4 text-gold">{t('pages.services.designs.title')}</h2>
+            <p className="text-gold text-body-lg max-w-3xl mx-auto">{t('pages.services.designs.description')}</p>
             </div>
 
                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto px-4">
@@ -907,11 +907,11 @@ export default function ServicesPage() {
                  {/* Overlay with design info */}
                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6">
                    <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                     <Badge className="mb-3 bg-primary/90 text-white border-0 text-xs">
+                     <Badge className="mb-3 bg-logo-brown/90 text-white border-0 text-caption">
                        {design.type}
                      </Badge>
-                     <h3 className="text-white text-xl font-bold mb-2">{design.title}</h3>
-                     <p className="text-white/90 text-sm mb-4">{design.description}</p>
+                     <h3 className="text-white text-heading-sm font-bold mb-2">{design.title}</h3>
+                     <p className="text-white/90 text-body-sm mb-4">{design.description}</p>
                                            <div className="flex items-center gap-3">
                      
                       </div>
@@ -921,7 +921,7 @@ export default function ServicesPage() {
                  {/* Floating badge */}
                  <div className="absolute top-4 right-4">
                    <div className="w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
-                     <Image className="w-4 h-4 text-primary" />
+                     <Image className="w-4 h-4 text-gold" />
                    </div>
                  </div>
                </div>
@@ -930,14 +930,10 @@ export default function ServicesPage() {
            
                        {/* Call to action for designs */}
             <div className="text-center mt-12 md:mt-16">
-              <p className="text-primary text-lg mb-6">{t('pages.services.designs.cta.title')}</p>
+              <p className="text-gold text-body-lg mb-6">{t('pages.services.designs.cta.title')}</p>
               <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-full">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 group">
-                  <Image className="w-5 h-5 mr-2" />
-                  {t('pages.services.designs.cta.portfolio')}
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </Button>
-                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+              
+                <Button size="lg" variant="outline" className="border-gold text-gold ">
                   <Phone className="w-5 h-5 mr-2" />
                   {t('pages.services.designs.cta.consultation')}
                 </Button>
@@ -954,32 +950,32 @@ export default function ServicesPage() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-in slide-in-from-bottom-4 duration-700">
-            <Badge variant="outline" className="mb-6 text-primary border-primary px-4 py-2 text-sm font-semibold shadow-sm">
+            <Badge variant="outline" className="mb-6 text-primary border-primary px-4 py-2 text-body-sm font-semibold shadow-sm">
               {t('pages.services.certifications.badge')}
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">{t('pages.services.certifications.title')}</h2>
-            <p className="text-primary text-lg max-w-3xl mx-auto">{t('pages.services.certifications.description')}</p>
+            <h2 className="text-heading-lg font-bold mb-4 text-gold">{t('pages.services.certifications.title')}</h2>
+            <p className="text-gold text-body-lg max-w-3xl mx-auto">{t('pages.services.certifications.description')}</p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center max-w-full">
             {/* Text Side */}
             <div className="space-y-4 sm:space-y-6">
-              <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-gold/10 text-gold rounded-full text-body-sm font-medium">
                 {t('pages.services.certifications.badge')}
               </div>
-              <h2 className="text-4xl font-bold text-primary leading-tight">
+              <h2 className="text-heading-lg font-bold text-gold leading-tight">
                 {t('pages.services.certifications.sectionTitle')}
               </h2>
-              <p className="text-primary text-lg leading-relaxed">
+              <p className="text-gold text-body-lg leading-relaxed">
                 {t('pages.services.certifications.sectionDescription')}
               </p>
               <div className="grid grid-cols-2 gap-4 max-w-full">
                 {certifications.map((cert, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center">
                       {cert.icon}
                     </div>
-                    <span className="text-primary font-medium text-sm">{cert.name}</span>
+                    <span className="text-gold font-medium text-body-sm">{cert.name}</span>
                   </div>
                 ))}
               </div>
@@ -997,8 +993,8 @@ export default function ServicesPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end">
                     <div className="p-4 text-white">
-                      <h4 className="font-semibold text-sm">Professional Certification</h4>
-                      <p className="text-xs opacity-90">Licensed HVAC Professional</p>
+                      <h4 className="font-semibold text-body-sm text-gold">Professional Certification</h4>
+                      <p className="text-caption opacity-90">Licensed HVAC Professional</p>
                     </div>
                   </div>
                   <div className="absolute -top-3 -left-3 w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-xl opacity-80"></div>
@@ -1012,8 +1008,8 @@ export default function ServicesPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl flex items-end">
                     <div className="p-4 text-white">
-                      <h4 className="font-semibold text-sm">Quality Assurance</h4>
-                      <p className="text-xs opacity-90">ISO Standards Compliance</p>
+                      <h4 className="font-semibold text-body-sm text-gold">Quality Assurance</h4>
+                      <p className="text-caption opacity-90">ISO Standards Compliance</p>
                     </div>
                   </div>
                   <div className="absolute -bottom-3 -right-3 w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-xl opacity-80"></div>

@@ -22,56 +22,8 @@ import { cn } from "../utils/cn";
 import { useLanguage } from "../contexts/LanguageContext";
 import BrandsSlider from "../components/BrandsSlider";
 import CTA from "../components/CTA";
-
-
-interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: 'default' | 'outline';
-}
-
-function Badge({ 
-  className, 
-  variant = 'default', 
-  ...props 
-}: BadgeProps) {
-  return (
-    <div
-      className={cn(
-        "inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium",
-        variant === 'default' && "bg-primary text-white",
-        variant === 'outline' && "border border-primary text-primary",
-        className
-      )}
-      {...props}
-    />
-  );
-}
-
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'default' | 'outline';
-  size?: 'default' | 'sm' | 'lg';
-}
-
-function Button({ 
-  className, 
-  variant = 'default', 
-  size = 'default', 
-  ...props 
-}: ButtonProps) {
-  return (
-    <button
-      className={cn(
-        "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50",
-        variant === 'default' && "bg-primary text-white hover:bg-primary/90",
-        variant === 'outline' && "border border-primary bg-white text-primary hover:bg-primary hover:text-white",
-        size === 'default' && "h-10 px-4 py-2",
-        size === 'sm' && "h-9 px-3 rounded-md",
-        size === 'lg' && "h-11 px-8 rounded-md",
-        className
-      )}
-      {...props}
-    />
-  );
-}
+import Button from "../components/Button";
+import Badge from "../components/Badge";
 
 
 
@@ -242,6 +194,7 @@ export default function AboutPage() {
     }
   ];
 
+
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
@@ -268,7 +221,7 @@ export default function AboutPage() {
             </motion.div>
             
             <motion.h1 
-              className="text-4xl md:text-6xl font-bold mb-6"
+              className="text-4xl md:text-6xl font-bold mb-6 text-logo-brown"
               variants={itemVariants}
             >
               {t('pages.about.title')}
@@ -315,7 +268,7 @@ export default function AboutPage() {
             variants={fadeInUpVariants}
           >
             <Badge variant="outline" className="mb-6 text-primary border-primary">{t('pages.about.foundation.badge')}</Badge>
-            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.about.foundation.title')}</h2>
+            <h2 className="text-3xl font-bold mb-4 text-logo-brown">{t('pages.about.foundation.title')}</h2>
             <p className="text-primary text-lg">{t('pages.about.foundation.subtitle')}</p>
           </motion.div>
 
@@ -342,32 +295,32 @@ export default function AboutPage() {
               variants={slideInRightVariants}
             >
               <div className="space-y-6">
-                <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-logo-brown rounded-full text-sm font-medium">
                   {t('pages.about.foundation.badge')}
                 </div>
-                <h2 className="text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-4xl font-bold text-logo-brown leading-tight">
                   {t('pages.about.foundation.title')}
                 </h2>
-                <p className="text-primary text-lg leading-relaxed">
+                <p className="text-logo-brown text-lg leading-relaxed">
                   {t('pages.about.foundation.subtitle')}
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Eye className="w-6 h-6 text-primary" />
+                      <Eye className="w-6 h-6 text-logo-brown" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-1">{t('pages.about.vision.title')}</h4>
-                      <p className="text-primary text-sm">{t('pages.about.vision.description')}</p>
+                      <h4 className="font-semibold text-logo-brown mb-1">{t('pages.about.vision.title')}</h4>
+                      <p className="text-logo-brown text-sm">{t('pages.about.vision.description')}</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Target className="w-6 h-6 text-secondary" />
+                      <Target className="w-6 h-6 text-logo-brown" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-1">{t('pages.about.mission.title')}</h4>
-                      <p className="text-primary text-sm">{t('pages.about.mission.description')}</p>
+                      <h4 className="font-semibold text-logo-brown mb-1">{t('pages.about.mission.title')}</h4>
+                      <p className="text-logo-brown text-sm">{t('pages.about.mission.description')}</p>
                     </div>
                   </div>
                 </div>
@@ -393,9 +346,9 @@ export default function AboutPage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUpVariants}
           >
-            <Badge variant="outline" className="mb-6 text-primary border-primary">{t('pages.about.values.badge')}</Badge>
-            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.about.values.title')}</h2>
-            <p className="text-primary text-lg">{t('pages.about.values.subtitle')}</p>
+            <Badge variant="outline" className="mb-6 text-logo-brown border-primary">{t('pages.about.values.badge')}</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-logo-brown">{t('pages.about.values.title')}</h2>
+            <p className="text-logo-brown text-lg">{t('pages.about.values.subtitle')}</p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -407,13 +360,13 @@ export default function AboutPage() {
               variants={slideInVariants}
             >
               <div className="space-y-4">
-                <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
+                <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-logo-brown rounded-full text-sm font-medium">
                   {t('pages.about.values.badge')}
                 </div>
-                <h2 className="text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-4xl font-bold text-logo-brown leading-tight">
                   {t('pages.about.values.title')}
                 </h2>
-                <p className="text-primary text-lg leading-relaxed">
+                <p className="text-logo-brown text-lg leading-relaxed">
                   {t('pages.about.values.subtitle')}
                 </p>
                 <div className="grid grid-cols-2 gap-4">
@@ -422,8 +375,8 @@ export default function AboutPage() {
                       <div className="w-10 h-10 text-black rounded-lg flex items-center justify-center">
                         {value.icon}
                       </div>
-                      <span className="text-black font-medium text-sm">{value.title}</span>
-                      <p className="text-black text-sm">{value.description}</p>
+                      <span className="text-logo-brown font-medium text-sm">{value.title}</span>
+                      <p className="text-logo-brown text-sm">{value.description}</p>
                     </div>
                   ))}
                 </div>
@@ -463,9 +416,9 @@ export default function AboutPage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUpVariants}
           >
-            <Badge variant="outline" className="mb-6 text-primary border-primary">{t('pages.about.milestones.badge')}</Badge>
-            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.about.milestones.title')}</h2>
-            <p className="text-primary text-lg">{t('pages.about.milestones.subtitle')}</p>
+            <Badge variant="outline" className="mb-6 text-logo-brown border-primary">{t('pages.about.milestones.badge')}</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-logo-brown">{t('pages.about.milestones.title')}</h2>
+            <p className="text-logo-brown text-lg">{t('pages.about.milestones.subtitle')}</p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -491,13 +444,13 @@ export default function AboutPage() {
               variants={slideInRightVariants}
             >
               <div className="space-y-6">
-                <div className="inline-flex items-center px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                <div className="inline-flex items-center px-4 py-2 bg-accent/10 text-logo-brown rounded-full text-sm font-medium">
                   {t('pages.about.milestones.badge')}
                 </div>
-                <h2 className="text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-4xl font-bold text-logo-brown leading-tight">
                   {t('pages.about.milestones.title')}
                 </h2>
-                <p className="text-primary text-lg leading-relaxed">
+                <p className="text-logo-brown text-lg leading-relaxed">
                   {t('pages.about.milestones.subtitle')}
                 </p>
                 <div className="space-y-4">
@@ -507,8 +460,8 @@ export default function AboutPage() {
                         {milestone.icon}
                       </div>
                       <div>
-                        <h4 className="font-semibold text-primary mb-1">{milestone.year} - {milestone.title}</h4>
-                        <p className="text-primary text-sm">{milestone.description}</p>
+                        <h4 className="font-semibold text-logo-brown mb-1">{milestone.year} - {milestone.title}</h4>
+                        <p className="text-logo-brown text-sm">{milestone.description}</p>
                       </div>
                     </div>
                   ))}
@@ -535,9 +488,9 @@ export default function AboutPage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUpVariants}
           >
-            <Badge variant="outline" className="mb-6 text-primary border-primary">{t('pages.about.team.badge')}</Badge>
-            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.about.team.title')}</h2>
-            <p className="text-primary text-lg">{t('pages.about.team.subtitle')}</p>
+            <Badge variant="outline" className="mb-6 text-logo-brown border-primary">{t('pages.about.team.badge')}</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-logo-brown">{t('pages.about.team.title')}</h2>
+            <p className="text-logo-brown text-lg">{t('pages.about.team.subtitle')}</p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -549,34 +502,34 @@ export default function AboutPage() {
               variants={slideInVariants}
             >
               <div className="space-y-6">
-                <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
+                <div className="inline-flex items-center px-4 py-2 bg-primary/10 text-logo-brown rounded-full text-sm font-medium">
                   {t('pages.about.team.badge')}
                 </div>
-                <h2 className="text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-4xl font-bold text-logo-brown leading-tight">
                   {t('pages.about.team.title')}
                 </h2>
-                <p className="text-primary text-lg leading-relaxed">
+                <p className="text-logo-brown text-lg leading-relaxed">
                   {t('pages.about.team.subtitle')}
                 </p>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Users className="w-6 h-6 text-primary" />
+                      <Users className="w-6 h-6 text-logo-brown" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">{t('pages.about.team.professionalTeam.title')}</h4>
-                      <p className="text-primary text-sm leading-relaxed">
+                      <h4 className="font-semibold text-logo-brown mb-2">{t('pages.about.team.professionalTeam.title')}</h4>
+                      <p className="text-logo-brown text-sm leading-relaxed">
                         {t('pages.about.team.professionalTeam.description')}
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Award className="w-6 h-6 text-secondary" />
+                      <Award className="w-6 h-6 text-logo-brown" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary mb-2">{t('pages.about.team.certifiedExcellence.title')}</h4>
-                      <p className="text-primary text-sm leading-relaxed">
+                      <h4 className="font-semibold text-logo-brown mb-2">{t('pages.about.team.certifiedExcellence.title')}</h4>
+                      <p className="text-logo-brown text-sm leading-relaxed">
                         {t('pages.about.team.certifiedExcellence.description')}
                       </p>
                     </div>
@@ -623,9 +576,9 @@ export default function AboutPage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUpVariants}
           >
-            <Badge variant="outline" className="mb-6 text-primary border-primary">{t('pages.about.achievements.badge')}</Badge>
-            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.about.achievements.title')}</h2>
-            <p className="text-primary text-lg">{t('pages.about.achievements.subtitle')}</p>
+            <Badge variant="outline" className="mb-6 text-logo-brown border-primary">{t('pages.about.achievements.badge')}</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-logo-brown">{t('pages.about.achievements.title')}</h2>
+            <p className="text-logo-brown text-lg">{t('pages.about.achievements.subtitle')}</p>
           </motion.div>
           
           <motion.div 
@@ -651,7 +604,7 @@ export default function AboutPage() {
                   </div>
                 </motion.div>
                 <motion.div 
-                  className="text-4xl font-bold text-primary mb-2"
+                  className="text-4xl font-bold text-logo-brown mb-2"
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   viewport={{ once: true }}
@@ -659,7 +612,7 @@ export default function AboutPage() {
                 >
                   {achievement.number}
                 </motion.div>
-                <div className="text-primary font-medium mb-1">{achievement.label}</div>
+                <div className="text-logo-brown font-medium mb-1">{achievement.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -682,9 +635,9 @@ export default function AboutPage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUpVariants}
           >
-            <Badge variant="outline" className="mb-6 text-primary border-primary">{t('pages.about.certifications.badge')}</Badge>
-            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.about.certifications.title')}</h2>
-            <p className="text-primary text-lg">{t('pages.about.certifications.subtitle')}</p>
+            <Badge variant="outline" className="mb-6 text-logo-brown border-primary">{t('pages.about.certifications.badge')}</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-logo-brown">{t('pages.about.certifications.title')}</h2>
+            <p className="text-logo-brown text-lg">{t('pages.about.certifications.subtitle')}</p>
           </motion.div>
 
           <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -696,13 +649,13 @@ export default function AboutPage() {
               variants={slideInVariants}
             >
               <div className="space-y-6">
-                <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
+                <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-logo-brown rounded-full text-sm font-medium">
                   {t('pages.about.certifications.badge')}
                 </div>
-                <h2 className="text-4xl font-bold text-primary leading-tight">
+                <h2 className="text-4xl font-bold text-logo-brown leading-tight">
                   {t('pages.about.certifications.title')}
                 </h2>
-                <p className="text-primary text-lg leading-relaxed">
+                <p className="text-logo-brown text-lg leading-relaxed">
                   {t('pages.about.certifications.subtitle')}
                 </p>
                 <div className="grid grid-cols-2 gap-4">
@@ -711,7 +664,7 @@ export default function AboutPage() {
                       <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                         {cert.icon}
                       </div>
-                      <span className="text-primary font-medium text-sm">{cert.title}</span>
+                      <span className="text-logo-brown font-medium text-sm">{cert.title}</span>
                     </div>
                   ))}
                 </div>
@@ -787,11 +740,11 @@ export default function AboutPage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUpVariants}
           >
-            <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-logo-brown rounded-full text-sm font-medium mb-6">
               {t('pages.home.brands_section.badge')}
             </div>
-            <h2 className="text-3xl font-bold text-primary mb-4">{t('pages.home.brands_section.title')}</h2>
-            <p className="text-primary text-lg max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-logo-brown mb-4">{t('pages.home.brands_section.title')}</h2>
+            <p className="text-logo-brown text-lg max-w-2xl mx-auto">
               {t('pages.home.brands_section.description')}
             </p>
           </motion.div>
@@ -805,7 +758,7 @@ export default function AboutPage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUpVariants}
           >
-            <p className="text-primary text-sm">
+            <p className="text-logo-brown text-sm">
               {t('pages.home.brands_section.footer')}
             </p>
           </motion.div>

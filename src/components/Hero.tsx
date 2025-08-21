@@ -3,46 +3,7 @@ import { Star, Shield, Clock, Wrench, ArrowRight } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { motion } from "framer-motion";
 import heroImage from "../assets/hero.jpg";
-
-interface ButtonProps {
-  children: React.ReactNode;
-  className?: string;
-  variant?: "default" | "outline" | "ghost";
-  size?: "default" | "sm" | "lg" | "xl";
-  onClick?: () => void;
-}
-
-function Button({ 
-  children, 
-  className = "", 
-  variant = "default", 
-  size = "default",
-  onClick
-}: ButtonProps) {
-  const baseStyles = "inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
-  
-  const variantStyles = {
-    default: "bg-primary text-white hover:bg-primary/90",
-    outline: "border-2 border-white text-white hover:bg-white hover:text-primary",
-    ghost: "text-white hover:bg-white/10"
-  };
-  
-  const sizeStyles = {
-    default: "h-11 px-6 py-2",
-    sm: "h-9 px-4 text-sm",
-    lg: "h-12 px-8 text-lg",
-    xl: "h-14 px-10 text-xl"
-  };
-  
-  return (
-    <button
-      className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  );
-}
+import Button from './Button';
 
 export default function Hero() {
   const { t, language } = useLanguage();
@@ -100,7 +61,7 @@ export default function Hero() {
 
       {/* Content */}
       <motion.div 
-        className="relative z-20 container mx-auto px-4 text-center text-white"
+        className="relative z-20 container mx-auto px-4 text-center text-primary"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -111,18 +72,18 @@ export default function Hero() {
             className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8"
             variants={itemVariants}
           >
-            <Star className="w-4 h-4 text-white" />
-            <span className="text-sm font-medium tracking-wide">{t('hero.badge')}</span>
+            <Star className="icon-sm text-primary" />
+            <span className="text-body-sm font-medium tracking-wide">{t('hero.badge')}</span>
           </motion.div>
 
           {/* Main Title */}
           <motion.h1 
-            className="text-4xl md:text-3xl lg:text-3.5xl font-black mb-8 leading-tight tracking-tight"
+            className="text-heading-xl font-black mb-8 leading-tight tracking-tight"
             variants={textVariants}
           >
             {t('hero.title')}
             <motion.span 
-              className="block mt-3 text-white/90 font-extrabold"
+              className="block mt-3 text-primary/90 font-extrabold"
               variants={textVariants}
             >
               {t('hero.titleHighlight')}
@@ -131,7 +92,7 @@ export default function Hero() {
 
           {/* Description */}
           <motion.p 
-            className="text-lg md:text-lg lg:text-xl text-gray-100 mb-12 max-w-3xl mx-auto leading-relaxed font-light tracking-wide"
+            className="text-body-lg text-primary mb-12 max-w-3xl mx-auto leading-relaxed font-light tracking-wide"
             variants={textVariants}
           >
             {t('hero.description')}
@@ -144,7 +105,7 @@ export default function Hero() {
           >
             <Button size="xl" className="group font-semibold tracking-wide">
               {t('hero.scheduleButton')}
-              <ArrowRight className={`w-5 h-5 ${isRTL ? 'mr-2 rotate-180' : 'ml-2'} group-hover:translate-x-1 transition-transform duration-300`} />
+              <ArrowRight className={`icon-md ${isRTL ? 'mr-2 rotate-180' : 'ml-2'} group-hover:translate-x-1 transition-transform duration-300`} />
             </Button>
             <Button variant="outline" size="xl" className="font-semibold tracking-wide">
               {t('hero.emergencyButton')}
@@ -158,33 +119,33 @@ export default function Hero() {
           >
             <motion.div className="group" variants={itemVariants}>
               <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300 border border-white/20">
-                <Star className="w-8 h-8 text-white" />
+                <Star className="icon-xl text-primary" />
               </div>
-              <p className="text-sm font-medium text-gray-100 group-hover:text-white transition-colors tracking-wide">
+              <p className="text-body-sm font-medium text-gray-100 group-hover:text-primary transition-colors tracking-wide">
                 {t('hero.features.fiveStar')}
               </p>
             </motion.div>
             <motion.div className="group" variants={itemVariants}>
               <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300 border border-white/20">
-                <Shield className="w-8 h-8 text-white" />
+                <Shield className="icon-xl text-primary" />
               </div>
-              <p className="text-sm font-medium text-gray-100 group-hover:text-white transition-colors tracking-wide">
+              <p className="text-body-sm font-medium text-gray-100 group-hover:text-primary transition-colors tracking-wide">
                 {t('hero.features.licensed')}
               </p>
             </motion.div>
             <motion.div className="group" variants={itemVariants}>
               <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300 border border-white/20">
-                <Clock className="w-8 h-8 text-white" />
+                <Clock className="icon-xl text-primary" />
               </div>
-              <p className="text-sm font-medium text-gray-100 group-hover:text-white transition-colors tracking-wide">
+              <p className="text-body-sm font-medium text-gray-100 group-hover:text-primary transition-colors tracking-wide">
                 {t('hero.features.emergency')}
               </p>
             </motion.div>
             <motion.div className="group" variants={itemVariants}>
               <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300 border border-white/20">
-                <Wrench className="w-8 h-8 text-white" />
+                <Wrench className="icon-xl text-primary" />
               </div>
-              <p className="text-sm font-medium text-gray-100 group-hover:text-white transition-colors tracking-wide">
+              <p className="text-body-sm font-medium text-gray-100 group-hover:text-primary transition-colors tracking-wide">
                 {t('hero.features.experts')}
               </p>
             </motion.div>

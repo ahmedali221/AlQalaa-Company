@@ -4,34 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo from '../assets/logo.jpg';
 import { cn } from "../utils/cn";
 import { useLanguage } from "../contexts/LanguageContext";
-
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'default' | 'outline' | 'ghost';
-  size?: 'default' | 'sm' | 'lg';
-}
-
-const Button = ({ 
-  className, 
-  variant = 'default', 
-  size = 'default', 
-  ...props 
-}: ButtonProps) => {
-  return (
-    <button
-      className={cn(
-        "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50",
-        variant === 'default' && "bg-primary text-white hover:bg-primary/90",
-        variant === 'outline' && "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        variant === 'ghost' && "hover:bg-accent hover:text-accent-foreground",
-        size === 'default' && "h-10 px-4 py-2",
-        size === 'sm' && "h-8 px-3 text-sm",
-        size === 'lg' && "h-12 px-6 text-lg",
-        className
-      )}
-      {...props}
-    />
-  );
-};
+import Button from './Button';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -54,22 +27,22 @@ export default function Header() {
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50 animate-in slide-in-from-top-4 duration-700 border-b border-accent">
       {/* Top bar with contact info */}
-      <div className="bg-primary text-white py-3 overflow-hidden">
+      <div className="bg-logo-brown text-white py-3 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-between items-center text-sm animate-in fade-in duration-1000 delay-300">
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
-                <Phone className="w-4 h-4 animate-pulse" />
-                <span className="font-medium">{t('header.phone')}</span>
+                <Phone className="icon-sm animate-pulse" />
+                <span className="text-body-sm font-medium">{t('header.phone')}</span>
               </div>
               <div className="hidden sm:flex items-center gap-2 hover:scale-105 transition-transform duration-300">
-                <Mail className="w-4 h-4" />
-                <span className="font-medium">{t('header.email')}</span>
+                <Mail className="icon-sm" />
+                <span className="text-body-sm font-medium">{t('header.email')}</span>
               </div>
             </div>
             <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
-              <MapPin className="w-4 h-4" />
-              <span className="font-medium">{t('header.location')}</span>
+              <MapPin className="icon-sm" />
+              <span className="text-body-sm font-medium">{t('header.location')}</span>
             </div>
           </div>
         </div>
@@ -90,10 +63,10 @@ export default function Header() {
               />
             </div>
             <div className="animate-in slide-in-from-left-4 duration-700 delay-100">
-              <h1 className="text-xl font-bold text-primary">
+              <h1 className="text-heading-xs text-logo-brown">
                 {language === 'en' ? 'AlQalaa Air Conditioning' : 'شركة القلعة للتكييف'}
               </h1>
-              <p className="text-sm text-secondary font-medium">{language === 'en' ? 'شركة القلعة للتبريد والتكييف' : 'AlQalaa Air Conditioning'}</p>
+              <p className="text-body-sm text-logo-brown font-medium">{language === 'en' ? 'شركة القلعة للتبريد والتكييف' : 'AlQalaa Air Conditioning'}</p>
             </div>
           </Link>
 
@@ -103,8 +76,8 @@ export default function Header() {
               <Link
                 key={item.id}
                 to={item.path}
-                className={`relative font-medium transition-all duration-300 hover:text-primary group animate-in slide-in-from-top-4 duration-700 ${
-                  currentPage === item.id ? 'text-primary font-bold' : 'text-secondary'
+                className={`relative text-label transition-all duration-300 hover:text-logo-brown group animate-in slide-in-from-top-4 duration-700 ${
+                  currentPage === item.id ? 'text-logo-brown font-bold' : 'text-logo-brown'
                 }`}
                 style={{ animationDelay: `${(index + 1) * 100}ms` }}
               >
@@ -120,11 +93,11 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
               <Button 
-                className="bg-transparent hover:bg-accent text-primary p-2 rounded-full flex items-center justify-center"
+                className="bg-transparent hover:bg-accent text-logo-brown p-2 rounded-full flex items-center justify-center"
                 onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
               >
-                <Globe className="w-5 h-5" />
-                <span className="ml-1 text-sm font-medium">{language === 'en' ? 'العربية' : 'English'}</span>
+                <Globe className="icon-md" />
+                <span className="ml-1 text-body-sm font-medium">{language === 'en' ? 'العربية' : 'English'}</span>
               </Button>
             </div>
 
@@ -135,9 +108,9 @@ export default function Header() {
             >
               <div className="transform transition-transform duration-300">
                 {isMobileMenuOpen ? (
-                  <X className="w-6 h-6 text-primary" />
+                  <X className="icon-lg text-logo-brown" />
                 ) : (
-                  <Menu className="w-6 h-6 text-secondary" />
+                  <Menu className="icon-lg text-logo-brown" />
                 )}
               </div>
             </button>
@@ -153,8 +126,8 @@ export default function Header() {
                   key={item.id}
                   to={item.path}
                   onClick={handleMobileMenuClose}
-                  className={`text-left hover:text-primary transition-all duration-300 hover:translate-x-2 animate-in slide-in-from-left-4 duration-300 font-medium ${
-                    currentPage === item.id ? 'text-primary font-bold' : 'text-secondary'
+                  className={`text-left text-label hover:text-logo-brown transition-all duration-300 hover:translate-x-2 animate-in slide-in-from-left-4 duration-300 ${
+                    currentPage === item.id ? 'text-logo-brown font-bold' : 'text-logo-brown'
                   }`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
@@ -163,7 +136,7 @@ export default function Header() {
               ))}
               <div className="flex flex-col gap-3 mt-2">
                 <Button 
-                  className="bg-transparent hover:bg-accent text-primary p-2 rounded-full flex items-center justify-center"
+                  className="bg-transparent hover:bg-accent text-logo-brown p-2 rounded-full flex items-center justify-center"
                   onClick={() => {
                     setLanguage(language === 'en' ? 'ar' : 'en');
                     setIsMobileMenuOpen(false);
@@ -176,7 +149,7 @@ export default function Header() {
                 <Link 
                   to="/contact"
                   onClick={handleMobileMenuClose}
-                  className="gradient-secondary hover:opacity-90 animate-in slide-in-from-left-4 duration-300 delay-300 shadow-lg border-0 text-primary px-4 py-2 rounded-md text-center font-medium"
+                  className="gradient-secondary hover:opacity-90 animate-in slide-in-from-left-4 duration-300 delay-300 shadow-lg border-0 text-logo-brown px-4 py-2 rounded-md text-center font-medium"
                 >
                   {t('header.getQuote')}
                 </Link>

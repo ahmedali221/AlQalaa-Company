@@ -5,7 +5,7 @@
     "about": "About",
     "contact": "Contact",
     "getQuote": "Get Quote",
-    "phone": "+971 58 192 9889",
+    "phone": "+971 56 620 1878",
     "email": "alqalaa02@gmail.com",
     "location": "Fujairah, Madhab"
   },
@@ -34,7 +34,7 @@
   "footer": {
     "companyName": "AlQalaa Air Conditioning",
     "companyNameArabic": "شركة القلعة للتبريد والتكييف",
-    "description": "Your trusted partner for central air conditioning solutions in the Eastern Region of UAE. Established in 2020, specializing in American and Asian HVAC systems with advanced engineering solutions.",
+    "description": "Your trusted partner for central air conditioning solutions in the Eastern Region of UAE. Established in 2019, specializing in American and Asian HVAC systems with advanced engineering solutions.",
     "services": {
       "title": "Our Services",
       "chilledWater": "Chilled Water Systems",
@@ -54,9 +54,9 @@
     },
     "contact": {
       "title": "Contact Info",
-      "mainPhone": "+971 58 192 9889",
+      "mainPhone": "+971 56 620 1878",
       "mainPhoneLabel": "Main Line",
-      "altPhone": "+971 50 123 4567",
+      "altPhone": "+971 58 192 9889",
       "altPhoneLabel": "Alternative Line",
       "email": "alqalaa02@gmail.com",
       "emailLabel": "Business Inquiries",
@@ -77,7 +77,7 @@
     "about": {
       "badge": "About AlQalaa Air Conditioning",
       "title": "Your Trusted AC Partner",
-      "description": "Since 2020, AlQalaa Air Conditioning has been providing professional AC solutions across Eastern Region UAE. Based in Fujairah-Madhab, we specialize in chilled water systems, smart controls, and comprehensive HVAC services.",
+      "description": "Since 2019, AlQalaa Air Conditioning has been providing professional AC solutions across Eastern Region UAE. Based in Fujairah-Madhab, we specialize in chilled water systems, smart controls, and comprehensive HVAC services.",
       "servicesButton": "Our Services",
       "contactButton": "Contact Us",
       "foundation": {
@@ -166,9 +166,9 @@
         "subtitle": "Licensed professionals with industry-leading partnerships",
         "items": [
           {
-            "title": "Rheem Authorized Agent",
+            "title": "Authorized Agents: Rheem, Carrier, O General, LG, Trane",
            
-            "description": "Official partnership for American AC systems"
+            "description": "Official partnerships with premium AC brands"
           },
           {
             "title": "Licensed Engineers",
@@ -381,7 +381,7 @@
         "title": "Quick Contact Options",
         "subtitle": "Reach us instantly through these direct channels",
         "call": {
-          "title": "Call: +971 58 192 9889",
+          "title": "Call: +971 56 620 1878",
           "subtitle": "24/7 Emergency Support"
         },
         "email": {
@@ -486,7 +486,7 @@
       "welcome": "Welcome to AlQalaa Air Conditioning",
       "featuredServices": "Featured Services",
       "whyChooseUs": "Why Choose Us",
-      "trusted_since": "Trusted Since 2020",
+      "trusted_since": "Trusted Since 2019",
       "hero_title": "Professional AC Solutions",
       "hero_subtitle": "Eastern Region UAE",
       "hero_description": "Expert air conditioning services with American and Asian HVAC systems. From chilled water systems to smart controls, we deliver excellence across Fujairah, Madhab, and the entire Eastern Region.",
@@ -524,7 +524,7 @@
       "specialties": {
         "american": {
           "title": "American Systems",
-          "desc": "Rheem authorized partner"
+          "desc": "Authorized partner: Rheem, Carrier, Trane"
         },
         "asian": {
           "title": "Asian Systems",
@@ -575,12 +575,12 @@
       },
       "stats_section": {
         "title": "Trusted Throughout Eastern Region UAE",
-        "subtitle": "Our experience and expertise since 2020"
+        "subtitle": "Our experience and expertise since 2019"
       },
       "about_section": {
         "badge": "About AlQalaa",
         "title": "Leading AC Solutions in Eastern Region UAE",
-        "description": "Since 2020, AlQalaa Air Conditioning has been the trusted name for professional HVAC solutions across Fujairah and the Eastern Region. We specialize in chilled water systems, smart controls, and comprehensive maintenance services.",
+        "description": "Since 2019, AlQalaa Air Conditioning has been the trusted name for professional HVAC solutions across Fujairah and the Eastern Region. We specialize in chilled water systems, smart controls, and comprehensive maintenance services.",
         "features": {
           "licensed": "Licensed and certified technicians",
           "warranty": "5-year warranty on all installations",
@@ -607,7 +607,7 @@
         "features": {
           "trackRecord": {
             "title": "Proven Track Record",
-            "description": "Over 100 successful projects completed since 2020"
+            "description": "Over 100 successful projects completed since 2019"
           },
           "timelyDelivery": {
             "title": "Timely Delivery",
@@ -638,7 +638,7 @@
         "title": "Ready for Professional AC Solutions?",
         "description": "Experience the difference of working with Eastern Region's trusted AC specialists. Contact AlQalaa Air Conditioning for expert consultation and premium service.",
         "buttons": {
-          "call": "Call: +971 58 192 9889",
+          "call": "Call: +971 56 620 1878",
           "consultation": "Schedule Consultation"
         }
       },
@@ -842,7 +842,7 @@
         "certifications": "Certifications",
         "industryRecognition": "Industry Recognition",
         "rheem": {
-          "title": "Rheem Authorized Agent"
+          "title": "Authorized Agents: Rheem, Carrier, O General, LG, Trane"
         },
         "engineers": {
           "title": "Licensed Engineers"

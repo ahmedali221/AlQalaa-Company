@@ -18,55 +18,8 @@ import { motion } from "framer-motion";
 import { cn } from "../utils/cn";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useEffect } from "react";
-
-interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: 'default' | 'outline';
-}
-
-function Badge({ 
-  className, 
-  variant = 'default', 
-  ...props 
-}: BadgeProps) {
-  return (
-    <div
-      className={cn(
-        "inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium",
-        variant === 'default' && "bg-primary text-white",
-        variant === 'outline' && "border border-primary text-primary",
-        className
-      )}
-      {...props}
-    />
-  );
-}
-
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'default' | 'outline';
-  size?: 'default' | 'sm' | 'lg';
-}
-
-function Button({ 
-  className, 
-  variant = 'default', 
-  size = 'default', 
-  ...props 
-}: ButtonProps) {
-  return (
-    <button
-      className={cn(
-        "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50",
-        variant === 'default' && "bg-primary text-white hover:bg-primary/90",
-        variant === 'outline' && "border border-primary bg-white text-primary hover:bg-primary hover:text-white",
-        size === 'default' && "h-10 px-4 py-2",
-        size === 'sm' && "h-9 px-3 rounded-md",
-        size === 'lg' && "h-11 px-8 rounded-md",
-        className
-      )}
-      {...props}
-    />
-  );
-}
+import Button from "../components/Button";
+import Badge from "../components/Badge";
 
 export default function ContactPage() {
   const { t, dir } = useLanguage();
@@ -159,7 +112,7 @@ export default function ContactPage() {
     {
       icon: <Phone className="w-6 h-6 text-white" />,
       title: t('pages.contact.contactInfo.phone.title'),
-      info: "+971 58 192 9889",
+      info: "+971 56 620 1878",
       subInfo: t('pages.contact.contactInfo.phone.subInfo')
     },
     {
@@ -252,11 +205,11 @@ export default function ContactPage() {
             </motion.div>
             
             <motion.h1 
-              className="text-4xl md:text-6xl font-bold mb-6"
+              className="text-4xl md:text-6xl font-bold mb-6 text-logo-brown"
               variants={itemVariants}
             >
               {t('pages.contact.title')}
-              <span className="block mt-2 text-primary">{t('pages.contact.subtitle')}</span>
+              <span className="block mt-2 text-logo-brown">{t('pages.contact.subtitle')}</span>
             </motion.h1>
             
             <motion.p 
@@ -287,9 +240,9 @@ export default function ContactPage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUpVariants}
           >
-            <Badge variant="outline" className="mb-6 text-primary border-primary">{t('pages.contact.contactDetails.badge')}</Badge>
-            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.contact.contactDetails.title')}</h2>
-            <p className="text-primary text-lg">{t('pages.contact.contactDetails.subtitle')}</p>
+            <Badge variant="outline" className="mb-6 text-logo-brown border-primary">{t('pages.contact.contactDetails.badge')}</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-logo-brown">{t('pages.contact.contactDetails.title')}</h2>
+            <p className="text-logo-brown text-lg">{t('pages.contact.contactDetails.subtitle')}</p>
           </motion.div>
 
           <motion.div 
@@ -313,9 +266,9 @@ export default function ContactPage() {
                   <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center text-white mx-auto mb-6 group-hover:scale-110 transition-all duration-300">
                     {contact.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-2 text-primary">{contact.title}</h3>
-                  <p className="text-primary font-bold mb-2 flex-grow">{contact.info}</p>
-                  <p className="text-primary text-sm leading-relaxed mb-2">{contact.subInfo}</p>
+                  <h3 className="text-xl font-bold mb-2 text-logo-brown">{contact.title}</h3>
+                  <p className="text-logo-brown font-bold mb-2 flex-grow">{contact.info}</p>
+                  <p className="text-logo-brown text-sm leading-relaxed mb-2">{contact.subInfo}</p>
                 </motion.div>
               </motion.div>
             ))}
@@ -347,14 +300,14 @@ export default function ContactPage() {
                 whileHover="hover"
               >
                 <div className="text-center mb-8">
-                  <h2 className="text-3xl font-bold mb-2 text-primary">{t('pages.contact.form.title')}</h2>
-                  <p className="text-primary">{t('pages.contact.form.description')}</p>
+                  <h2 className="text-3xl font-bold mb-2 text-logo-brown">{t('pages.contact.form.title')}</h2>
+                  <p className="text-logo-brown">{t('pages.contact.form.description')}</p>
                 </div>
                 
                 <form className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium mb-2 text-primary">
+                      <label className="block text-sm font-medium mb-2 text-logo-brown">
                         {t('pages.contact.form.firstName.label')}
                       </label>
                       <input
@@ -364,7 +317,7 @@ export default function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium mb-2 text-primary">
+                      <label className="block text-sm font-medium mb-2 text-logo-brown">
                         {t('pages.contact.form.lastName.label')}
                       </label>
                       <input
@@ -376,7 +329,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium mb-2 text-primary">
+                    <label className="block text-sm font-medium mb-2 text-logo-brown">
                       {t('pages.contact.form.phone.label')}
                     </label>
                     <input
@@ -387,7 +340,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium mb-2 text-primary">
+                    <label className="block text-sm font-medium mb-2 text-logo-brown">
                       {t('pages.contact.form.email.label')}
                     </label>
                     <input
@@ -398,7 +351,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium mb-2 text-primary">
+                    <label className="block text-sm font-medium mb-2 text-logo-brown">
                       {t('pages.contact.form.location.label')}
                     </label>
                     <select className="w-full px-4 py-3 bg-snow border border-accent rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 focus:scale-105">
@@ -412,7 +365,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium mb-2 text-primary">
+                    <label className="block text-sm font-medium mb-2 text-logo-brown">
                       {t('pages.contact.form.service.label')}
                     </label>
                     <select className="w-full px-4 py-3 bg-snow border border-accent rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 focus:scale-105">
@@ -429,7 +382,7 @@ export default function ContactPage() {
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium mb-2 text-primary">
+                    <label className="block text-sm font-medium mb-2 text-logo-brown">
                       {t('pages.contact.form.details.label')}
                     </label>
                     <textarea
@@ -456,8 +409,8 @@ export default function ContactPage() {
               variants={slideInRightVariants}
             >
               <motion.div className="text-center" variants={itemVariants}>
-                <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.contact.whatToExpect.title')}</h2>
-                <p className="text-primary text-lg">{t('pages.contact.whatToExpect.subtitle')}</p>
+                <h2 className="text-3xl font-bold mb-4 text-logo-brown">{t('pages.contact.whatToExpect.title')}</h2>
+                <p className="text-logo-brown text-lg">{t('pages.contact.whatToExpected.subtitle')}</p>
               </motion.div>
 
               <motion.div 
@@ -480,9 +433,9 @@ export default function ContactPage() {
                           {info.icon}
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-xl font-bold mb-1 text-primary">{info.title}</h3>
-                          <p className="text-2xl font-bold text-primary mb-1">{info.value}</p>
-                          <p className="text-primary text-sm">{info.description}</p>
+                          <h3 className="text-xl font-bold mb-1 text-logo-brown">{info.title}</h3>
+                          <p className="text-2xl font-bold text-logo-brown mb-1">{info.value}</p>
+                          <p className="text-logo-brown text-sm">{info.description}</p>
                         </div>
                       </div>
                     </motion.div>
@@ -496,12 +449,12 @@ export default function ContactPage() {
                 variants={cardVariants}
                 whileHover="hover"
               >
-                <h3 className="text-2xl font-bold mb-6 text-center text-primary">{t('pages.contact.quickContact.title')}</h3>
-                <p className="text-primary text-center mb-8 text-lg">{t('pages.contact.quickContact.subtitle')}</p>
+                <h3 className="text-2xl font-bold mb-6 text-center text-logo-brown">{t('pages.contact.quickContact.title')}</h3>
+                <p className="text-logo-brown text-center mb-8 text-lg">{t('pages.contact.quickContact.subtitle')}</p>
                 <div className="space-y-6"> 
-                  <a href="tel:+97158192989" className="block">
+                  <a href="tel:+971566201878" className="block">
                     <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white group hover:scale-105 transition-all duration-300 p-6 h-auto">
-                      <Phone className="w-6 h-6 mr-4 animate-pulse text-primary group-hover:text-white" />
+                      <Phone className="w-6 h-6 mr-4 animate-pulse text-logo-brown group-hover:text-white" />
                       <div className="text-left">
                         <div className="font-bold text-lg">{t('pages.contact.quickContact.call.title')}</div>
                         <div className="text-base opacity-70">{t('pages.contact.quickContact.call.subtitle')}</div>
@@ -511,7 +464,7 @@ export default function ContactPage() {
                   </a>
                   <a href="mailto:info@alqalaa-ac.com" className="block">
                     <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white group hover:scale-105 transition-all duration-300 p-6 h-auto">
-                      <Mail className="w-6 h-6 mr-4 text-primary group-hover:text-white" />
+                      <Mail className="w-6 h-6 mr-4 text-logo-brown group-hover:text-white" />
                       <div className="text-left">
                         <div className="font-bold text-lg">{t('pages.contact.quickContact.email.title')}</div>
                         <div className="text-base opacity-70">{t('pages.contact.quickContact.email.subtitle')}</div>
@@ -521,7 +474,7 @@ export default function ContactPage() {
                   </a>
                   <a href="https://wa.me/97158192989" target="_blank" rel="noopener noreferrer" className="block">
                     <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white group hover:scale-105 transition-all duration-300 p-6 h-auto">
-                      <MessageCircle className="w-6 h-6 mr-4 text-primary group-hover:text-white" />
+                      <MessageCircle className="w-6 h-6 mr-4 text-logo-brown group-hover:text-white" />
                       <div className="text-left">
                         <div className="font-bold text-lg">{t('pages.contact.quickContact.whatsapp.title')}</div>
                         <div className="text-base opacity-70">{t('pages.contact.quickContact.whatsapp.subtitle')}</div>
@@ -531,8 +484,8 @@ export default function ContactPage() {
                   </a>
                 </div>
                 <div className="mt-8 pt-8 border-t border-accent">
-                  <h4 className="font-bold text-center mb-3 text-primary text-lg">{t('pages.contact.quickContact.responseTime.title')}</h4>
-                  <p className="text-base text-primary text-center">{t('pages.contact.quickContact.responseTime.description')}</p>
+                  <h4 className="font-bold text-center mb-3 text-logo-brown text-lg">{t('pages.contact.quickContact.responseTime.title')}</h4>
+                  <p className="text-base text-logo-brown text-center">{t('pages.contact.quickContact.responseTime.description')}</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -556,9 +509,9 @@ export default function ContactPage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUpVariants}
           >
-            <Badge variant="outline" className="mb-6 text-primary border-primary">{t('pages.contact.serviceCoverage.badge')}</Badge>
-            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.contact.serviceCoverage.title')}</h2>
-            <p className="text-primary text-lg">{t('pages.contact.serviceCoverage.subtitle')}</p>
+            <Badge variant="outline" className="mb-6 text-logo-brown border-primary">{t('pages.contact.serviceCoverage.badge')}</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-logo-brown">{t('pages.contact.serviceCoverage.title')}</h2>
+            <p className="text-logo-brown text-lg">{t('pages.contact.serviceCoverage.subtitle')}</p>
           </motion.div>
 
           <motion.div 
@@ -572,10 +525,10 @@ export default function ContactPage() {
               <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-secondary rounded-full text-sm font-medium">
                 {t('pages.contact.serviceCoverage.coverageAreas.badge')}
               </div>
-              <h2 className="text-4xl font-bold text-primary leading-tight text-center">
+              <h2 className="text-4xl font-bold text-logo-brown leading-tight text-center">
                 {t('pages.contact.serviceCoverage.coverageAreas.title')}
               </h2>
-              <p className="text-primary text-lg leading-relaxed text-center">
+              <p className="text-logo-brown text-lg leading-relaxed text-center">
                 {t('pages.contact.serviceCoverage.coverageAreas.description')}
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
@@ -593,8 +546,8 @@ export default function ContactPage() {
                       <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300">
                         {area.icon}
                       </div>
-                      <h3 className="text-primary font-bold text-sm mb-2">{area.city}</h3>
-                      <p className="text-primary text-xs">{area.coverage}</p>
+                      <h3 className="text-logo-brown font-bold text-sm mb-2">{area.city}</h3>
+                      <p className="text-logo-brown text-xs">{area.coverage}</p>
                     </motion.div>
                   </motion.div>
                 ))}
@@ -620,9 +573,9 @@ export default function ContactPage() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeInUpVariants}
           >
-            <Badge variant="outline" className="mb-6 text-primary border-primary">{t('pages.contact.location.badge')}</Badge>
-            <h2 className="text-3xl font-bold mb-4 text-primary">{t('pages.contact.location.title')}</h2>
-            <p className="text-primary text-lg">{t('pages.contact.location.description')}</p>
+            <Badge variant="outline" className="mb-6 text-logo-brown border-primary">{t('pages.contact.location.badge')}</Badge>
+            <h2 className="text-3xl font-bold mb-4 text-logo-brown">{t('pages.contact.location.title')}</h2>
+            <p className="text-logo-brown text-lg">{t('pages.contact.location.description')}</p>
           </motion.div>
 
           {/* Contact Details Section */}
@@ -640,23 +593,23 @@ export default function ContactPage() {
                   <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <MapPin className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="font-bold text-primary mb-2">{t('pages.contact.location.address.area')}</h4>
-                  <p className="text-primary">{t('pages.contact.location.address.region')}</p>
+                  <h4 className="font-bold text-logo-brown mb-2">{t('pages.contact.location.address.area')}</h4>
+                  <p className="text-logo-brown">{t('pages.contact.location.address.region')}</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Navigation className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="font-bold text-primary mb-2">{t('pages.contact.location.access.title')}</h4>
-                  <p className="text-primary">{t('pages.contact.location.access.description')}</p>
+                  <h4 className="font-bold text-logo-brown mb-2">{t('pages.contact.location.access.title')}</h4>
+                  <p className="text-logo-brown">{t('pages.contact.location.access.description')}</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Clock className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="font-bold text-primary mb-2">{t('pages.contact.location.hours.title')}</h4>
-                  <p className="text-primary">{t('pages.contact.location.hours.weekdays')}</p>
-                  <p className="text-primary">{t('pages.contact.location.hours.friday')}</p>
+                  <h4 className="font-bold text-logo-brown mb-2">{t('pages.contact.location.hours.title')}</h4>
+                  <p className="text-logo-brown">{t('pages.contact.location.hours.weekdays')}</p>
+                  <p className="text-logo-brown">{t('pages.contact.location.hours.friday')}</p>
                 </div>
               </div>
               
@@ -685,7 +638,7 @@ export default function ContactPage() {
             whileHover="hover"
           >
             <div className="relative">
-              <div className="w-full h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+              <div className="w-full h-64 sm:h-80 md:h-96 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.139305!2d56.331444!3d25.139305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA4JzIxLjUiTiA1NsKwMTknNTMuMiJF!5e0!3m2!1sen!2sae!4v1234567890"
                   width="100%"
@@ -705,8 +658,8 @@ export default function ContactPage() {
                     <MapPin className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-primary text-sm">AlQalaa AC</p>
-                    <p className="text-primary text-xs">Fujairah, UAE</p>
+                    <p className="font-bold text-logo-brown text-sm">AlQalaa AC</p>
+                    <p className="text-logo-brown text-xs">Fujairah, UAE</p>
                   </div>
                 </div>
               </div>
