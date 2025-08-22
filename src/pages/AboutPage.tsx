@@ -18,7 +18,7 @@ import {
   Zap
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { cn } from "../utils/cn";
+// removed unused `cn` import
 import { useLanguage } from "../contexts/LanguageContext";
 import BrandsSlider from "../components/BrandsSlider";
 import CTA from "../components/CTA";
@@ -305,7 +305,7 @@ export default function AboutPage() {
                   {t('pages.about.foundation.subtitle')}
                 </p>
                 <div className="space-y-4">
-                  <div className="flex items-start space-x-4">
+                  <div className={`flex items-start ${dir === 'rtl' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
                     <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Eye className="w-6 h-6 text-logo-brown" />
                     </div>
@@ -314,7 +314,7 @@ export default function AboutPage() {
                       <p className="text-logo-brown text-sm">{t('pages.about.vision.description')}</p>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-4">
+                  <div className={`flex items-start ${dir === 'rtl' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
                     <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Target className="w-6 h-6 text-logo-brown" />
                     </div>
@@ -371,12 +371,14 @@ export default function AboutPage() {
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   {companyValues.map((value, index) => (
-                    <div key={index} className="flex items-center space-x-3">
+                    <div key={index} className={`flex items-center ${dir === 'rtl' ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
                       <div className="w-10 h-10 text-black rounded-lg flex items-center justify-center">
                         {value.icon}
                       </div>
-                      <span className="text-logo-brown font-medium text-sm">{value.title}</span>
-                      <p className="text-logo-brown text-sm">{value.description}</p>
+                      <div>
+                        <span className="text-logo-brown font-medium text-sm block">{value.title}</span>
+                        <p className="text-logo-brown text-sm">{value.description}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -455,7 +457,7 @@ export default function AboutPage() {
                 </p>
                 <div className="space-y-4">
                   {milestones.slice(0, 3).map((milestone, index) => (
-                    <div key={index} className="flex items-start space-x-4">
+                    <div key={index} className={`flex items-start ${dir === 'rtl' ? 'space-x-reverse space-x-4' : 'space-x-4'}`}>
                       <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
                         {milestone.icon}
                       </div>

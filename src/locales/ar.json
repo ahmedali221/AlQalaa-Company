@@ -5,7 +5,7 @@
     "about": "من نحن",
     "contact": "اتصل بنا",
     "getQuote": "احصل على عرض سعر",
-    "phone": "+971 56 620 1878",
+    "phone": "+٩٧١ ٥٦ ٦٢٠ ١٨٧٨",
     "email": "alqalaa02@gmail.com",
     "location": "الفجيرة، مدحاء"
   },
@@ -54,9 +54,9 @@
     },
     "contact": {
       "title": "معلومات الاتصال",
-      "mainPhone": "+971 56 620 1878",
+      "mainPhone": "+٩٧١ ٥٦ ٦٢٠ ١٨٧٨",
       "mainPhoneLabel": "الخط الرئيسي",
-      "altPhone": "+971 58 192 9889",
+      "altPhone": "+٩٧١ ٥٨ ١٩٢ ٩٨٨٩",
       "altPhoneLabel": "الخط البديل",
       "email": "alqalaa02@gmail.com",
       "emailLabel": "استفسارات الأعمال",
@@ -507,7 +507,7 @@
         "phone": {
           "label": "رقم الهاتف *",
           "labelArabic": "رقم الهاتف",
-          "placeholder": "+971 50 123 4567"
+          "placeholder": "+٩٧١ ٥٠ ١٢٣ ٤٥٦٧"
         },
         "email": {
           "label": "البريد الإلكتروني",
@@ -644,7 +644,7 @@
         },
         "phone": {
           "label": "رقم الهاتف",
-          "placeholder": "+971 50 123 4567"
+          "placeholder": "+٩٧١ ٥٠ ١٢٣ ٤٥٦٧"
         },
         "service": {
           "label": "الخدمة المطلوبة",

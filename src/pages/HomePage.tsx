@@ -25,7 +25,7 @@ import companyImage2 from "../assets/Company/company.JPG";
 
 
 export default function HomePage() {
-  const { t, language } = useLanguage();
+  const { t, language, dir } = useLanguage();
   const isRTL = language === 'ar';
   
   // Animation variants
@@ -180,22 +180,22 @@ export default function HomePage() {
                   {t('pages.home.about_section.description')}
                 </p>
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
+                  <div className={`flex items-center ${dir === 'rtl' ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
                     <CheckCircle className="w-6 h-6 text-gold flex-shrink-0" />
                     <span className="text-gold">{t('pages.home.about_section.features.licensed')}</span>
                   </div>
-                  <div className="flex items-center space-x-3">
+                  <div className={`flex items-center ${dir === 'rtl' ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
                     <CheckCircle className="w-6 h-6 text-gold flex-shrink-0" />
                     <span className="text-gold">{t('pages.home.about_section.features.warranty')}</span>
                   </div>
-                  <div className="flex items-center space-x-3">
+                  <div className={`flex items-center ${dir === 'rtl' ? 'space-x-reverse space-x-3' : 'space-x-3'}`}>
                     <CheckCircle className="w-6 h-6 text-gold flex-shrink-0" />
                     <span className="text-gold">{t('pages.home.about_section.features.support')}</span>
                   </div>
                 </div>
                 <button className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors duration-300">
                   {t('pages.home.about_section.button')}
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <ArrowRight className={`w-4 h-4 ${dir === 'rtl' ? 'mr-2 rotate-180' : 'ml-2'}`} />
                 </button>
               </div>
             </motion.div>
@@ -295,7 +295,7 @@ export default function HomePage() {
               variants={slideInRightVariants}
             >
               <div className="space-y-6">
-                <div className="inline-flex items-center px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                <div className="inline-flex items-center px-4 py-2 bg-accent/10 text-logo-brown rounded-full text-sm font-medium">
                   {t('pages.home.whyChooseUs_section.badge')}
                 </div>
                 <h2 className="text-4xl font-bold text-logo-brown leading-tight">
@@ -325,7 +325,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Lightbulb className="w-6 h-6 text-accent" />
+                      <Lightbulb className="w-6 h-6 text-logo-brown" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-logo-brown mb-1">{t('pages.home.whyChooseUs_section.features.innovation.title')}</h4>
@@ -499,7 +499,7 @@ export default function HomePage() {
               className="space-y-6"
               variants={slideInRightVariants}
             >
-              <div className="inline-flex items-center px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-accent/10 text-logo-brown rounded-full text-sm font-medium">
                 {t('pages.home.portfolio_section.projects.project3.category')}
               </div>
               <h3 className="text-3xl font-bold text-logo-brown">{t('pages.home.portfolio_section.projects.project3.title')}</h3>
@@ -508,15 +508,15 @@ export default function HomePage() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-logo-brown flex-shrink-0" />
                   <span className="text-logo-brown">{t('pages.home.portfolio_section.projects.project3.features.annual')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-logo-brown flex-shrink-0" />
                   <span className="text-logo-brown">{t('pages.home.portfolio_section.projects.project3.features.optimization')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-logo-brown flex-shrink-0" />
                   <span className="text-logo-brown">{t('pages.home.portfolio_section.projects.project3.features.luxury')}</span>
                 </div>
               </div>
@@ -584,7 +584,7 @@ export default function HomePage() {
                   </div>
                   <div className={`${isRTL ? 'text-right' : 'text-left'} w-full`}>
                     <h4 className="font-semibold text-logo-brown group-hover:text-logo-brown/80 transition-colors mb-2">{method.label}</h4>
-                    <p className="text-logo-brown group-hover:text-logo-brown/80 transition-colors">{method.value}</p>
+                    <p className="text-logo-brown group-hover:text-logo-brown/80 transition-colors" dir={method.value.includes('+') ? 'ltr' : undefined}>{method.value}</p>
                   </div>
                 </motion.div>
               ))}

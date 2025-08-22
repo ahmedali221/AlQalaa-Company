@@ -112,7 +112,7 @@ export default function CTA({
               <Link to="/contact">
                                  <button className="inline-flex items-center px-4 sm:px-5 py-2 sm:py-2.5 bg-white text-primary hover:bg-white/90 group border-0 shadow-lg shadow-black/20 text-sm sm:text-base font-semibold rounded-lg transition-all duration-300">
                    <Phone className={`w-4 h-4 ${isRTL ? 'ml-3' : 'mr-3'}`} />
-                   {primaryButtonText}
+                   <span dir={primaryButtonText.includes('+') ? 'ltr' : undefined}>{primaryButtonText}</span>
                    <ArrowRight className={`w-4 h-4 ${isRTL ? 'mr-3 rotate-180' : 'ml-3'} group-hover:translate-x-1 transition-transform duration-300`} />
                  </button>
               </Link>

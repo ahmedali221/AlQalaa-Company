@@ -15,7 +15,6 @@ import {
   Headphones,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { cn } from "../utils/cn";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useEffect } from "react";
 import Button from "../components/Button";
@@ -199,7 +198,7 @@ export default function ContactPage() {
           <div className="max-w-4xl mx-auto text-center">
             <motion.div variants={itemVariants}>
               <Badge variant="outline" className="mb-6 text-primary border-primary">
-                <MessageCircle className="w-4 h-4 mr-2" />
+                <MessageCircle className={`w-4 h-4 ${dir === 'rtl' ? 'ml-2' : 'mr-2'}`} />
                 {t('pages.contact.badge')}
               </Badge>
             </motion.div>
@@ -336,6 +335,7 @@ export default function ContactPage() {
                       type="tel"
                       className="w-full px-4 py-3 bg-snow border border-accent rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 focus:scale-105"
                       placeholder={t('pages.contact.form.phone.placeholder')}
+                      dir="ltr"
                     />
                   </div>
                   
@@ -393,7 +393,7 @@ export default function ContactPage() {
                   </div>
                   
                   <Button className="w-full bg-primary hover:bg-primary/90 py-4 group hover:scale-105 transition-all duration-300 border-0">
-                    <Send className={`w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 ${dir === 'rtl' ? 'ml-2' : 'mr-2'}`} />
+                    <Send className={`w-5 h-5 transition-transform duration-300 ${dir === 'rtl' ? 'ml-2 group-hover:-translate-x-1' : 'mr-2 group-hover:translate-x-1'}`} />
                     {t('pages.contact.form.submit')}
                   </Button>
                 </form>
@@ -457,7 +457,7 @@ export default function ContactPage() {
                       <Phone className="w-6 h-6 mr-4 animate-pulse text-logo-brown group-hover:text-white" />
                       <div className="text-left">
                         <div className="font-bold text-lg">{t('pages.contact.quickContact.call.title')}</div>
-                        <div className="text-base opacity-70">{t('pages.contact.quickContact.call.subtitle')}</div>
+                        <div className="text-base opacity-70" dir="ltr">{t('pages.contact.quickContact.call.subtitle')}</div>
                       </div>
                       <ArrowRight className="w-5 h-5 ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                     </Button>

@@ -3,7 +3,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import logo from '../assets/logo.jpg';
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, dir } = useLanguage();
 
   return (
     <footer className="section-primary">
@@ -72,14 +72,14 @@ export default function Footer() {
                 <Phone className="w-5 h-5 text-secondary" />
                 <div>
                   <p className="text-sm text-secondary">{t('footer.contact.mainPhoneLabel')}</p>
-                  <p className="font-medium">{t('footer.contact.mainPhone')}</p>
+                  <p className="font-medium" dir="ltr">{t('footer.contact.mainPhone')}</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-secondary" />
                 <div>
                   <p className="text-sm text-secondary">{t('footer.contact.altPhoneLabel')}</p>
-                  <p className="font-medium">{t('footer.contact.altPhone')}</p>
+                  <p className="font-medium" dir="ltr">{t('footer.contact.altPhone')}</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">

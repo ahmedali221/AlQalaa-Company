@@ -8,7 +8,7 @@ import Button from './Button';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
+  const { language, setLanguage, t, dir } = useLanguage();
   const location = useLocation();
 
   const navItems = [
@@ -33,7 +33,7 @@ export default function Header() {
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
                 <Phone className="icon-sm animate-pulse" />
-                <span className="text-body-sm font-medium">{t('header.phone')}</span>
+                <span className="text-body-sm font-medium" dir="ltr">{t('header.phone')}</span>
               </div>
               <div className="hidden sm:flex items-center gap-2 hover:scale-105 transition-transform duration-300">
                 <Mail className="icon-sm" />

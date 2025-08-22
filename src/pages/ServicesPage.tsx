@@ -311,7 +311,7 @@ export default function ServicesPage() {
     <div className="max-w-4xl mx-auto text-center">
       <motion.div variants={fadeInUp}>
         <Badge variant="outline" className="mb-4 sm:mb-6 text-logo-brown border-logo-brown px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold shadow-sm">
-          <Thermometer className="w-4 h-4 mr-2" />
+          <Thermometer className={`w-4 h-4 ${dir === 'rtl' ? 'ml-2' : 'mr-2'}`} />
           {t('pages.services.badge')}
         </Badge>
       </motion.div>
@@ -337,12 +337,12 @@ export default function ServicesPage() {
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button size="lg" className="bg-primary hover:bg-primary/90 group border-0 shadow-lg shadow-primary/20 text-sm sm:text-base font-medium py-2.5 sm:py-3 px-6 sm:px-8">
             {t('pages.services.quoteButton')}
-            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+            <ArrowRight className={`w-4 h-4 transition-transform duration-300 ${dir === 'rtl' ? 'mr-2 rotate-180 group-hover:-translate-x-1' : 'ml-2 group-hover:translate-x-1'}`} />
           </Button>
         </motion.div>
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button variant="outline" size="lg" className="group border-gold text-gold hover:bg-gold hover:text-white shadow-lg text-sm sm:text-base font-medium py-2.5 sm:py-3 px-6 sm:px-8">
-            <Phone className="w-4 h-4 mr-2" />
+            <Phone className={`w-4 h-4 ${dir === 'rtl' ? 'ml-2' : 'mr-2'}`} />
             {t('pages.services.callButton')}
           </Button>
         </motion.div>
@@ -717,7 +717,7 @@ export default function ServicesPage() {
                 {t('pages.about.systemDesign.description')}
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="flex items-start space-x-3">
+                <div className={`flex items-start space-x-3 ${dir === 'rtl' ? 'space-x-reverse' : ''}`}>
                   <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center">
                     <Target className="w-5 h-5 text-gold" />
                   </div>
@@ -726,7 +726,7 @@ export default function ServicesPage() {
                     <p className="text-gold text-caption">{t('pages.about.systemDesign.features.analysis.description')}</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3">
+                <div className={`flex items-start space-x-3 ${dir === 'rtl' ? 'space-x-reverse' : ''}`}>
                   <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
                     <Image className="w-5 h-5 text-gold" />
                   </div>
@@ -735,7 +735,7 @@ export default function ServicesPage() {
                     <p className="text-gold text-caption">{t('pages.about.systemDesign.features.modeling.description')}</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3">
+                <div className={`flex items-start space-x-3 ${dir === 'rtl' ? 'space-x-reverse' : ''}`}>
                   <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
                     <Settings className="w-5 h-5 text-gold" />
                   </div>
@@ -744,7 +744,7 @@ export default function ServicesPage() {
                     <p className="text-gold text-caption">{t('pages.about.systemDesign.features.engineering.description')}</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3">
+                <div className={`flex items-start space-x-3 ${dir === 'rtl' ? 'space-x-reverse' : ''}`}>
                   <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center">
                     <TrendingUp className="w-5 h-5 text-primary" />
                   </div>
@@ -792,7 +792,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-in slide-in-from-bottom-4 duration-700">
             <Badge variant="outline" className="mb-6 text-gold border-gold px-4 py-2 text-body-sm font-semibold shadow-sm">
-              <Headphones className="w-4 h-4 mr-2" />
+              <Headphones className={`w-4 h-4 ${dir === 'rtl' ? 'ml-2' : 'mr-2'}`} />
               {t('pages.about.support.badge')}
             </Badge>
             <h2 className="text-heading-lg font-bold mb-4 text-gold">{t('pages.about.support.title')}</h2>
@@ -812,7 +812,7 @@ export default function ServicesPage() {
                 {t('pages.about.support.description')}
               </p>
               <div className="grid grid-cols-2 gap-4">
-                <div className="flex items-start space-x-3">
+                <div className={`flex items-start space-x-3 ${dir === 'rtl' ? 'space-x-reverse' : ''}`}>
                   <div className="w-10 h-10 bg-logo-brown/10 rounded-lg flex items-center justify-center">
                     <Shield className="w-5 h-5 text-gold" />
                   </div>
@@ -821,7 +821,7 @@ export default function ServicesPage() {
                     <p className="text-gold text-caption">{t('pages.about.support.features.emergencySupport.description')}</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3">
+                <div className={`flex items-start space-x-3 ${dir === 'rtl' ? 'space-x-reverse' : ''}`}>
                   <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center">
                     <Settings className="w-5 h-5 text-gold" />
                   </div>
@@ -830,7 +830,7 @@ export default function ServicesPage() {
                     <p className="text-gold text-caption">{t('pages.about.support.features.preventiveMaintenance.description')}</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3">
+                <div className={`flex items-start space-x-3 ${dir === 'rtl' ? 'space-x-reverse' : ''}`}>
                   <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
                     <Wrench className="w-5 h-5 text-gold" />
                   </div>
@@ -839,7 +839,7 @@ export default function ServicesPage() {
                     <p className="text-gold text-caption">{t('pages.about.support.features.technicalSupport.description')}</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3">
+                <div className={`flex items-start space-x-3 ${dir === 'rtl' ? 'space-x-reverse' : ''}`}>
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                     <Award className="w-5 h-5 text-gold" />
                   </div>
@@ -874,7 +874,7 @@ export default function ServicesPage() {
          <div className="container mx-auto px-4 relative z-10">
                        <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-in slide-in-from-bottom-4 duration-700">
               <Badge variant="outline" className="mb-6 text-gold border-gold px-4 py-2 text-body-sm font-semibold shadow-sm">
-                <Image className="w-4 h-4 mr-2" />
+                <Image className={`w-4 h-4 ${dir === 'rtl' ? 'ml-2' : 'mr-2'}`} />
                 {t('pages.services.designs.badge')}
               </Badge>
               <h2 className="text-heading-lg font-bold mb-4 text-gold">{t('pages.services.designs.title')}</h2>
@@ -934,7 +934,7 @@ export default function ServicesPage() {
               <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-full">
               
                 <Button size="lg" variant="outline" className="border-gold text-gold ">
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className={`w-5 h-5 ${dir === 'rtl' ? 'ml-2' : 'mr-2'}`} />
                   {t('pages.services.designs.cta.consultation')}
                 </Button>
               </div>
