@@ -23,7 +23,6 @@ export default function CTA({
   primaryButtonText, 
   secondaryButtonText,
   features,
-  variant = 'primary',
   showFeatures = true 
 }: CTAProps) {
   const { t, dir } = useLanguage();

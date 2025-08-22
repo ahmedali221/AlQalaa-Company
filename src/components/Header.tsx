@@ -2,13 +2,13 @@ import { Phone, Mail, MapPin, Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from '../assets/logo.jpg';
-import { cn } from "../utils/cn";
+
 import { useLanguage } from "../contexts/LanguageContext";
 import Button from './Button';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { language, setLanguage, t, dir } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
 
   const navItems = [

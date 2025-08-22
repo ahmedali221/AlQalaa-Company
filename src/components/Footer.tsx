@@ -3,7 +3,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 import logo from '../assets/logo.jpg';
 
 export default function Footer() {
-  const { t, dir } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <footer className="section-primary">
