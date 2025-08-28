@@ -73,7 +73,7 @@ export default function Hero() {
             variants={itemVariants}
           >
             <Star className="icon-sm text-white" />
-            <span className="text-body-sm text-white font-medium tracking-wide">{t('hero.badge')}</span>
+            <span className=" text-white font-medium tracking-wide">{t('hero.badge')}</span>
           </motion.div>
 
           {/* Main Title */}
@@ -121,7 +121,7 @@ export default function Hero() {
               <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300 border border-white/20">
                 <Star className="icon-xl text-white" />
               </div>
-              <p className="text-body-sm font-medium text-white group-hover:text-white transition-colors tracking-wide">
+              <p className=" font-medium text-white group-hover:text-white transition-colors tracking-wide">
                 {t('hero.features.fiveStar')}
               </p>
             </motion.div>
@@ -129,7 +129,7 @@ export default function Hero() {
               <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300 border border-white/20">
                 <Shield className="icon-xl text-white" />
               </div>
-              <p className="text-body-sm font-medium text-white group-hover:text-white transition-colors tracking-wide">
+              <p className="font-medium text-white group-hover:text-white transition-colors tracking-wide">
                 {t('hero.features.licensed')}
               </p>
             </motion.div>
@@ -137,7 +137,7 @@ export default function Hero() {
               <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300 border border-white/20">
                 <Clock className="icon-xl text-white" />
               </div>
-              <p className="text-body-sm font-medium text-white group-hover:text-white transition-colors tracking-wide">
+              <p className=" font-medium text-white group-hover:text-white transition-colors tracking-wide">
                 {t('hero.features.emergency')}
               </p>
             </motion.div>
@@ -145,7 +145,7 @@ export default function Hero() {
               <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300 border border-white/20">
                 <Wrench className="icon-xl text-white" />
               </div>
-              <p className="text-body-sm font-medium text-white group-hover:text-white transition-colors tracking-wide">
+              <p className=" font-medium text-white group-hover:text-white transition-colors tracking-wide">
                 {t('hero.features.experts')}
               </p>
             </motion.div>
