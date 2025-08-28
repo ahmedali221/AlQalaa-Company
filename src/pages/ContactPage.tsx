@@ -138,22 +138,22 @@ export default function ContactPage() {
     { 
       city: t('pages.contact.serviceAreas.fujairah.city'), 
       coverage: t('pages.contact.serviceAreas.fujairah.coverage'),
-      icon: <Building className="w-5 h-5 text-white" />
+      icon: <Building className="w-5 h-5 text-primary" />
     },
     { 
       city: t('pages.contact.serviceAreas.madhab.city'), 
       coverage: t('pages.contact.serviceAreas.madhab.coverage'),
-      icon: <Star className="w-5 h-5 text-white" />
+      icon: <Star className="w-5 h-5 text-primary" />
     },
     { 
       city: t('pages.contact.serviceAreas.kalba.city'), 
       coverage: t('pages.contact.serviceAreas.kalba.coverage'),
-      icon: <Navigation className="w-5 h-5 text-white" />
+      icon: <Navigation className="w-5 h-5 text-primary" />
     },
     { 
       city: t('pages.contact.serviceAreas.khorFakkan.city'), 
       coverage: t('pages.contact.serviceAreas.khorFakkan.coverage'),
-      icon: <Globe className="w-5 h-5 text-white" />
+      icon: <Globe className="w-5 h-5 text-primary" />
     }
   ];
 
@@ -266,7 +266,7 @@ export default function ContactPage() {
                     {contact.icon}
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-logo-brown">{contact.title}</h3>
-                  <p className="text-logo-brown font-bold mb-2 flex-grow">{contact.info}</p>
+                  <p className="text-logo-brown font-bold mb-2 flex-grow" dir="ltr">{contact.info}</p>
                   <p className="text-logo-brown text-sm leading-relaxed mb-2">{contact.subInfo}</p>
                 </motion.div>
               </motion.div>
@@ -477,7 +477,7 @@ export default function ContactPage() {
                       <MessageCircle className="w-6 h-6 mr-4 text-logo-brown group-hover:text-white" />
                       <div className="text-left">
                         <div className="font-bold text-lg">{t('pages.contact.quickContact.whatsapp.title')}</div>
-                        <div className="text-base opacity-70">{t('pages.contact.quickContact.whatsapp.subtitle')}</div>
+                        <div className="text-base opacity-70" dir="ltr">{t('pages.contact.quickContact.whatsapp.subtitle')}</div>
                       </div>
                       <ArrowRight className="w-5 h-5 ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                     </Button>

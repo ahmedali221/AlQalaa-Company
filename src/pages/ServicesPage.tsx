@@ -465,12 +465,12 @@ export default function ServicesPage() {
                       {/* Left column - Icon and title */}
                       <div className="lg:col-span-1">
                         <div className="flex flex-col sm:flex-row lg:flex-col items-start gap-4 sm:gap-6 mb-4 sm:mb-6">
-                          <div className={`w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 bg-gradient-to-br ${service.color} text-white shadow-lg shadow-primary/20`}>
+                          <div className={`w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 bg-gradient-to-br  text-white shadow-lg shadow-primary/20`}>
                             {service.icon}
                           </div>
                           <div className="flex-1">
                             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 group-hover:text-gold transition-colors duration-300 text-gold">{service.title}</h3>
-                <p className="text-gold text-body-sm leading-relaxed">{service.description}</p>
+                            <p className="text-gold text-body-sm leading-relaxed">{service.description}</p>
                           </div>
                         </div>
                       </div>
@@ -480,14 +480,14 @@ export default function ServicesPage() {
                         <div className="space-y-4 sm:space-y-5">
                           <div>
                             <h4 className="font-bold mb-3 text-gold text-sm sm:text-base flex items-center">
-                    <CheckCircle className="w-4 h-4 text-gold mr-2" />
+                              <CheckCircle className="w-4 h-4 text-gold mr-2" />
                               {t('pages.services.keyFeatures')}
                             </h4>
                             <ul className="space-y-2 sm:space-y-3">
                               {service.features.map((feature, idx) => (
                                 <li key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-gold group-hover:transform group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${idx * 50}ms` }}>
-                        <div className="w-4 h-4 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                          <CheckCircle className="w-3 h-3 text-gold" />
+                                  <div className="w-4 h-4 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                                    <CheckCircle className="w-3 h-3 text-gold" />
                                   </div>
                                   {feature}
                                 </li>
@@ -532,25 +532,25 @@ export default function ServicesPage() {
                     <>
                       <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-4 sm:mb-6">
                         <div className={`w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 bg-accent group-hover:bg-gradient-to-br group-hover:from-primary/10 group-hover:to-primary/5`}>
-                          {service.icon}
+                          <div className="text-white">{service.icon}</div>
                         </div>
                         <div className="flex-1">
                           <h3 className="text-heading-sm font-bold mb-1 sm:mb-2 group-hover:text-gold transition-colors duration-300 text-gold">{service.title}</h3>
-                  <p className="text-gold text-sm sm:text-base leading-relaxed">{service.description}</p>
+                          <p className="text-gold text-sm sm:text-base leading-relaxed">{service.description}</p>
                         </div>
                       </div>
 
                       <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6 max-w-full">
                         <div>
                           <h4 className="font-bold mb-2 sm:mb-3 text-gold text-body-sm flex items-center">
-                      <CheckCircle className="w-4 h-4 text-gold mr-2" />
+                            <CheckCircle className="w-4 h-4 text-gold mr-2" />
                             {t('pages.services.keyFeatures')}
                           </h4>
                           <ul className="space-y-2 sm:space-y-3">
                             {service.features.map((feature, idx) => (
                               <li key={idx} className="flex items-center gap-1.5 sm:gap-2 text-body-sm text-gold group-hover:transform group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${idx * 50}ms` }}>
-                          <div className="w-4 h-4 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                            <CheckCircle className="w-3 h-3 text-gold" />
+                                <div className="w-4 h-4 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                                  <CheckCircle className="w-3 h-3 text-gold" />
                                 </div>
                                 {feature}
                               </li>

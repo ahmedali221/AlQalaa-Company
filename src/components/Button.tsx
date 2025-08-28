@@ -21,8 +21,8 @@ export function Button({
         // Variant styles
         {
           'default': "bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20",
-          'outline': "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-white",
-          'ghost': "text-primary hover:bg-primary/10",
+          'outline': "border-2 border-primary bg-transparent text-white hover:bg-primary hover:text-white",
+          'ghost': "text-white hover:bg-primary/10",
           'secondary': "bg-secondary text-white hover:bg-secondary/90 shadow-lg shadow-secondary/20"
         }[variant],
         // Size styles

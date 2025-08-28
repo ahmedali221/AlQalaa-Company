@@ -17,6 +17,41 @@ interface CTAProps {
   showFeatures?: boolean;
 }
 
+// Helper function to format mixed RTL text with LTR numbers
+const formatMixedContent = (text: string, isRTL: boolean) => {
+  if (!isRTL) return text;
+  
+  // For RTL: Keep Arabic text RTL, but make numbers and phone numbers LTR
+  const phoneRegex = /(\+?\d[\d\s\-\(\)]{7,})/g;
+  const numberRegex = /(\d+)/g;
+  
+  // First handle phone numbers (longer sequences)
+  let formatted = text.replace(phoneRegex, '\u202D$1\u202C');
+  // Then handle remaining individual numbers
+  formatted = formatted.replace(numberRegex, '\u202D$1\u202C');
+  
+  return formatted;
+};
+
+// Helper function specifically for phone display in contact info
+const formatPhoneDisplay = (text: string, isRTL: boolean) => {
+  if (!isRTL) return text;
+  
+  // Split text into Arabic and number parts
+  const phoneRegex = /(\+?\d[\d\s\-\(\)]{7,})/;
+  const match = text.match(phoneRegex);
+  
+  if (match) {
+    const phoneNumber = match[1];
+    const textPart = text.replace(phoneRegex, '').trim();
+    
+    // For RTL: Arabic text + LTR phone number
+    return `${textPart} \u202D${phoneNumber}\u202C`;
+  }
+  
+  return formatMixedContent(text, isRTL);
+};
+
 export default function CTA({ 
   title, 
   description, 
@@ -42,11 +77,9 @@ export default function CTA({
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
   };
 
- 
-
   return (
     <motion.section 
-      className={`py-6 sm:py-8 md:py-12 lg:py-16  text-gold relative overflow-hidden`}
+      className={`py-6 sm:py-8 md:py-12 lg:py-16 text-gold relative overflow-hidden`}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
@@ -79,25 +112,43 @@ export default function CTA({
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div variants={fadeInUp}>
-                         <div className="inline-flex items-center px-3 py-1.5 bg-white/20 text-gold border-white/30 backdrop-blur-sm rounded-full text-xs font-semibold mb-4">
-               <Phone className={`w-3 h-3 ${isRTL ? 'ml-2' : 'mr-2'}`} />
-               {t('pages.services.cta.badge')}
-             </div>
+            <div className="inline-flex items-center px-3 py-1.5 bg-white/20 text-gold border-white/30 backdrop-blur-sm rounded-full text-xs font-semibold mb-4">
+              <Phone className={`w-3 h-3 ${isRTL ? 'ml-2' : 'mr-2'}`} />
+              <span 
+                style={{
+                  direction: isRTL ? 'rtl' : 'ltr',
+                  unicodeBidi: 'embed'
+                }}
+                dangerouslySetInnerHTML={{
+                  __html: formatPhoneDisplay(t('pages.services.cta.badge'), isRTL)
+                }}
+              />
+            </div>
           </motion.div>
           
           <motion.h2 
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 text-gold leading-tight"
             variants={fadeInUp}
-          >
-            {title}
-          </motion.h2>
+            style={{
+              direction: isRTL ? 'rtl' : 'ltr',
+              textAlign: 'center'
+            }}
+            dangerouslySetInnerHTML={{
+              __html: formatMixedContent(title, isRTL)
+            }}
+          />
           
           <motion.p 
             className="text-sm sm:text-base md:text-lg text-light mb-4 sm:mb-6 leading-relaxed max-w-3xl mx-auto"
             variants={fadeInUp}
-          >
-            {description}
-          </motion.p>
+            style={{
+              direction: isRTL ? 'rtl' : 'ltr',
+              textAlign: 'center'
+            }}
+            dangerouslySetInnerHTML={{
+              __html: formatMixedContent(description, isRTL)
+            }}
+          />
           
           <motion.div 
             className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4"
@@ -109,11 +160,19 @@ export default function CTA({
               transition={{ duration: 0.2 }}
             >
               <Link to="/contact">
-                                 <button className="inline-flex items-center px-4 sm:px-5 py-2 sm:py-2.5 bg-white text-primary hover:bg-white/90 group border-0 shadow-lg shadow-black/20 text-sm sm:text-base font-semibold rounded-lg transition-all duration-300">
-                   <Phone className={`w-4 h-4 ${isRTL ? 'ml-3' : 'mr-3'}`} />
-                   <span dir={primaryButtonText.includes('+') ? 'ltr' : undefined}>{primaryButtonText}</span>
-                   <ArrowRight className={`w-4 h-4 ${isRTL ? 'mr-3 rotate-180' : 'ml-3'} group-hover:translate-x-1 transition-transform duration-300`} />
-                 </button>
+                <button className="inline-flex items-center px-4 sm:px-5 py-2 sm:py-2.5 bg-white text-primary hover:bg-white/90 group border-0 shadow-lg shadow-black/20 text-sm sm:text-base font-semibold rounded-lg transition-all duration-300">
+                  <Phone className={`w-4 h-4 ${isRTL ? 'ml-3' : 'mr-3'}`} />
+                  <span 
+                    style={{
+                      direction: isRTL ? 'rtl' : 'ltr',
+                      unicodeBidi: 'embed'
+                    }}
+                    dangerouslySetInnerHTML={{
+                      __html: formatPhoneDisplay(primaryButtonText, isRTL)
+                    }}
+                  />
+                  <ArrowRight className={`w-4 h-4 ${isRTL ? 'mr-3 rotate-180' : 'ml-3'} group-hover:translate-x-1 transition-transform duration-300`} />
+                </button>
               </Link>
             </motion.div>
             
@@ -124,11 +183,19 @@ export default function CTA({
                 transition={{ duration: 0.2 }}
               >
                 <Link to="/contact">
-                                     <button className="inline-flex items-center px-4 sm:px-5 py-2 sm:py-2.5 border-2 border-gold text-gold hover:bg-gold hover:text-primary group shadow-lg text-sm sm:text-base font-semibold rounded-lg transition-all duration-300">
-                     <ArrowRight className={`w-4 h-4 ${isRTL ? 'ml-3 rotate-180' : 'mr-3'}`} />
-                     {secondaryButtonText}
-                     <ArrowRight className={`w-4 h-4 ${isRTL ? 'mr-3 rotate-180' : 'ml-3'} group-hover:translate-x-1 transition-transform duration-300`} />
-                   </button>
+                  <button className="inline-flex items-center px-4 sm:px-5 py-2 sm:py-2.5 border-2 border-gold text-gold hover:bg-gold hover:text-primary group shadow-lg text-sm sm:text-base font-semibold rounded-lg transition-all duration-300">
+                    <ArrowRight className={`w-4 h-4 ${isRTL ? 'ml-3 rotate-180' : 'mr-3'}`} />
+                    <span 
+                      style={{
+                        direction: isRTL ? 'rtl' : 'ltr',
+                        unicodeBidi: 'embed'
+                      }}
+                      dangerouslySetInnerHTML={{
+                        __html: formatPhoneDisplay(secondaryButtonText, isRTL)
+                      }}
+                    />
+                    <ArrowRight className={`w-4 h-4 ${isRTL ? 'mr-3 rotate-180' : 'ml-3'} group-hover:translate-x-1 transition-transform duration-300`} />
+                  </button>
                 </Link>
               </motion.div>
             )}
@@ -139,18 +206,45 @@ export default function CTA({
               className="mt-4 sm:mt-6 flex flex-col sm:flex-row justify-center items-center gap-3 text-light"
               variants={fadeInUp}
             >
-                             <div className="flex items-center gap-2">
-                 <CheckCircle className="w-4 h-4 text-gold" />
-                 <span className="text-xs sm:text-sm">{features.freeConsultation}</span>
-               </div>
-               <div className="flex items-center gap-2">
-                 <CheckCircle className="w-4 h-4 text-gold" />
-                 <span className="text-xs sm:text-sm">{features.quickResponse}</span>
-               </div>
-               <div className="flex items-center gap-2">
-                 <CheckCircle className="w-4 h-4 text-gold" />
-                 <span className="text-xs sm:text-sm">{features.expertTeam}</span>
-               </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-gold" />
+                <span 
+                  className="text-xs sm:text-sm" 
+                  style={{
+                    direction: isRTL ? 'rtl' : 'ltr',
+                    unicodeBidi: 'embed'
+                  }}
+                  dangerouslySetInnerHTML={{
+                    __html: formatPhoneDisplay(features.freeConsultation, isRTL)
+                  }}
+                />
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-gold" />
+                <span 
+                  className="text-xs sm:text-sm" 
+                  style={{
+                    direction: isRTL ? 'rtl' : 'ltr',
+                    unicodeBidi: 'embed'
+                  }}
+                  dangerouslySetInnerHTML={{
+                    __html: formatPhoneDisplay(features.quickResponse, isRTL)
+                  }}
+                />
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-gold" />
+                <span 
+                  className="text-xs sm:text-sm" 
+                  style={{
+                    direction: isRTL ? 'rtl' : 'ltr',
+                    unicodeBidi: 'embed'
+                  }}
+                  dangerouslySetInnerHTML={{
+                    __html: formatPhoneDisplay(features.expertTeam, isRTL)
+                  }}
+                />
+              </div>
             </motion.div>
           )}
         </div>

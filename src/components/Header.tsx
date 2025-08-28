@@ -37,12 +37,12 @@ export default function Header() {
               </div>
               <div className="hidden sm:flex items-center gap-2 hover:scale-105 transition-transform duration-300">
                 <Mail className="icon-sm" />
-                <span className="text-body-sm font-medium">{t('header.email')}</span>
+                <span className="text-body-sm font-medium" dir="ltr">{t('header.email')}</span>
               </div>
             </div>
             <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
               <MapPin className="icon-sm" />
-              <span className="text-body-sm font-medium">{t('header.location')}</span>
+              <span className="text-body-sm font-medium" dir={language === 'ar' ? 'rtl' : 'ltr'}>{t('header.location')}</span>
             </div>
           </div>
         </div>

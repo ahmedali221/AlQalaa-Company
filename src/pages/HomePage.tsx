@@ -601,7 +601,7 @@ export default function HomePage() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Phone className={`w-4 h-4 ${isRTL ? 'ml-2' : 'mr-2'}`} />
-                {t('pages.home.contact_section.buttons.call')}
+                <span dir="ltr">{t('pages.home.contact_section.buttons.call')}</span>
               </motion.a>
               <motion.a 
                 href="mailto:info@alqalaa-ac.com" 

@@ -82,18 +82,18 @@
 
 @import "tailwindcss";
 
-/* Custom Theme Colors - Dark Theme with Light Golden Text */
+/* Custom Theme Colors - Light Theme with Dark Brown Text */
 :root {
   --color-primary: #A0522D;      /* Primary brown color */
   --color-secondary: #140b03;    /* Dark brown for backgrounds */
   --color-accent: #2D1B0E;       /* Dark accent color */
-  --color-white: #2D1B0E;        /* Dark background */
-  --color-gold: #F4E4BC;         /* Light golden color for headings */
-  --color-dark-gold: #E6D7B8;    /* Slightly darker golden */
-  --color-logo-brown: #F4E4BC;   /* Light golden for headings */
-  --color-text-dark: #f6e2b2;    /* Light golden text for headings */
-  --color-text-light: #E6D7B8;   /* Light text for body */
-  --color-snow: #1A0F08;         /* Very dark brown for sections */
+  --color-white: #f2eded;        /* Off-white background */
+  --color-gold: #2D1B0E;         /* Dark brown color for headings */
+  --color-dark-gold: #140b03;    /* Darker brown */
+  --color-logo-brown: #2D1B0E;   /* Dark brown for headings */
+  --color-text-dark: #2D1B0E;    /* Dark brown text for headings */
+  --color-text-light: #140b03;   /* Dark brown text for body */
+  --color-snow: #f0f0f0;         /* Slightly darker off-white for sections */
 }
 
 /* Global Theme Styles */
@@ -166,13 +166,13 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: var(--color-dark-gold);
+  background-color: var(--color-accent);
   transform: translateY(-1px);
 }
 
 .btn-secondary {
   background-color: var(--color-secondary);
-  color: var(--color-text-dark);
+  color: var(--color-white);
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
@@ -181,13 +181,13 @@ body {
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-gold);
+  background-color: var(--color-accent);
   transform: translateY(-1px);
 }
 
 .btn-accent {
   background-color: var(--color-accent);
-  color: var(--color-text-dark);
+  color: var(--color-white);
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
@@ -208,6 +208,7 @@ body {
   padding: 1.5rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
+  color: var(--color-text-light);
 }
 
 .card:hover {
@@ -226,7 +227,7 @@ body {
 
 .nav-link:hover {
   background-color: var(--color-accent);
-  color: var(--color-text-dark);
+  color: var(--color-white);
 }
 
 .nav-link.active {
@@ -241,6 +242,7 @@ body {
   padding: 0.75rem;
   background-color: var(--color-white);
   transition: border-color 0.2s ease;
+  color: var(--color-text-light);
 }
 
 .form-input:focus {
@@ -257,12 +259,12 @@ body {
 
 .section-secondary {
   background-color: var(--color-secondary);
-  color: var(--color-text-dark);
+  color: var(--color-white);
 }
 
 .section-accent {
   background-color: var(--color-accent);
-  color: var(--color-text-dark);
+  color: var(--color-white);
 }
 
 .section-snow {
@@ -273,14 +275,17 @@ body {
 /* Utility classes */
 .gradient-primary {
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-white);
 }
 
 .gradient-secondary {
-  background: linear-gradient(135deg, var(--color-secondary), var(--color-gold));
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+  color: var(--color-white);
 }
 
 .gradient-golden {
-  background: linear-gradient(135deg, var(--color-gold), var(--color-accent));
+  background: linear-gradient(135deg, var(--color-snow), var(--color-white));
+  color: var(--color-text-dark);
 }
 
 .text-shadow {
