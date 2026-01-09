@@ -25,7 +25,6 @@ import BrandsSlider from "../components/BrandsSlider";
 import CTA from "../components/CTA";
 import Button from "../components/Button";
 import Badge from "../components/Badge";
-import { img } from "framer-motion/client";
 
 
 
