@@ -74,201 +74,219 @@
   },
   "pages": {
    
-    "about": {
-      "badge": "About AlQalaa Air Conditioning",
-      "title": "Your Trusted AC Partner",
-      "description": "Since 2019, AlQalaa Air Conditioning has been providing professional AC solutions across Eastern Region UAE. Based in Fujairah-Madhab, we specialize in chilled water systems, smart controls, and comprehensive HVAC services.",
-      "servicesButton": "Our Services",
-      "contactButton": "Contact Us",
-      "foundation": {
-        "badge": "Our Foundation",
-        "title": "Vision & Mission",
-        "subtitle": "Guiding principles that drive our excellence"
+  "about": {
+  "badge": "About AlQalaa Air Conditioning",
+  "title": "Your Trusted AC Partner",
+  "description": "Since 2019, AlQalaa Air Conditioning has been providing professional AC solutions across Eastern Region UAE. Based in Fujairah-Madhab, we specialize in chilled water systems, smart controls, and comprehensive HVAC services.",
+  "companyProfile": {
+    "title": "Company Profile",
+    "description": "Al-Qalaa Company for Refrigeration and Air Conditioning was established in the eastern region of the Emirates in 2020. It is responsible for supply and installation of all central air conditioner products (American and Asian) systems. It is based in Fujairah (Madhab) and it is supervised by a specialized engineering staff and management. They hold a bachelor's degree in mechanical engineering for air conditioning (Cooling and Heating), highly experienced in the field of central air conditioners, hold certificates of appreciation for participation in manufacture courses of air conditioners of various types, such as American and Asian system. We, Al-Qalaa Company for Air Conditioning and Refrigeration, have an agency for most brands of air conditioners, especially Rahem Brand, which is advanced American air conditioning system. Al-Qalaa Company is considered one of the most important companies in the Eastern Region because it works to satisfy customers, uses advanced and specialized engineering programs to calculate cooling loads, such as hap, AutoCAD and Revit software for 3D engineering designs, and works on follow-up from the beginning of studying and supervising projects until the project delivery with the best types and raw materials. We look forward to work with you and we would be very happy to serve you."
+  },
+  "features": {
+    "items": [
+      {
+        "title": "Customer Satisfaction",
+        "description": "Delivering high-quality services that satisfy all our clients"
       },
-      "vision": {
-        "title": "Our Vision",
-        "description": "To be the leading AC solutions provider in Eastern Region UAE, known for innovation, quality, and exceptional customer service. We envision a future where every building has efficient, smart, and sustainable climate control systems."
+      {
+        "title": "Advanced Engineering Software",
+        "description": "Using advanced engineering software for professional engineering designs"
       },
-      "mission": {
-        "title": "Our Mission",
-        "description": "To deliver professional AC solutions through innovative technology, expert engineering, and reliable service. We commit to providing energy-efficient systems that enhance comfort while minimizing environmental impact."
+      {
+        "title": "Cooling Load Calculations",
+        "description": "Specialized for calculating cooling loads using industry software (Revit Software, HAP, AutoCAD)"
       },
-      "values": {
-        "badge": "Core Values",
-        "title": "What We Stand For",
-        "subtitle": "Values that define our culture and guide our actions",
-        "items": [
-          {
-            "title": "Excellence",
-            "description": "We strive for excellence in every project, ensuring the highest quality standards and customer satisfaction."
-          },
-          {
-            "title": "Reliability",
-            "description": "Our clients trust us to deliver reliable AC solutions with consistent performance and professional service."
-          },
-          {
-            "title": "Innovation",
-            "description": "We embrace innovative technologies and smart solutions to enhance AC system efficiency and user experience."
-          },
-          {
-            "title": "Quality",
-            "description": "Quality is at the core of everything we do, from equipment selection to installation and maintenance."
-          }
-        ]
-      },
-      "milestones": {
-        "badge": "Our Journey",
-        "title": "Company Milestones",
-        "subtitle": "Key moments that shaped our growth and success",
-        "items": [
-          {
-            "title": "Company Establishment",
-            "description": "AlQalaa Air Conditioning & Cooling established in Fujairah-Madhab area"
-          },
-          {
-            "title": "Rheem Partnership",
-            "description": "Became authorized agent for Rheem AC systems"
-          },
-          {
-            "title": "Smart Integration",
-            "description": "Introduced IoT and smart control systems"
-          },
-          {
-            "title": "Regional Expansion",
-            "description": "Extended services across Eastern Region UAE"
-          }
-        ]
-      },
-      "achievements": {
-        "badge": "Our Success",
-        "title": "By the Numbers",
-        "subtitle": "Achievements that reflect our commitment to excellence",
-        "items": [
-          {
-            "label": "Projects Completed"
-          },
-          {
-            "label": "Happy Clients"
-          },
-          {
-            "label": "Warranty Coverage"
-          },
-          {
-            "label": "Support Available"
-            
-          }
-        ]
-      },
-      "certifications": {
-        "badge": "Quality Assurance",
-        "title": "Certifications & Partnerships",
-       
-        "subtitle": "Licensed professionals with industry-leading partnerships",
-        "items": [
-          {
-            "title": "Authorized Agents: Rheem, Carrier, O General, LG, Trane",
-           
-            "description": "Official partnerships with premium AC brands"
-          },
-          {
-            "title": "Licensed Engineers",
-           
-            "description": "UAE licensed mechanical engineering team"
-          },
-          {
-            "title": "Quality Standards",
-           
-            "description": "ISO compliant quality management systems"
-          },
-          {
-            "title": "Municipality Approved",
-           
-            "description": "UAE municipality registered contractor"
-          }
-        ]
-      },
-      "team": {
-        "badge": "Our Team",
-        "title": "Expert Professionals",
-        "subtitle": "Experienced specialists dedicated to your success",
-        "professionalTeam": {
-          "title": "Professional Team",
-          "description": "Our dedicated team of HVAC professionals brings together years of experience and expertise. From certified technicians to experienced engineers, we work collaboratively to deliver exceptional service and innovative solutions for all your air conditioning and cooling needs."
-        },
-        "certifiedExcellence": {
-          "title": "Certified Excellence",
-          "description": "Each team member is certified and trained in the latest HVAC technologies and safety standards. We maintain the highest levels of professionalism and continuously update our skills to provide you with the most advanced and reliable solutions."
-        }
-      },
-      "siteInspection": {
-        "badge": "Site Inspection",
-        "title": "Site Inspection & Planning",
-        "subtitle": "Professional site inspection and detailed planning for optimal HVAC system design and installation",
-        "description": "Our comprehensive site inspection process ensures that every HVAC system is perfectly designed for your specific location and requirements. We conduct thorough assessments to determine the optimal placement, capacity, and configuration for maximum efficiency and performance.",
-        "features": {
-          "siteAssessment": {
-            "title": "Site Assessment",
-            "description": "Comprehensive evaluation of building structure, space availability, and environmental factors"
-          },
-          "technicalPlanning": {
-            "title": "Technical Planning",
-            "description": "Detailed technical specifications and system configuration planning"
-          },
-          "documentation": {
-            "title": "Documentation",
-            "description": "Complete documentation and detailed reports for project planning"
-          }
-        }
-      },
-      "support": {
-        "badge": "Ongoing Support",
-        "title": "24/7 Support & Maintenance",
-        "subtitle": "Comprehensive support services to ensure your HVAC system operates at peak performance",
-        "description": "Our commitment doesn't end with installation. We provide ongoing support, maintenance, and emergency services to ensure your HVAC system continues to operate efficiently and reliably. Our team is available 24/7 for any urgent issues or maintenance needs.",
-        "features": {
-          "emergencySupport": {
-            "title": "Emergency Support",
-            "description": "24/7 emergency response for critical HVAC issues and breakdowns"
-          },
-          "preventiveMaintenance": {
-            "title": "Preventive Maintenance",
-            "description": "Regular maintenance programs to extend system life and prevent issues"
-          },
-          "technicalSupport": {
-            "title": "Technical Support",
-            "description": "Expert technical assistance and troubleshooting for all HVAC systems"
-          },
-          "warrantyService": {
-            "title": "Warranty Service",
-            "description": "Comprehensive warranty coverage and service for all installed systems"
-          }
-        }
-      },
-      "systemDesign": {
-        "badge": "System Design",
-        "title": "How We Design Your HVAC System",
-        "subtitle": "Advanced 3D modeling and engineering approach for optimal system design",
-        "description": "Our design process begins with comprehensive analysis and advanced 3D modeling to create the perfect HVAC solution for your space. We use cutting-edge technology to visualize and optimize every aspect of your system before installation begins.",
-        "features": {
-          "analysis": {
-            "title": "Space Analysis",
-            "description": "Comprehensive evaluation of building structure, space requirements, and environmental factors"
-          },
-          "modeling": {
-            "title": "3D Modeling",
-            "description": "Advanced 3D visualization and modeling for precise system layout and optimization"
-          },
-          "engineering": {
-            "title": "Engineering Design",
-            "description": "Detailed engineering calculations and specifications for optimal performance"
-          },
-          "optimization": {
-            "title": "System Optimization",
-            "description": "Performance optimization and energy efficiency calculations for cost-effective solutions"
-          }
-        }
+      {
+        "title": "Project Management & Supervision",
+        "description": "Work on follow-up from the beginning of project studies and supervision until project delivery with the best types and materials"
       }
+    ]
+  },
+  "servicesButton": "Our Services",
+  "contactButton": "Contact Us",
+  "foundation": {
+    "badge": "Our Foundation",
+    "title": "Vision & Mission",
+    "subtitle": "Guiding principles that drive our excellence"
+  },
+  "vision": {
+    "title": "Our Vision",
+    "description": "To be one of the leading companies in the Eastern Region providing comprehensive and integrated services in the field of energy-saving systems, in line with the requirements of global industry and management."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "Al-Qalaa Company for Refrigeration and Air Conditioning seeks to provide its comprehensive services in the field of energy-saving refrigeration and air conditioning systems with high quality and craftsmanship, investing in the capabilities of its technical and functional staff and their advanced capabilities, aiming to raise the level of advanced service for its clients and their advancement."
+  },
+  "values": {
+    "badge": "Core Values",
+    "title": "What We Stand For",
+    "subtitle": "Values that define our culture and guide our actions",
+    "items": [
+      {
+        "title": "Passion",
+        "description": "We work with passion and love everything we do, and we are proud to provide the highest values."
+      },
+      {
+        "title": "Excellence",
+        "description": "We strive to provide the best services that comply with international industry standards."
+      },
+      {
+        "title": "Transparency",
+        "description": "We are honest in our relationships and committed to everything we agree upon."
+      },
+      {
+        "title": "Credibility",
+        "description": "We honor our commitments, fulfill our promises, and stand up for what we believe in."
+      }
+    ]
+  },
+  "milestones": {
+    "badge": "Our Journey",
+    "title": "Company Milestones",
+    "subtitle": "Key moments that shaped our growth and success",
+    "items": [
+      {
+        "title": "Company Establishment",
+        "description": "AlQalaa Air Conditioning & Cooling established in Fujairah-Madhab area"
+      },
+      {
+        "title": "Rheem Partnership",
+        "description": "Became authorized agent for Rheem AC systems"
+      },
+      {
+        "title": "Smart Integration",
+        "description": "Introduced IoT and smart control systems"
+      },
+      {
+        "title": "Regional Expansion",
+        "description": "Extended services across Eastern Region UAE"
+      }
+    ]
+  },
+  "achievements": {
+    "badge": "Our Success",
+    "title": "By the Numbers",
+    "subtitle": "Achievements that reflect our commitment to excellence",
+    "items": [
+      {
+        "label": "Projects Completed"
+      },
+      {
+        "label": "Happy Clients"
+      },
+      {
+        "label": "Warranty Coverage"
+      },
+      {
+        "label": "Support Available"
+      }
+    ]
+  },
+  "certifications": {
+    "badge": "Quality Assurance",
+    "title": "Certifications & Partnerships",
+    "subtitle": "Licensed professionals with industry-leading partnerships",
+    "items": [
+      {
+        "title": "Authorized Agents: Rheem, Carrier, O General, LG, Trane",
+        "description": "Official partnerships with premium AC brands"
+      },
+      {
+        "title": "Licensed Engineers",
+        "description": "UAE licensed mechanical engineering team"
+      },
+      {
+        "title": "Quality Standards",
+        "description": "ISO compliant quality management systems"
+      },
+      {
+        "title": "Municipality Approved",
+        "description": "UAE municipality registered contractor"
+      }
+    ]
+  },
+  "team": {
+    "badge": "Our Team",
+    "title": "Expert Professionals",
+    "subtitle": "Experienced specialists dedicated to your success",
+    "professionalTeam": {
+      "title": "Professional Team",
+      "description": "Our dedicated team of HVAC professionals brings together years of experience and expertise. From certified technicians to experienced engineers, we work collaboratively to deliver exceptional service and innovative solutions for all your air conditioning and cooling needs."
     },
+    "certifiedExcellence": {
+      "title": "Certified Excellence",
+      "description": "Each team member is certified and trained in the latest HVAC technologies and safety standards. We maintain the highest levels of professionalism and continuously update our skills to provide you with the most advanced and reliable solutions."
+    }
+  },
+  "siteInspection": {
+    "badge": "Site Inspection",
+    "title": "Site Inspection & Planning",
+    "subtitle": "Professional site inspection and detailed planning for optimal HVAC system design and installation",
+    "description": "Our comprehensive site inspection process ensures that every HVAC system is perfectly designed for your specific location and requirements. We conduct thorough assessments to determine the optimal placement, capacity, and configuration for maximum efficiency and performance.",
+    "features": {
+      "siteAssessment": {
+        "title": "Site Assessment",
+        "description": "Comprehensive evaluation of building structure, space availability, and environmental factors"
+      },
+      "technicalPlanning": {
+        "title": "Technical Planning",
+        "description": "Detailed technical specifications and system configuration planning"
+      },
+      "documentation": {
+        "title": "Documentation",
+        "description": "Complete documentation and detailed reports for project planning"
+      }
+    }
+  },
+  "support": {
+    "badge": "Ongoing Support",
+    "title": "24/7 Support & Maintenance",
+    "subtitle": "Comprehensive support services to ensure your HVAC system operates at peak performance",
+    "description": "Our commitment doesn't end with installation. We provide ongoing support, maintenance, and emergency services to ensure your HVAC system continues to operate efficiently and reliably. Our team is available 24/7 for any urgent issues or maintenance needs.",
+    "features": {
+      "emergencySupport": {
+        "title": "Emergency Support",
+        "description": "24/7 emergency response for critical HVAC issues and breakdowns"
+      },
+      "preventiveMaintenance": {
+        "title": "Preventive Maintenance",
+        "description": "Regular maintenance programs to extend system life and prevent issues"
+      },
+      "technicalSupport": {
+        "title": "Technical Support",
+        "description": "Expert technical assistance and troubleshooting for all HVAC systems"
+      },
+      "warrantyService": {
+        "title": "Warranty Service",
+        "description": "Comprehensive warranty coverage and service for all installed systems"
+      }
+    }
+  },
+  "systemDesign": {
+    "badge": "System Design",
+    "title": "How We Design Your HVAC System",
+    "subtitle": "Advanced 3D modeling and engineering approach for optimal system design",
+    "description": "Our design process begins with comprehensive analysis and advanced 3D modeling to create the perfect HVAC solution for your space. We use cutting-edge technology to visualize and optimize every aspect of your system before installation begins.",
+    "features": {
+      "analysis": {
+        "title": "Space Analysis",
+        "description": "Comprehensive evaluation of building structure, space requirements, and environmental factors"
+      },
+      "modeling": {
+        "title": "3D Modeling",
+        "description": "Advanced 3D visualization and modeling for precise system layout and optimization"
+      },
+      "engineering": {
+        "title": "Engineering Design",
+        "description": "Detailed engineering calculations and specifications for optimal performance"
+      },
+      "optimization": {
+        "title": "System Optimization",
+        "description": "Performance optimization and energy efficiency calculations for cost-effective solutions"
+      }
+    }
+  }
+},
     "contact": {
       "badge": "Contact AlQalaa Air Conditioning",
       "title": "Get in Touch",
@@ -881,6 +899,38 @@
           },
           "ras_al_khaimah": {
             "title": "Ras Al Khaimah"
+          }
+        }
+      },
+      "workSteps": {
+        "badge": "Work Steps",
+        "title": "Our Work Process",
+        "subtitle": "Professional step-by-step approach to deliver exceptional AC solutions",
+        "description": "Our systematic approach ensures every project is completed with precision, quality, and customer satisfaction. From initial consultation to final testing, we follow proven processes that guarantee optimal results.",
+        "steps": {
+          "contract": {
+            "title": "Contract Signing",
+            "description": "Signing the contract to preserve the rights of the first party (the client) and the second party (Al-Qalaa Air Conditioning & Refrigeration Company) in accordance with the law."
+          },
+          "calculation": {
+            "title": "Capacity Calculation",
+            "description": "The work team, consisting of specialized engineers, calculates the capacities according to specialized software to obtain the most accurate and best results."
+          },
+          "siteExploration": {
+            "title": "Site Exploration",
+            "description": "The designated space for the project is explored according to the signed contract."
+          },
+          "manufacturing": {
+            "title": "Duct Manufacturing",
+            "description": "The craftsmen team begins manufacturing ducts according to international standards using pre-insulated materials with global standard specifications."
+          },
+          "workStages": {
+            "title": "Work Stages",
+            "description": "Work stages begin concurrently with the contractor from the start of foundation, and the stages are completed in order and within the specified time."
+          },
+          "followUp": {
+            "title": "Follow-up & Maintenance",
+            "description": "After completing all stages, we continue follow-up and maintenance work according to the agreed contract."
           }
         }
       },

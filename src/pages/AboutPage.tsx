@@ -17,6 +17,7 @@ import {
   Trophy,
   Zap
 } from "lucide-react";
+import hero from "../assets/hero.jpg"
 import { motion } from "framer-motion";
 // removed unused `cn` import
 import { useLanguage } from "../contexts/LanguageContext";
@@ -24,6 +25,7 @@ import BrandsSlider from "../components/BrandsSlider";
 import CTA from "../components/CTA";
 import Button from "../components/Button";
 import Badge from "../components/Badge";
+import { img } from "framer-motion/client";
 
 
 
@@ -194,48 +196,136 @@ export default function AboutPage() {
     }
   ];
 
+  const features = [
+    {
+      title: t('pages.about.features.items.0.title'),
+      description: t('pages.about.features.items.0.description')
+    },
+    {
+      title: t('pages.about.features.items.1.title'),
+      description: t('pages.about.features.items.1.description')
+    },
+    {
+      title: t('pages.about.features.items.2.title'),
+      description: t('pages.about.features.items.2.description')
+    },
+    {
+      title: t('pages.about.features.items.3.title'),
+      description: t('pages.about.features.items.3.description')
+    }
+  ];
 
   return (
     <div className="overflow-x-hidden">
-      {/* Hero Section */}
       <motion.section 
-        className="bg-gradient-to-br from-snow via-white to-accent py-8 sm:py-12 relative"
+        className="w-full h-96 md:h-[500px] flex items-center justify-center overflow-hidden relative"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
-        <div className="absolute inset-0 opacity-40">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(247, 199, 144, 0.1) 1px, transparent 0)`,
-            backgroundSize: '25px 25px'
-          }}></div>
-        </div>
+        {/* Background Image */}
+        <img
+          src={hero}
+          alt="About Al Qalaa Company"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
         
-        <div className="container mx-auto px-4 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div variants={itemVariants}>
-              <Badge variant="outline" className="mb-6 text-primary border-primary">
-                <Building className={`w-4 h-4 ${dir === 'rtl' ? 'ml-2' : 'mr-2'}`} />
-                {t('pages.about.badge')}
-              </Badge>
-            </motion.div>
-            
-            <motion.h1 
-              className="text-4xl md:text-6xl font-bold mb-6 text-logo-brown"
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        {/* Content */}
+        <div className="relative text-center text-white max-w-3xl px-4 z-10">
+          <motion.div variants={itemVariants} className="mb-6">
+        <Badge variant="outline" className="mb-6 text-white border-white bg-white/10 backdrop-blur-sm">
+          <Building className={`w-4 h-4 ${dir === 'rtl' ? 'ml-2' : 'mr-2'}`} />
+          {t('pages.about.badge')}
+        </Badge>
+          </motion.div>
+          
+      
+          
+          <motion.h1 
+        className="text-lg md:text-xl"
+        variants={itemVariants}
+          >
+        {t('pages.about.badge')}
+          </motion.h1>
+        </div>
+      </motion.section>
+      {/* Features Section */}
+      <motion.section 
+        className="py-12 sm:py-16 bg-white"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={containerVariants}
+      >
+        <div className="container mx-auto px-8">
+          <motion.div className="max-w-7xl mx-auto">
+            <motion.h2 
+              className="text-4xl md:text-5xl font-bold mb-6 text-logo-brown"
               variants={itemVariants}
             >
               {t('pages.about.title')}
-            </motion.h1>
+            </motion.h2>
             
             <motion.p 
-              className="text-xl text-primary mb-8 leading-relaxed"
+              className="text-lg text-primary mb-12 leading-relaxed"
               variants={itemVariants}
             >
               {t('pages.about.description')}
             </motion.p>
+
+            {/* Company Profile Section - New Addition */}
+            <motion.div 
+              className="bg-logo-beige/10 p-8 rounded-2xl mb-12 border border-logo-brown/10"
+              variants={itemVariants}
+            >
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mr-4">
+                  <Building className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-logo-brown mb-1">
+                    {t('pages.about.companyProfile.title')}
+                  </h3>
+        
+                </div>
+              </div>
+              
+              <motion.p 
+                className="text-logo-brown/90 leading-relaxed text-justify"
+                variants={itemVariants}
+              >
+                {t('pages.about.companyProfile.description')}
+              </motion.p>
+            </motion.div>
             
             <motion.div 
-              className="flex flex-wrap justify-center gap-4"
+              className="grid md:grid-cols-2 gap-6 mb-12" 
+              variants={containerVariants}
+            >
+              {features.map((f, i) => (
+                <motion.div 
+                  key={i} 
+                  className={`flex items-start ${dir === 'rtl' ? 'flex-row' : ''}`} 
+                  variants={itemVariants}
+                >
+                  <div className={`w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 ${dir === 'rtl' ? 'ml-4' : 'mr-4'}`}>
+                    <CheckCircle className="w-5 h-5 text-primary" />
+                  </div>
+                  <div className="text-logo-brown">
+                    <div className="font-semibold mb-1">{f.title}</div>
+                    <div className="text-sm text-logo-brown/80">{f.description}</div>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* Action Buttons */}
+            <motion.div 
+              className="flex flex-wrap gap-4 justify-center"
               variants={itemVariants}
             >
               <Button size="lg" className="bg-primary hover:bg-primary/90 group hover:scale-105 transition-all duration-300 border-0">
@@ -247,13 +337,13 @@ export default function AboutPage() {
                 {t('pages.about.contactButton')}
               </Button>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </motion.section>
 
       {/* Section 1: Vision & Mission - Image Left, Text Right */}
       <motion.section 
-        className="py-8 sm:py-12 bg-white"
+        className="pb-8 sm:py-12 bg-white"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -360,9 +450,7 @@ export default function AboutPage() {
               variants={slideInVariants}
             >
               <div className="space-y-4">
-                <div className="inline-flex items-center px-4 py-2 bg-secondary/10 text-logo-brown rounded-full text-sm font-medium">
-                  {t('pages.about.values.badge')}
-                </div>
+            
                 <h2 className="text-4xl font-bold text-logo-brown leading-tight">
                   {t('pages.about.values.title')}
                 </h2>

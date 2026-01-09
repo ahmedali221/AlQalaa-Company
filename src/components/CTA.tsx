@@ -184,7 +184,6 @@ export default function CTA({
               >
                 <Link to="/contact">
                   <button className="inline-flex items-center px-4 sm:px-5 py-2 sm:py-2.5 border-2 border-gold text-gold hover:bg-gold hover:text-primary group shadow-lg text-sm sm:text-base font-semibold rounded-lg transition-all duration-300">
-                    <ArrowRight className={`w-4 h-4 ${isRTL ? 'ml-3 rotate-180' : 'mr-3'}`} />
                     <span 
                       style={{
                         direction: isRTL ? 'rtl' : 'ltr',

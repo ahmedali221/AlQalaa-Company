@@ -335,7 +335,7 @@ export default function ServicesPage() {
         variants={fadeInUp}
       >
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 group border-0 shadow-lg shadow-primary/20 text-sm sm:text-base font-medium py-2.5 sm:py-3 px-6 sm:px-8">
+          <Button size="lg" className="bg-gold text-white hover:bg-gold/90 group border-0 shadow-lg shadow-primary/20 text-sm sm:text-base font-medium py-2.5 sm:py-3 px-6 sm:px-8">
             {t('pages.services.quoteButton')}
             <ArrowRight className={`w-4 h-4 transition-transform duration-300 ${dir === 'rtl' ? 'mr-2 rotate-180 group-hover:-translate-x-1' : 'ml-2 group-hover:translate-x-1'}`} />
           </Button>
@@ -371,7 +371,7 @@ export default function ServicesPage() {
               >
                 <div className="bg-gradient-to-br from-snow to-white rounded-2xl p-6 border border-accent hover:shadow-lg hover:border-primary/20 transition-all duration-300">
                   <motion.div 
-                    className="w-12 h-12 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-300"
+                    className="w-12 h-12 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-all duration-300"
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
                   >
@@ -386,7 +386,7 @@ export default function ServicesPage() {
         </div>
       </motion.section>
 
-      {/* Main Services */}
+{/* Main Services */}
       <motion.section 
         className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden"
         initial="hidden"
@@ -408,18 +408,6 @@ export default function ServicesPage() {
             ease: "easeInOut"
           }}
         ></motion.div>
-        <motion.div 
-           className="absolute top-1/4 right-4 sm:right-8 w-40 h-40 bg-gradient-to-bl from-primary/10 to-accent/10 rounded-full blur-3xl max-w-full"
-          animate={{ 
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.5, 0.2]
-          }}
-          transition={{ 
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        ></motion.div>
         
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <motion.div 
@@ -434,158 +422,80 @@ export default function ServicesPage() {
           </motion.div>
 
           <motion.div 
-            className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 max-w-6xl mx-auto px-4"
+            className="grid md:grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 max-w-7xl mx-auto px-4"
             variants={staggerContainer}
           >
             {mainServices.map((service, index) => (
               <motion.div 
                 key={index} 
-                className={`relative group cursor-pointer ${
-                  service.popular ? 'lg:col-span-2' : ''
-                }`}
+                className="relative group cursor-pointer"
                 variants={itemVariants}
                 whileHover={{ scale: 1.02, y: -5 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className={`relative bg-white border border-accent rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/30 hover:scale-[1.02] sm:hover:scale-[1.03] transition-all duration-500 h-full flex flex-col ${
-                  service.popular ? 'border-primary/30 bg-gradient-to-br from-secondary/10 via-white to-accent/10 shadow-xl shadow-primary/15' : ''
-                }`}>
-                  {service.popular && (
-                    <div className="absolute -top-2 sm:-top-3 left-4 sm:left-8">
-                      <Badge className="bg-gradient-to-r from-primary to-secondary border-0 animate-pulse px-3 sm:px-4 py-1 sm:py-1.5 text-body-sm shadow-lg shadow-primary/30 text-white">
-                        <Star className="w-3 sm:w-4 sm:h-4 mr-2" />
-                        {t('pages.services.mostPopular')}
-                      </Badge>
-                    </div>
-                  )}
+                <div className="relative bg-white border border-accent rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 hover:shadow-2xl hover:shadow-primary/10 hover:border-primary/30 transition-all duration-500 h-full flex flex-col">
                   
-                  {service.popular ? (
-                    // Popular service layout - full width with enhanced design
-                    <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 max-w-full">
-                      {/* Left column - Icon and title */}
-                      <div className="lg:col-span-1">
-                        <div className="flex flex-col sm:flex-row lg:flex-col items-start gap-4 sm:gap-6 mb-4 sm:mb-6">
-                          <div className={`w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 bg-gradient-to-br  text-white shadow-lg shadow-primary/20`}>
-                            {service.icon}
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 group-hover:text-gold transition-colors duration-300 text-gold">{service.title}</h3>
-                            <p className="text-gold text-body-sm leading-relaxed">{service.description}</p>
-                          </div>
-                        </div>
-                      </div>
+                  {/* Unified Header: Icon and Title */}
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-4 sm:mb-6">
+                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 bg-gradient-to-br from-secondary to-primary text-white shadow-lg shadow-primary/20 flex-shrink-0">
+                      {service.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2 group-hover:text-gold transition-colors duration-300 text-gold">
+                        {service.title}
+                      </h3>
+                      <p className="text-gold text-sm sm:text-base leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
 
-                      {/* Middle column - Features */}
-                      <div className="lg:col-span-1">
-                        <div className="space-y-4 sm:space-y-5">
-                          <div>
-                            <h4 className="font-bold mb-3 text-gold text-sm sm:text-base flex items-center">
-                              <CheckCircle className="w-4 h-4 text-gold mr-2" />
-                              {t('pages.services.keyFeatures')}
-                            </h4>
-                            <ul className="space-y-2 sm:space-y-3">
-                              {service.features.map((feature, idx) => (
-                                <li key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-gold group-hover:transform group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${idx * 50}ms` }}>
-                                  <div className="w-4 h-4 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                                    <CheckCircle className="w-3 h-3 text-gold" />
-                                  </div>
-                                  {feature}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
+                  {/* Unified Content: Features and Stats */}
+                  <div className="grid sm:grid-cols-1 md:grid-cols-1 gap-4 sm:gap-6 mb-4 sm:mb-6 max-w-full">
+                    <div>
+                      <h4 className="font-bold mb-2 sm:mb-3 text-gold text-body-sm flex items-center">
+                        <CheckCircle className="w-4 h-4 text-gold mr-2" />
+                        {t('pages.services.keyFeatures')}
+                      </h4>
+                      <ul className="space-y-2 sm:space-y-3">
+                        {service.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center gap-1.5 sm:gap-2 text-body-sm text-gold group-hover:transform group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${idx * 50}ms` }}>
+                            <div className="w-4 h-4 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                              <CheckCircle className="w-3 h-3 text-gold" />
+                            </div>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="space-y-3 sm:space-y-5">
+                      <div className="p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-br from-snow to-white group-hover:from-primary/5 group-hover:to-primary/10 transition-all duration-300 border border-accent">
+                        <h4 className="font-bold text-xs sm:text-sm text-gold mb-1 sm:mb-2 flex items-center">
+                          <Target className="w-4 h-4 text-gold mr-2" />
+                          {t('pages.services.capacityRange')}
+                        </h4>
+                        <p className="text-gold font-bold text-sm sm:text-base">{service.capacity}</p>
                       </div>
-
-                      {/* Right column - Capacity, Warranty, and Button */}
-                      <div className="lg:col-span-1">
-                        <div className="space-y-4 sm:space-y-5 mb-4 sm:mb-6">
-                          <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-gradient-to-br from-snow to-white group-hover:from-primary/5 group-hover:to-primary/10 transition-all duration-300 border border-accent">
-                            <h4 className="font-bold text-body-sm text-gold mb-2 flex items-center">
-                              <Target className="w-4 h-4 text-gold mr-2" />
-                              {t('pages.services.capacityRange')}
-                            </h4>
-                            <p className="text-gold font-bold text-sm sm:text-base">{service.capacity}</p>
-                          </div>
-                          <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-gradient-to-br from-snow to-white group-hover:from-primary/5 group-hover:to-primary/10 transition-all duration-300 border border-accent">
-                            <h4 className="font-bold text-body-sm text-gold mb-2 flex items-center">
-                              <Shield className="w-4 h-4 text-gold mr-2" />
-                              {t('pages.services.warranty')}
-                            </h4>
-                            <p className="text-gold text-sm sm:text-base">{service.warranty}</p>
-                          </div>
-                        </div>
-                        
-                        <div className="mt-auto pt-3 sm:pt-4">
-                          <Button 
-                            variant="default" 
-                            className="w-full group-hover:scale-105 transition-transform duration-300 text-body-sm py-3 sm:py-4 bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 border-0 shadow-lg shadow-primary/20"
-                          >
-                            {t('pages.services.getDetails')}
-                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                          </Button>
-                        </div>
+                      <div className="p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-br from-snow to-white group-hover:from-primary/5 group-hover:to-primary/10 transition-all duration-300 border border-accent">
+                        <h4 className="font-bold text-xs sm:text-sm text-gold mb-1 sm:mb-2 flex items-center">
+                          <Shield className="w-4 h-4 text-gold mr-2" />
+                          {t('pages.services.warranty')}
+                        </h4>
+                        <p className="text-gold text-sm sm:text-base">{service.warranty}</p>
                       </div>
                     </div>
-                  ) : (
-                    // Regular service layout - original design
-                    <>
-                      <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-4 sm:mb-6">
-                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 bg-accent group-hover:bg-gradient-to-br group-hover:from-primary/10 group-hover:to-primary/5`}>
-                          <div className="text-white">{service.icon}</div>
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-heading-sm font-bold mb-1 sm:mb-2 group-hover:text-gold transition-colors duration-300 text-gold">{service.title}</h3>
-                          <p className="text-gold text-sm sm:text-base leading-relaxed">{service.description}</p>
-                        </div>
-                      </div>
+                  </div>
 
-                      <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6 max-w-full">
-                        <div>
-                          <h4 className="font-bold mb-2 sm:mb-3 text-gold text-body-sm flex items-center">
-                            <CheckCircle className="w-4 h-4 text-gold mr-2" />
-                            {t('pages.services.keyFeatures')}
-                          </h4>
-                          <ul className="space-y-2 sm:space-y-3">
-                            {service.features.map((feature, idx) => (
-                              <li key={idx} className="flex items-center gap-1.5 sm:gap-2 text-body-sm text-gold group-hover:transform group-hover:translate-x-1 transition-transform duration-300" style={{ transitionDelay: `${idx * 50}ms` }}>
-                                <div className="w-4 h-4 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
-                                  <CheckCircle className="w-3 h-3 text-gold" />
-                                </div>
-                                {feature}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div className="space-y-3 sm:space-y-5">
-                          <div className="p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-br from-snow to-white group-hover:from-primary/5 group-hover:to-primary/10 transition-all duration-300 border border-accent">
-                            <h4 className="font-bold text-xs sm:text-sm text-gold mb-1 sm:mb-2 flex items-center">
-                              <Target className="w-4 h-4 text-gold mr-2" />
-                              {t('pages.services.capacityRange')}
-                            </h4>
-                            <p className="text-gold font-bold text-sm sm:text-base">{service.capacity}</p>
-                          </div>
-                          <div className="p-3 sm:p-4 rounded-lg sm:rounded-xl bg-gradient-to-br from-snow to-white group-hover:from-primary/5 group-hover:to-primary/10 transition-all duration-300 border border-accent">
-                            <h4 className="font-bold text-xs sm:text-sm text-gold mb-1 sm:mb-2 flex items-center">
-                              <Shield className="w-4 h-4 text-gold mr-2" />
-                              {t('pages.services.warranty')}
-                            </h4>
-                            <p className="text-gold text-sm sm:text-base">{service.warranty}</p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="mt-auto pt-3 sm:pt-4">
-                        <Button 
-                          variant="outline" 
-                          className="w-full group-hover:scale-105 transition-transform duration-300 text-sm sm:text-base py-2 sm:py-2.5 border-gold text-gold hover:bg-gold hover:text-white"
-                        >
-                          {t('pages.services.getDetails')}
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                        </Button>
-                      </div>
-                    </>
-                  )}
+                  {/* Unified Footer: Action Button */}
+                  <div className="mt-auto pt-3 sm:pt-4">
+                    <Button 
+                      variant="outline" 
+                      className="w-full group-hover:scale-105 transition-transform duration-300 text-sm sm:text-base py-2 sm:py-2.5 border-gold text-gold hover:bg-gold hover:text-white"
+                    >
+                      {t('pages.services.getDetails')}
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    </Button>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -596,15 +506,11 @@ export default function ServicesPage() {
  
       {/* Section 2: Work Process - Alternating Layout */}
       <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden">
-        {/* Enhanced decorative elements */}
-        <div className="absolute top-0 left-4 sm:left-8 w-40 h-40 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
-        <div className="absolute bottom-1/4 right-4 sm:right-8 w-56 h-56 bg-gradient-to-tl from-secondary/30 to-primary/20 rounded-full blur-3xl max-w-full"></div>
+    
         
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16 animate-in slide-in-from-bottom-4 duration-700">
-            <Badge variant="outline" className="mb-4 sm:mb-6 text-gold border-gold px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-semibold shadow-sm">
-              {t('pages.services.process.badge')}
-            </Badge>
+        
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-gold">{t('pages.services.process.title')}</h2>
             <p className="text-gold text-base sm:text-lg max-w-3xl mx-auto">{t('pages.services.process.description')}</p>
           </div>
@@ -618,12 +524,7 @@ export default function ServicesPage() {
                 }`}
                 style={{ animationDelay: `${index * 200}ms` }}
               >
-                {/* Step Number Badge */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center shadow-lg shadow-primary/20 border-4 border-white">
-                    <span className="text-white font-bold text-heading-sm">{index + 1}</span>
-                  </div>
-                </div>
+           
 
                 {/* Content - Alternating layout */}
                 <div className={`space-y-4 sm:space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
@@ -783,6 +684,92 @@ export default function ServicesPage() {
         </div>
       </section>
 
+{/* Section: Work Steps - Simplified Vertical Layout */}
+<section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white relative overflow-hidden">
+ 
+  
+  <div className="container mx-auto px-4 relative z-10">
+    <motion.div 
+      className="text-center mb-8 sm:mb-12 md:mb-16"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeInUp}
+    >
+    
+      <h2 className="text-heading-lg font-bold mb-4 text-gold">{t('pages.services.workSteps.title')}</h2>
+      <p className="text-gold text-body-lg max-w-3xl mx-auto">{t('pages.services.workSteps.description')}</p>
+    </motion.div>
+
+    {/* Simple Vertical Steps Layout */}
+    <motion.div 
+      className="max-w-7xl mx-auto"
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
+      {/* Timeline Line */}
+      <div className="absolute left-8 md:left-1/2 md:transform md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-primary via-accent to-secondary">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/20 to-transparent"></div>
+      </div>
+      
+      {[
+        {
+          title: t('pages.services.workSteps.steps.contract.title'),
+          description: t('pages.services.workSteps.steps.contract.description'),
+        },
+        {
+          title: t('pages.services.workSteps.steps.calculation.title'),
+          description: t('pages.services.workSteps.steps.calculation.description'),
+        },
+        {
+          title: t('pages.services.workSteps.steps.siteExploration.title'),
+          description: t('pages.services.workSteps.steps.siteExploration.description'),
+        },
+        {
+          title: t('pages.services.workSteps.steps.manufacturing.title'),
+          description: t('pages.services.workSteps.steps.manufacturing.description'),
+        },
+        {
+          title: t('pages.services.workSteps.steps.workStages.title'),
+          description: t('pages.services.workSteps.steps.workStages.description'),
+        },
+        {
+          title: t('pages.services.workSteps.steps.followUp.title'),
+          description: t('pages.services.workSteps.steps.followUp.description'),
+        }
+      ].map((step, index) => (
+        <motion.div 
+          key={index}
+          className="relative pl-16 md:pl-0 mb-10 last:mb-0 group"
+          variants={itemVariants}
+        >
+      
+          
+          {/* Step Content - Center aligned for desktop */}
+          <div className="md:text-start flex items-center gap-4">
+            {/* Circular brown avatar with step number */}
+            <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+              {index + 1}
+            </div>
+            <div>
+              <h3 className="text-heading-md font-bold text-gold mb-3 group-hover:text-primary transition-colors duration-300">
+                {step.title}
+              </h3>
+              <p className="text-gold text-body-md leading-relaxed">
+                {step.description}
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </motion.div>
+
+
+  </div>
+</section>
+
       {/* Section: Support & Maintenance */}
       <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-snow to-white relative overflow-hidden">
         {/* Enhanced decorative elements */}
@@ -867,9 +854,7 @@ export default function ServicesPage() {
 
       {/* Design Showcase Section */}
                  <section className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-snow to-white relative overflow-hidden">
-         {/* Enhanced decorative elements */}
-         <div className="absolute top-1/3 left-4 sm:left-8 w-48 h-48 bg-gradient-to-br from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
-        <div className="absolute bottom-0 right-4 sm:right-8 w-64 h-64 bg-gradient-to-tl from-primary/5 to-accent/5 rounded-full blur-3xl max-w-full"></div>
+      
          
          <div className="container mx-auto px-4 relative z-10">
                        <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-in slide-in-from-bottom-4 duration-700">
@@ -904,19 +889,7 @@ export default function ServicesPage() {
                    />
                  </div>
                  
-                 {/* Overlay with design info */}
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6">
-                   <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                     <Badge className="mb-3 bg-logo-brown/90 text-white border-0 text-caption">
-                       {design.type}
-                     </Badge>
-                     <h3 className="text-white text-heading-sm font-bold mb-2">{design.title}</h3>
-                     <p className="text-white/90 text-body-sm mb-4">{design.description}</p>
-                                           <div className="flex items-center gap-3">
-                     
-                      </div>
-                   </div>
-                 </div>
+            
                  
                  {/* Floating badge */}
                  <div className="absolute top-4 right-4">
@@ -928,17 +901,7 @@ export default function ServicesPage() {
              ))}
            </div>
            
-                       {/* Call to action for designs */}
-            <div className="text-center mt-12 md:mt-16">
-              <p className="text-gold text-body-lg mb-6">{t('pages.services.designs.cta.title')}</p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-full">
-              
-                <Button size="lg" variant="outline" className="border-gold text-gold ">
-                  <Phone className={`w-5 h-5 ${dir === 'rtl' ? 'ml-2' : 'mr-2'}`} />
-                  {t('pages.services.designs.cta.consultation')}
-                </Button>
-              </div>
-            </div>
+       
          </div>
        </section>
 
