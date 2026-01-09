@@ -8,7 +8,6 @@ import {
   Wrench,
   Users,
   Phone,
-  Star,
   Building,
   Monitor,
   Package,
