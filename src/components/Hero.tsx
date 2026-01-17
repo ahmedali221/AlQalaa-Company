@@ -7,7 +7,7 @@ import Button from './Button';
 
 export default function Hero() {
   const { t, language } = useLanguage();
-  
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -45,7 +45,7 @@ export default function Hero() {
   };
 
   const isRTL = language === 'ar';
-  
+
   return (
     <section id="home" className="relative flex items-center justify-center overflow-hidden h-screen">
       {/* Background Image */}
@@ -60,7 +60,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <motion.div 
+      <motion.div
         className="relative z-20 container mx-auto px-4 text-center text-white"
         initial="hidden"
         animate="visible"
@@ -68,7 +68,7 @@ export default function Hero() {
       >
         <div className="max-w-4xl mx-auto">
           {/* Badge */}
-          <motion.div 
+          <motion.div
             className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8"
             variants={itemVariants}
           >
@@ -77,12 +77,12 @@ export default function Hero() {
           </motion.div>
 
           {/* Main Title */}
-          <motion.h1 
+          <motion.h1
             className="text-heading-xl font-black mb-8 leading-tight tracking-tight text-white"
             variants={textVariants}
           >
             {t('hero.title')}
-            <motion.span 
+            <motion.span
               className="block mt-3 text-white font-extrabold"
               variants={textVariants}
             >
@@ -91,7 +91,7 @@ export default function Hero() {
           </motion.h1>
 
           {/* Description */}
-          <motion.p 
+          <motion.p
             className="text-body-lg text-white mb-12 max-w-3xl mx-auto leading-relaxed font-light tracking-wide"
             variants={textVariants}
           >
@@ -99,7 +99,7 @@ export default function Hero() {
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
             variants={itemVariants}
           >
@@ -113,7 +113,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Features Grid */}
-          <motion.div 
+          <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
             variants={containerVariants}
           >
@@ -151,12 +151,12 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-        
+
         </div>
       </motion.div>
 
       {/* Scroll Indicator */}
-      <motion.div 
+      <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

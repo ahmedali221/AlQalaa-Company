@@ -1,8 +1,8 @@
-import { 
-  Star, 
-  Shield, 
-  Clock, 
-  Wrench, 
+import {
+  Star,
+  Shield,
+  Clock,
+  Wrench,
   ArrowRight,
   Users,
   Award,
@@ -12,9 +12,11 @@ import {
   Mail,
   CheckCircle,
   Settings,
-  Lightbulb
+  Lightbulb,
+  MessageCircle
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { useLanguage } from "../contexts/LanguageContext";
 import Hero from "../components/Hero";
 import BrandsSlider from "../components/BrandsSlider";
@@ -27,7 +29,7 @@ import companyImage2 from "../assets/Company/company.JPG";
 export default function HomePage() {
   const { t, language, dir } = useLanguage();
   const isRTL = language === 'ar';
-  
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -109,7 +111,7 @@ export default function HomePage() {
       {/* Stats Section */}
       <section className="py-16 bg-gradient-to-b from-white to-snow">
         <div className="container mx-auto px-12">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial="hidden"
             whileInView="visible"
@@ -119,8 +121,8 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold mb-4 text-gold">{t('pages.home.stats_section.title')}</h2>
             <p className="text-secondary text-lg">{t('pages.home.stats_section.subtitle')}</p>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="grid md:grid-cols-4 gap-8"
             initial="hidden"
             whileInView="visible"
@@ -128,8 +130,8 @@ export default function HomePage() {
             variants={containerVariants}
           >
             {stats.map((stat, index) => (
-              <motion.div 
-                key={index} 
+              <motion.div
+                key={index}
                 className="text-center group"
                 variants={itemVariants}
               >
@@ -149,7 +151,7 @@ export default function HomePage() {
         <div className="container mx-auto px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image Side */}
-            <motion.div 
+            <motion.div
               className="relative"
               initial="hidden"
               whileInView="visible"
@@ -163,7 +165,7 @@ export default function HomePage() {
             </motion.div>
 
             {/* Text Side */}
-            <motion.div 
+            <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
@@ -193,10 +195,10 @@ export default function HomePage() {
                     <span className="text-gold">{t('pages.home.about_section.features.support')}</span>
                   </div>
                 </div>
-                <button className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors duration-300">
+                <Link to="/about" className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors duration-300 group">
                   {t('pages.home.about_section.button')}
-                  <ArrowRight className={`w-4 h-4 ${dir === 'rtl' ? 'mr-2 rotate-180' : 'ml-2'}`} />
-                </button>
+                  <ArrowRight className={`w-4 h-4 transition-transform duration-300 ${dir === 'rtl' ? 'mr-2 rotate-180 group-hover:-translate-x-1' : 'ml-2 group-hover:translate-x-1'}`} />
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -208,7 +210,7 @@ export default function HomePage() {
         <div className="container mx-auto px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Text Side */}
-            <motion.div 
+            <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
@@ -225,10 +227,10 @@ export default function HomePage() {
                   {t('pages.home.services_section.description')}
                 </p>
                 <div className="grid grid-cols-2 gap-4">
-             
+
                   <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                  <Settings className="w-5 h-5 text-gold" />
+                    <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                      <Settings className="w-5 h-5 text-gold" />
                     </div>
                     <span className="text-gold font-medium">{t('pages.home.services_section.items.smartControls')}</span>
                   </div>
@@ -239,21 +241,21 @@ export default function HomePage() {
                     <span className="text-gold font-medium">{t('pages.home.services_section.items.maintenance')}</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-gold" />
+                    <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                      <Shield className="w-5 h-5 text-gold" />
                     </div>
                     <span className="text-gold font-medium">{t('pages.home.services_section.items.installation')}</span>
                   </div>
                 </div>
-                <button className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors duration-300">
+                <Link to="/services" className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors duration-300 group">
                   {t('pages.home.services_section.button')}
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
+                  <ArrowRight className={`w-4 h-4 transition-transform duration-300 ${dir === 'rtl' ? 'mr-2 rotate-180 group-hover:-translate-x-1' : 'ml-2 group-hover:translate-x-1'}`} />
+                </Link>
               </div>
             </motion.div>
 
             {/* Image Side */}
-            <motion.div 
+            <motion.div
               className="relative"
               initial="hidden"
               whileInView="visible"
@@ -274,7 +276,7 @@ export default function HomePage() {
         <div className="container mx-auto px-12">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image Side */}
-            <motion.div 
+            <motion.div
               className="relative"
               initial="hidden"
               whileInView="visible"
@@ -288,7 +290,7 @@ export default function HomePage() {
             </motion.div>
 
             {/* Text Side */}
-            <motion.div 
+            <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
@@ -333,10 +335,10 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-                <button className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors duration-300">
+                <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors duration-300 group">
                   {t('pages.home.whyChooseUs_section.button')}
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
+                  <ArrowRight className={`w-4 h-4 transition-transform duration-300 ${dir === 'rtl' ? 'mr-2 rotate-180 group-hover:-translate-x-1' : 'ml-2 group-hover:translate-x-1'}`} />
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -348,7 +350,7 @@ export default function HomePage() {
       <section className="py-12 bg-gradient-to-b from-snow to-white">
         <div className="container mx-auto px-12">
           {/* Contact Details Section */}
-          <motion.div 
+          <motion.div
             className="max-w-4xl mx-auto mb-16"
             initial="hidden"
             whileInView="visible"
@@ -366,14 +368,14 @@ export default function HomePage() {
                 {t('pages.home.contact_section.description')}
               </p>
             </div>
-            
-            <motion.div 
+
+            <motion.div
               className="grid md:grid-cols-3 gap-8 mt-12"
               variants={containerVariants}
             >
               {contactMethods.map((method, index) => (
-                <motion.div 
-                  key={index} 
+                <motion.div
+                  key={index}
                   className="group flex flex-col items-center text-center p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-accent/30 hover:bg-white/80 hover:scale-105 transition-all duration-300 cursor-pointer"
                   variants={itemVariants}
                   whileHover={{ scale: 1.05 }}
@@ -388,13 +390,13 @@ export default function HomePage() {
                 </motion.div>
               ))}
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4 mt-8"
               variants={itemVariants}
             >
-              <motion.a 
-                href="tel:+971566201878" 
+              <motion.a
+                href="tel:+971566201878"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -402,8 +404,19 @@ export default function HomePage() {
                 <Phone className={`w-4 h-4 ${isRTL ? 'ml-2' : 'mr-2'}`} />
                 <span dir="ltr">{t('pages.home.contact_section.buttons.call')}</span>
               </motion.a>
-              <motion.a 
-                href="mailto:info@alqalaa-ac.com" 
+              <motion.a
+                href="https://wa.me/971566201878"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-white rounded-xl font-semibold hover:bg-accent hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <MessageCircle className={`w-4 h-4 ${isRTL ? 'ml-2' : 'mr-2'}`} />
+                {t('pages.home.contact_section.buttons.whatsapp')}
+              </motion.a>
+              <motion.a
+                href="mailto:info@alqalaa-ac.com"
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-logo-brown rounded-xl font-semibold hover:bg-primary hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl "
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -415,7 +428,7 @@ export default function HomePage() {
           </motion.div>
 
           {/* Map Section */}
-          <motion.div 
+          <motion.div
             className="max-w-6xl mx-auto"
             initial="hidden"
             whileInView="visible"
@@ -456,7 +469,7 @@ export default function HomePage() {
       {/* Section 6: Trusted Brands - Auto Slider */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-12">
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             initial="hidden"
             whileInView="visible"
@@ -474,7 +487,7 @@ export default function HomePage() {
 
           <BrandsSlider />
 
-          <motion.div 
+          <motion.div
             className="text-center mt-12"
             initial="hidden"
             whileInView="visible"
@@ -489,7 +502,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <CTA 
+      <CTA
         title={t('pages.home.cta_section.title')}
         description={t('pages.home.cta_section.description')}
         primaryButtonText={t('pages.home.cta_section.buttons.call')}
