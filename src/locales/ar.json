@@ -55,7 +55,7 @@
       "title": "معلومات الاتصال",
       "mainPhone": "+971 56 620 1878",
       "mainPhoneLabel": "الخط الرئيسي",
-      "altPhone": "+971 58 192 9889",
+      "altPhone": "+971 566201878",
       "altPhoneLabel": "الخط البديل",
       "email": "alqalaa02@gmail.com",
       "emailLabel": "استفسارات الأعمال",
@@ -492,11 +492,11 @@
           "subtitle": "دعم طوارئ 24/7"
         },
         "email": {
-          "title": "البريد الإلكتروني: info@alqalaa-ac.com",
+          "title": "البريد الإلكتروني: alqalaa02@gmail.com",
           "subtitle": "استفسارات مهنية"
         },
         "whatsapp": {
-          "title": "واتساب: +971 58 192 9889",
+          "title": "واتساب: +971 566201878",
           "subtitle": "دعم الرسائل السريعة"
         },
         "responseTime": {

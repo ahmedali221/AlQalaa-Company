@@ -1,8 +1,8 @@
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
   ArrowRight,
   MessageCircle,
   Calendar,
@@ -22,12 +22,12 @@ import Badge from "../components/Badge";
 
 export default function ContactPage() {
   const { t, dir } = useLanguage();
-  
+
   // Scroll to top when component mounts
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -123,7 +123,7 @@ export default function ContactPage() {
     {
       icon: <Mail className="w-6 h-6 text-white" />,
       title: t('pages.contact.contactInfo.email.title'),
-      info: "info@alqalaa-ac.com",
+      info: "alqalaa02@gmail.com",
       subInfo: t('pages.contact.contactInfo.email.subInfo')
     },
     {
@@ -135,23 +135,23 @@ export default function ContactPage() {
   ];
 
   const serviceAreas = [
-    { 
-      city: t('pages.contact.serviceAreas.fujairah.city'), 
+    {
+      city: t('pages.contact.serviceAreas.fujairah.city'),
       coverage: t('pages.contact.serviceAreas.fujairah.coverage'),
       icon: <Building className="w-5 h-5 text-primary" />
     },
-    { 
-      city: t('pages.contact.serviceAreas.madhab.city'), 
+    {
+      city: t('pages.contact.serviceAreas.madhab.city'),
       coverage: t('pages.contact.serviceAreas.madhab.coverage'),
       icon: <Star className="w-5 h-5 text-primary" />
     },
-    { 
-      city: t('pages.contact.serviceAreas.kalba.city'), 
+    {
+      city: t('pages.contact.serviceAreas.kalba.city'),
       coverage: t('pages.contact.serviceAreas.kalba.coverage'),
       icon: <Navigation className="w-5 h-5 text-primary" />
     },
-    { 
-      city: t('pages.contact.serviceAreas.khorFakkan.city'), 
+    {
+      city: t('pages.contact.serviceAreas.khorFakkan.city'),
       coverage: t('pages.contact.serviceAreas.khorFakkan.coverage'),
       icon: <Globe className="w-5 h-5 text-primary" />
     }
@@ -181,7 +181,7 @@ export default function ContactPage() {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <motion.section 
+      <motion.section
         className="bg-gradient-to-br from-snow via-white to-accent py-8 sm:py-12 relative"
         initial="hidden"
         animate="visible"
@@ -193,7 +193,7 @@ export default function ContactPage() {
             backgroundSize: '25px 25px'
           }}></div>
         </div>
-        
+
         <div className="container mx-auto px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div variants={itemVariants}>
@@ -202,29 +202,29 @@ export default function ContactPage() {
                 {t('pages.contact.badge')}
               </Badge>
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               className="text-4xl md:text-6xl font-bold mb-6 text-logo-brown"
               variants={itemVariants}
             >
               {t('pages.contact.title')}
               <span className="block mt-2 text-logo-brown">{t('pages.contact.subtitle')}</span>
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               className="text-xl text-primary mb-8 leading-relaxed"
               variants={itemVariants}
             >
               {t('pages.contact.description')}
             </motion.p>
-            
-          
+
+
           </div>
         </div>
       </motion.section>
 
       {/* Contact Information */}
-      <motion.section 
+      <motion.section
         className="py-8 sm:py-12 bg-white"
         initial="hidden"
         whileInView="visible"
@@ -232,7 +232,7 @@ export default function ContactPage() {
         variants={containerVariants}
       >
         <div className="container mx-auto px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial="hidden"
             whileInView="visible"
@@ -244,7 +244,7 @@ export default function ContactPage() {
             <p className="text-logo-brown text-lg">{t('pages.contact.contactDetails.subtitle')}</p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             initial="hidden"
             whileInView="visible"
@@ -252,13 +252,13 @@ export default function ContactPage() {
             variants={containerVariants}
           >
             {contactInfo.map((contact, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="group cursor-pointer"
                 variants={itemVariants}
                 whileHover="hover"
               >
-                <motion.div 
+                <motion.div
                   className="bg-white border border-accent rounded-3xl p-8 text-center h-full flex flex-col"
                   variants={cardVariants}
                 >
@@ -276,7 +276,7 @@ export default function ContactPage() {
       </motion.section>
 
       {/* Section 1: Contact Form & Response Info - Text Left, Image Right */}
-      <motion.section 
+      <motion.section
         className="py-8 sm:py-12 bg-gradient-to-b from-snow to-white"
         initial="hidden"
         whileInView="visible"
@@ -286,14 +286,14 @@ export default function ContactPage() {
         <div className="container mx-auto px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Contact Form */}
-            <motion.div 
+            <motion.div
               className=""
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               variants={slideInVariants}
             >
-              <motion.div 
+              <motion.div
                 className="bg-white/90 backdrop-blur-sm border border-accent rounded-3xl p-8"
                 variants={cardVariants}
                 whileHover="hover"
@@ -302,7 +302,7 @@ export default function ContactPage() {
                   <h2 className="text-3xl font-bold mb-2 text-logo-brown">{t('pages.contact.form.title')}</h2>
                   <p className="text-logo-brown">{t('pages.contact.form.description')}</p>
                 </div>
-                
+
                 <form className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
@@ -326,7 +326,7 @@ export default function ContactPage() {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium mb-2 text-logo-brown">
                       {t('pages.contact.form.phone.label')}
@@ -338,7 +338,7 @@ export default function ContactPage() {
                       dir="ltr"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium mb-2 text-logo-brown">
                       {t('pages.contact.form.email.label')}
@@ -349,7 +349,7 @@ export default function ContactPage() {
                       placeholder={t('pages.contact.form.email.placeholder')}
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium mb-2 text-logo-brown">
                       {t('pages.contact.form.location.label')}
@@ -363,7 +363,7 @@ export default function ContactPage() {
                       <option>{t('pages.contact.form.location.other')}</option>
                     </select>
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium mb-2 text-logo-brown">
                       {t('pages.contact.form.service.label')}
@@ -380,7 +380,7 @@ export default function ContactPage() {
                       <option>{t('pages.contact.form.service.design')}</option>
                     </select>
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium mb-2 text-logo-brown">
                       {t('pages.contact.form.details.label')}
@@ -391,7 +391,7 @@ export default function ContactPage() {
                       placeholder={t('pages.contact.form.details.placeholder')}
                     ></textarea>
                   </div>
-                  
+
                   <Button className="w-full bg-primary hover:bg-primary/90 py-4 group hover:scale-105 transition-all duration-300 border-0">
                     <Send className={`w-5 h-5 transition-transform duration-300 ${dir === 'rtl' ? 'ml-2 group-hover:-translate-x-1' : 'mr-2 group-hover:translate-x-1'}`} />
                     {t('pages.contact.form.submit')}
@@ -401,7 +401,7 @@ export default function ContactPage() {
             </motion.div>
 
             {/* Response Information */}
-            <motion.div 
+            <motion.div
               className="space-y-8"
               initial="hidden"
               whileInView="visible"
@@ -413,18 +413,18 @@ export default function ContactPage() {
                 <p className="text-logo-brown text-lg">{t('pages.contact.whatToExpected.subtitle')}</p>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="space-y-6"
                 variants={containerVariants}
               >
                 {responseInfo.map((info, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     className="group cursor-pointer"
                     variants={itemVariants}
                     whileHover="hover"
                   >
-                    <motion.div 
+                    <motion.div
                       className="bg-white/90 backdrop-blur-sm border border-accent rounded-3xl p-6"
                       variants={cardVariants}
                     >
@@ -444,14 +444,14 @@ export default function ContactPage() {
               </motion.div>
 
               {/* Quick Contact Options */}
-              <motion.div 
+              <motion.div
                 className="bg-white/90 backdrop-blur-sm border border-accent rounded-3xl p-10"
                 variants={cardVariants}
                 whileHover="hover"
               >
                 <h3 className="text-2xl font-bold mb-6 text-center text-logo-brown">{t('pages.contact.quickContact.title')}</h3>
                 <p className="text-logo-brown text-center mb-8 text-lg">{t('pages.contact.quickContact.subtitle')}</p>
-                <div className="space-y-6"> 
+                <div className="space-y-6">
                   <a href="tel:+971566201878" className="block">
                     <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white group hover:scale-105 transition-all duration-300 p-6 h-auto">
                       <Phone className="w-6 h-6 mr-4 animate-pulse text-logo-brown group-hover:text-white" />
@@ -462,7 +462,7 @@ export default function ContactPage() {
                       <ArrowRight className="w-5 h-5 ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                     </Button>
                   </a>
-                  <a href="mailto:info@alqalaa-ac.com" className="block">
+                  <a href="mailto:alqalaa02@gmail.com" className="block">
                     <Button variant="outline" className="w-full justify-start border-primary text-primary hover:bg-primary hover:text-white group hover:scale-105 transition-all duration-300 p-6 h-auto">
                       <Mail className="w-6 h-6 mr-4 text-logo-brown group-hover:text-white" />
                       <div className="text-left">
@@ -494,7 +494,7 @@ export default function ContactPage() {
       </motion.section>
 
       {/* Section 2: Service Areas - Text Only */}
-      <motion.section 
+      <motion.section
         className="py-8 sm:py-12 bg-white"
         initial="hidden"
         whileInView="visible"
@@ -502,7 +502,7 @@ export default function ContactPage() {
         variants={containerVariants}
       >
         <div className="container mx-auto px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial="hidden"
             whileInView="visible"
@@ -514,7 +514,7 @@ export default function ContactPage() {
             <p className="text-logo-brown text-lg">{t('pages.contact.serviceCoverage.subtitle')}</p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="max-w-4xl mx-auto"
             initial="hidden"
             whileInView="visible"
@@ -533,13 +533,13 @@ export default function ContactPage() {
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
                 {serviceAreas.map((area, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     className="group cursor-pointer"
                     variants={itemVariants}
                     whileHover="hover"
                   >
-                    <motion.div 
+                    <motion.div
                       className="bg-white border border-accent rounded-2xl p-6 text-center h-full flex flex-col items-center justify-center"
                       variants={cardVariants}
                     >
@@ -558,7 +558,7 @@ export default function ContactPage() {
       </motion.section>
 
       {/* Section 3: Location & Directions - Full Width Layout */}
-      <motion.section 
+      <motion.section
         className="py-8 sm:py-12 bg-gradient-to-b from-snow to-white"
         initial="hidden"
         whileInView="visible"
@@ -566,7 +566,7 @@ export default function ContactPage() {
         variants={containerVariants}
       >
         <div className="container mx-auto px-8">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial="hidden"
             whileInView="visible"
@@ -579,7 +579,7 @@ export default function ContactPage() {
           </motion.div>
 
           {/* Contact Details Section */}
-          <motion.div 
+          <motion.div
             className="max-w-4xl mx-auto mb-16"
             initial="hidden"
             whileInView="visible"
@@ -612,11 +612,11 @@ export default function ContactPage() {
                   <p className="text-logo-brown">{t('pages.contact.location.hours.friday')}</p>
                 </div>
               </div>
-              
+
               <div className="text-center mt-8">
-                <a 
-                  href="https://www.google.com/maps/place/25.139305,56.331444/data=!4m6!3m5!1s0!7e2!8m2!3d25.1393055!4d56.3314439?entry=gps&coh=192189&g_ep=CAESBzI1LjMxLjIYACD67A0qhwEsOTQyNjc3MjcsOTQyMjMyOTksOTQyMTY0MTMsOTQyODA1NzYsOTQyMTI0OTYsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTc1MjMsOTQyMTg2NTMsOTQyMjk4MzksOTQyNzUxNjgsNDcwODQzOTMsOTQyMTMyMDAsOTQyNTgzMjVCAkFF&skid=2231d3d2-0d17-4df0-a26f-33c5f40c048a" 
-                  target="_blank" 
+                <a
+                  href="https://www.google.com/maps/place/25.139305,56.331444/data=!4m6!3m5!1s0!7e2!8m2!3d25.1393055!4d56.3314439?entry=gps&coh=192189&g_ep=CAESBzI1LjMxLjIYACD67A0qhwEsOTQyNjc3MjcsOTQyMjMyOTksOTQyMTY0MTMsOTQyODA1NzYsOTQyMTI0OTYsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTc1MjMsOTQyMTg2NTMsOTQyMjk4MzksOTQyNzUxNjgsNDcwODQzOTMsOTQyMTMyMDAsOTQyNTgzMjVCAkFF&skid=2231d3d2-0d17-4df0-a26f-33c5f40c048a"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 group hover:scale-105 transition-all duration-300 border-0 shadow-lg hover:shadow-xl"
                 >
@@ -629,7 +629,7 @@ export default function ContactPage() {
           </motion.div>
 
           {/* Map Section */}
-          <motion.div 
+          <motion.div
             className="max-w-6xl mx-auto"
             initial="hidden"
             whileInView="visible"
@@ -667,7 +667,7 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </motion.section>
-    
+
     </div>
   );
 }

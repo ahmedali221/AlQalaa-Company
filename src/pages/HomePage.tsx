@@ -416,7 +416,7 @@ export default function HomePage() {
                 {t('pages.home.contact_section.buttons.whatsapp')}
               </motion.a>
               <motion.a
-                href="mailto:info@alqalaa-ac.com"
+                href="mailto:alqalaa02@gmail.com"
                 className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-logo-brown rounded-xl font-semibold hover:bg-primary hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl "
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

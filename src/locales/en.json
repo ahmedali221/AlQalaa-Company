@@ -55,7 +55,7 @@
       "title": "Contact Info",
       "mainPhone": "+971 56 620 1878",
       "mainPhoneLabel": "Main Line",
-      "altPhone": "+971 58 192 9889",
+      "altPhone": "+971 566201878",
       "altPhoneLabel": "Alternative Line",
       "email": "alqalaa02@gmail.com",
       "emailLabel": "Business Inquiries",
@@ -387,11 +387,11 @@
           "subtitle": "24/7 Emergency Support"
         },
         "email": {
-          "title": "Email: info@alqalaa-ac.com",
+          "title": "Email: alqalaa02@gmail.com",
           "subtitle": "Professional Inquiries"
         },
         "whatsapp": {
-          "title": "WhatsApp: +971 58 192 9889",
+          "title": "WhatsApp: +971 566201878",
           "subtitle": "Quick Messaging Support"
         },
         "responseTime": {
